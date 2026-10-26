@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate the average of numbers online with UtilityHub's free Average Calculator.">
+  <title>Average Calculator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">FREE ONLINE TOOL</span>
+      <h1>Average Calculator</h1>
+      <p>Find the average (mean) of any set of numbers quickly.</p>
+    </section>
+
+    <section class="calculator-card">
+      <form id="averageForm">
+        <label for="numbers">Enter your numbers</label>
+        <textarea
+          id="numbers"
+          name="numbers"
+          rows="5"
+          placeholder="Example: 10, 20, 30, 40, 50"
+          required
+        ></textarea>
+        <p class="hint">Separate numbers with commas, spaces or new lines.</p>
+
+        <div class="actions">
+          <button type="submit" class="primary-btn">Calculate Average</button>
+          <button type="reset" class="secondary-btn">Clear</button>
+        </div>
+      </form>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+
+      <section id="result" class="result" hidden aria-live="polite">
+        <h2>Calculation Result</h2>
+        <div class="result-grid">
+          <div class="result-item">
+            <span>Average (Mean)</span>
+            <strong id="averageValue">—</strong>
+          </div>
+          <div class="result-item">
+            <span>Total Sum</span>
+            <strong id="sumValue">—</strong>
+          </div>
+          <div class="result-item">
+            <span>Number Count</span>
+            <strong id="countValue">—</strong>
+          </div>
+        </div>
+        <p id="rangeValue" class="range-value"></p>
+      </section>
+    </section>
+
+    <section class="info">
+      <h2>How to calculate an average</h2>
+      <ol>
+        <li>Enter two or more numbers.</li>
+        <li>Separate them with commas, spaces or new lines.</li>
+        <li>Click Calculate Average to see the result.</li>
+      </ol>
+      <p><strong>Formula:</strong> Average = Sum of all numbers ÷ Number of values.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 UtilityHub. Free online tools.</p>
+  </footer>
+</body>
+</html>

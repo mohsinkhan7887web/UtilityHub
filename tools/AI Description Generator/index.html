@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create description ideas for YouTube videos, blogs, social posts, and products with UtilityHub's free description generator.">
+  <meta name="theme-color" content="#2563eb">
+  <title>AI Description Generator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="page-container">
+    <section class="intro">
+      <span class="eyebrow">FREE CONTENT TOOL</span>
+      <h1>AI Description Generator</h1>
+      <p>Create description ideas for YouTube videos, blogs, social media posts, and products in seconds.</p>
+    </section>
+
+    <section class="tool-card">
+      <form id="descriptionForm">
+        <div class="form-group">
+          <label for="topic">Topic or Content Title</label>
+          <input
+            id="topic"
+            name="topic"
+            type="text"
+            placeholder="e.g. 10 Best Budget Smartphones"
+            maxlength="180"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="contentType">Description Type</label>
+          <select id="contentType" name="contentType">
+            <option value="youtube">YouTube Video</option>
+            <option value="blog">Blog Post</option>
+            <option value="social">Social Media Post</option>
+            <option value="product">Product Description</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="tone">Writing Style</label>
+          <select id="tone" name="tone">
+            <option value="friendly">Friendly and Engaging</option>
+            <option value="professional">Professional</option>
+            <option value="informative">Informative</option>
+            <option value="persuasive">Persuasive</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="keywords">Keywords (optional)</label>
+          <input
+            id="keywords"
+            name="keywords"
+            type="text"
+            placeholder="e.g. budget phones, buying guide"
+            maxlength="200"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="details">Extra Details (optional)</label>
+          <textarea
+            id="details"
+            name="details"
+            rows="4"
+            maxlength="600"
+            placeholder="What should the description mention?"
+          ></textarea>
+        </div>
+
+        <div class="button-row">
+          <button class="primary-button" id="generateBtn" type="submit">
+            Generate Description
+          </button>
+          <button class="secondary-button" id="clearBtn" type="button">
+            Clear
+          </button>
+        </div>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <section id="resultSection" class="result-section" hidden>
+        <div class="result-heading">
+          <h2>Your Description</h2>
+          <span id="resultCount">0 words</span>
+        </div>
+
+        <textarea
+          id="descriptionOutput"
+          rows="12"
+          readonly
+          aria-label="Generated description"
+        ></textarea>
+
+        <div class="button-row">
+          <button class="primary-button" id="copyBtn" type="button">
+            Copy Description
+          </button>
+          <button class="secondary-button" id="downloadBtn" type="button">
+            Download TXT
+          </button>
+        </div>
+
+        <p class="result-hint">Review and edit the description before publishing.</p>
+      </section>
+    </section>
+
+    <section class="info-section">
+      <h2>How to use this tool</h2>
+      <ol>
+        <li>Enter your topic or content title.</li>
+        <li>Choose a description type and writing style.</li>
+        <li>Add keywords and extra details if needed.</li>
+        <li>Generate, copy, or download your description.</li>
+      </ol>
+      <p><strong>Note:</strong> This free version uses built-in writing templates in your browser. It does not connect to a generative AI service.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> UtilityHub. Free tools for everyone.</p>
+  </footer>
+</body>
+</html>

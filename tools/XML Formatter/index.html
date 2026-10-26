@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Format, validate, and minify XML online with UtilityHub's free XML Formatter.">
+  <title>XML Formatter &amp; Validator - UtilityHub</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="brand">Utility<span>Hub</span></a>
+      <a href="../../index.html" class="back-link">← Back to Home</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">DEVELOPER TOOLS</span>
+      <h1>XML Formatter <span>&amp; Validator</span></h1>
+      <p>Format, inspect, and minify XML with helpful feedback. Free, simple, and browser-based.</p>
+    </section>
+
+    <section class="tool-panel">
+      <div class="panel-heading">
+        <div>
+          <h2>XML Editor</h2>
+          <p>Paste your XML below or load the sample.</p>
+        </div>
+
+        <label class="indent-control" for="indentSize">
+          Indentation
+          <select id="indentSize">
+            <option value="2">2 spaces</option>
+            <option value="4" selected>4 spaces</option>
+            <option value="tab">Tab</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="field-label" for="xmlInput">Input XML</label>
+      <textarea
+        id="xmlInput"
+        spellcheck="false"
+        placeholder="Paste your XML here..."
+        aria-label="Input XML"
+      ></textarea>
+
+      <div class="button-row primary-actions">
+        <button id="formatButton" class="btn btn-primary" type="button">Format XML</button>
+        <button id="validateButton" class="btn btn-secondary" type="button">Validate XML</button>
+        <button id="minifyButton" class="btn btn-secondary" type="button">Minify XML</button>
+        <button id="sampleButton" class="btn btn-light" type="button">Load Sample</button>
+        <button id="clearButton" class="btn btn-light" type="button">Clear</button>
+      </div>
+
+      <div id="statusBox" class="status-box" role="status" aria-live="polite">
+        <strong id="statusTitle">Ready</strong>
+        <p id="statusMessage">Paste XML or load the sample to get started.</p>
+      </div>
+
+      <div class="output-heading">
+        <label class="field-label" for="xmlOutput">Output XML</label>
+        <span id="xmlStatus" class="status-chip">Waiting for input</span>
+      </div>
+
+      <textarea
+        id="xmlOutput"
+        spellcheck="false"
+        placeholder="Formatted or minified XML will appear here..."
+        aria-label="Output XML"
+        readonly
+      ></textarea>
+
+      <div class="button-row output-actions">
+        <button id="copyButton" class="btn btn-primary" type="button">Copy Output</button>
+        <button id="useOutputButton" class="btn btn-secondary" type="button">Use Output as Input</button>
+        <button id="downloadButton" class="btn btn-secondary" type="button">Download XML</button>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <span>Input characters</span>
+          <strong id="inputCount">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Output characters</span>
+          <strong id="outputCount">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to use XML Formatter</h2>
+      <ol>
+        <li>Paste XML into the input editor or load the sample.</li>
+        <li>Choose your preferred indentation.</li>
+        <li>Format XML to improve readability.</li>
+        <li>Validate XML to check common structural errors.</li>
+        <li>Copy the result or download it as an XML file.</li>
+      </ol>
+
+      <h2>What does XML validation check?</h2>
+      <p>This tool checks common XML structure issues, such as mismatched tags, missing closing tags, and malformed tag nesting. It is intended as a basic browser-based checker, not a replacement for a full XML parser or schema validator.</p>
+
+      <p class="privacy-note">Privacy: XML is processed in your browser by this tool. Avoid pasting sensitive information into any online tool unless you understand how it handles your data.</p>
+    </section>
+
+    <footer class="site-footer">
+      <p>© 2026 UtilityHub. Free online tools.</p>
+    </footer>
+  </main>
+</body>
+</html>

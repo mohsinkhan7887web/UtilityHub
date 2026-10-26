@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reorder PDF pages online for free. Move pages up or down and download your reorganized PDF in your browser.">
+  <title>PDF Page Reorder - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">FREE ONLINE PDF TOOL</p>
+      <h1>PDF Page Reorder</h1>
+      <p>Change the order of your PDF pages and download a reorganized document.</p>
+    </section>
+
+    <section class="tool-card">
+      <div id="uploadArea" class="upload-area">
+        <div class="pdf-icon">PDF</div>
+        <h2>Choose a PDF file</h2>
+        <p>Select a PDF from your device to arrange its pages.</p>
+        <input id="pdfInput" type="file" accept=".pdf,application/pdf">
+        <p class="small-note">Your PDF is processed locally in your browser.</p>
+      </div>
+
+      <div id="workspace" hidden>
+        <div class="file-card">
+          <div class="pdf-icon small">PDF</div>
+          <div class="file-info">
+            <strong id="fileName">document.pdf</strong>
+            <span id="pageCount"></span>
+          </div>
+          <button id="changePdfButton" class="button secondary" type="button">Change PDF</button>
+        </div>
+
+        <p class="help-text">Use the arrows to change the page order. The first page in this list will be the first page in your new PDF.</p>
+
+        <div class="list-heading">
+          <strong>Page order</strong>
+          <span id="orderCount"></span>
+        </div>
+
+        <ol id="pageList" class="page-list"></ol>
+
+        <p id="statusMessage" class="status" role="status" aria-live="polite"></p>
+
+        <button id="downloadButton" class="button primary full-width" type="button">Create Reordered PDF</button>
+        <button id="resetButton" class="button secondary full-width" type="button">Start Over</button>
+
+        <div id="resultArea" class="result-area" hidden>
+          <h2>Your PDF is ready!</h2>
+          <p id="resultDetails"></p>
+          <a id="downloadLink" class="button primary full-width" href="#" download="utilityhub-reordered.pdf">Download PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to reorder PDF pages</h2>
+      <ol>
+        <li>Choose a PDF file.</li>
+        <li>Use Move Up and Move Down to arrange pages.</li>
+        <li>Create and download the reordered PDF.</li>
+      </ol>
+      <h2>Frequently asked questions</h2>
+      <h3>Will the original PDF change?</h3>
+      <p>No. The tool creates a new PDF and leaves your original file unchanged.</p>
+      <h3>Is my file uploaded?</h3>
+      <p>No upload to our server is needed. Processing takes place in your browser.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>UtilityHub · Simple tools for everyday tasks</p>
+  </footer>
+</body>
+</html>

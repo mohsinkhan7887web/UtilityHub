@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resize JPG, PNG and WebP images online for free. Set custom dimensions and download resized images directly in your browser.">
+  <title>Image Resizer - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">FREE ONLINE IMAGE TOOL</p>
+      <h1>Image Resizer</h1>
+      <p>Resize JPG, PNG and WebP images to your preferred dimensions directly in your browser.</p>
+    </section>
+
+    <section class="tool-card">
+      <div id="uploadArea" class="upload-area">
+        <div class="image-icon">IMG</div>
+        <h2>Select your image</h2>
+        <p>Choose a JPG, PNG or WebP image from your device.</p>
+        <label for="imageInput" class="button primary">Choose Image</label>
+        <input
+          id="imageInput"
+          type="file"
+          accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp"
+          hidden
+        >
+        <p class="small-note">Your image is processed locally in your browser.</p>
+      </div>
+
+      <div id="workspace" hidden>
+        <div class="file-card">
+          <div class="image-icon small">IMG</div>
+          <div class="file-info">
+            <strong id="fileName">image.png</strong>
+            <span id="fileSize"></span>
+            <span id="originalDimensions"></span>
+          </div>
+          <button id="changeImageButton" class="button secondary" type="button">
+            Change Image
+          </button>
+        </div>
+
+        <div class="preview-section">
+          <h2>Original Image Preview</h2>
+          <div class="preview-frame">
+            <img id="imagePreview" alt="Original image preview">
+          </div>
+        </div>
+
+        <section class="settings-section">
+          <h2>Resize Settings</h2>
+
+          <div class="dimension-grid">
+            <div class="field-group">
+              <label for="widthInput">Width (pixels)</label>
+              <input
+                id="widthInput"
+                type="number"
+                min="1"
+                max="10000"
+                step="1"
+                inputmode="numeric"
+                placeholder="e.g. 1080"
+              >
+            </div>
+
+            <div class="field-group">
+              <label for="heightInput">Height (pixels)</label>
+              <input
+                id="heightInput"
+                type="number"
+                min="1"
+                max="10000"
+                step="1"
+                inputmode="numeric"
+                placeholder="e.g. 1080"
+              >
+            </div>
+          </div>
+
+          <label class="checkbox-row" for="aspectRatio">
+            <input id="aspectRatio" type="checkbox" checked>
+            <span>Lock aspect ratio (maintain proportions)</span>
+          </label>
+
+          <div class="field-group format-field">
+            <label for="outputFormat">Output format</label>
+            <select id="outputFormat">
+              <option value="image/png">PNG</option>
+              <option value="image/jpeg">JPG</option>
+              <option value="image/webp">WebP</option>
+            </select>
+          </div>
+
+          <div id="qualitySection" class="quality-section" hidden>
+            <label for="qualityInput">
+              Output quality: <strong id="qualityValue">90%</strong>
+            </label>
+            <input
+              id="qualityInput"
+              type="range"
+              min="10"
+              max="100"
+              value="90"
+            >
+            <p class="small-note">Higher quality usually creates a larger file.</p>
+          </div>
+
+          <p class="small-note">
+            Maximum width or height: 10,000 pixels. Very large images may require more memory.
+          </p>
+        </section>
+
+        <p id="statusMessage" class="status" role="status" aria-live="polite"></p>
+
+        <button id="resizeButton" class="button primary full-width" type="button">
+          Resize Image
+        </button>
+
+        <section id="resultArea" class="result-area" hidden>
+          <h2>Your Resized Image</h2>
+          <p id="resultDimensions"></p>
+          <p id="resultDetails"></p>
+
+          <div class="preview-frame result-preview">
+            <img id="resultPreview" alt="Resized image preview">
+          </div>
+
+          <a
+            id="downloadLink"
+            class="button primary full-width"
+            href="#"
+            download="utilityhub-resized.png"
+          >
+            Download Resized Image
+          </a>
+        </section>
+
+        <button id="resetButton" class="button secondary full-width" type="button">
+          Resize Another Image
+        </button>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to resize an image</h2>
+      <ol>
+        <li>Select a JPG, PNG or WebP image from your device.</li>
+        <li>Enter your preferred width and height in pixels.</li>
+        <li>Keep aspect ratio locked to maintain the original proportions, or unlock it for custom dimensions.</li>
+        <li>Select an output format and click Resize Image.</li>
+        <li>Preview and download your resized image.</li>
+      </ol>
+
+      <h2>Frequently asked questions</h2>
+
+      <h3>What is aspect ratio?</h3>
+      <p>Aspect ratio describes the relationship between an image's width and height. Locking it helps prevent unwanted stretching.</p>
+
+      <h3>Will resizing improve image quality?</h3>
+      <p>Resizing changes image dimensions but cannot restore details that were not present in the original image.</p>
+
+      <h3>Is my image uploaded to a server?</h3>
+      <p>No. This tool is designed to resize images locally in your browser.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>UtilityHub · Simple tools for everyday tasks</p>
+  </footer>
+</body>
+</html>

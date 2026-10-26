@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generate title ideas for YouTube videos, blog posts, and social media content with UtilityHub's free title generator.">
+  <meta name="robots" content="index, follow">
+  <title>Free Title Generator Online | UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="page-container">
+    <section class="intro">
+      <span class="eyebrow">FREE CONTENT TOOL</span>
+      <h1>AI Title Generator</h1>
+      <p>Explore title ideas for videos, blog posts, and social media content. Choose a content type and tone to get started.</p>
+    </section>
+
+    <section class="tool-card">
+      <form id="titleForm">
+        <div class="form-group">
+          <label for="topic">Topic or main keyword</label>
+          <input
+            id="topic"
+            name="topic"
+            type="text"
+            maxlength="150"
+            placeholder="e.g. Best budget smartphones"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="contentType">Content type</label>
+          <select id="contentType" name="contentType">
+            <option value="youtube">YouTube video</option>
+            <option value="blog">Blog post</option>
+            <option value="shorts">YouTube Shorts / Reel</option>
+            <option value="social">Social media post</option>
+            <option value="product">Product title</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="tone">Title style</label>
+          <select id="tone" name="tone">
+            <option value="curiosity">Curiosity</option>
+            <option value="informative">Informative</option>
+            <option value="professional">Professional</option>
+            <option value="catchy">Catchy</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="keyword">Extra keyword (optional)</label>
+          <input
+            id="keyword"
+            name="keyword"
+            type="text"
+            maxlength="80"
+            placeholder="e.g. 2026, beginner, easy"
+          >
+        </div>
+
+        <div class="button-row">
+          <button type="submit" id="generateBtn" class="primary-button">
+            Generate Titles
+          </button>
+          <button type="button" id="clearBtn" class="secondary-button">
+            Clear
+          </button>
+        </div>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+
+      <section id="resultSection" class="result-section" hidden>
+        <div class="result-heading">
+          <h2>Title ideas</h2>
+          <span id="resultCount">0 titles</span>
+        </div>
+
+        <p class="result-hint">
+          Select and edit any title before using it.
+        </p>
+
+        <div id="titleResults" class="title-results"></div>
+
+        <div class="button-row">
+          <button type="button" id="copyAllBtn" class="primary-button">
+            Copy All Titles
+          </button>
+          <button type="button" id="downloadBtn" class="secondary-button">
+            Download TXT
+          </button>
+        </div>
+      </section>
+
+      <p class="privacy-note">
+        Your topic is processed locally in your browser. This version uses title templates, not a generative AI service.
+      </p>
+    </section>
+
+    <section class="info-section">
+      <h2>How to use the title generator</h2>
+      <ol>
+        <li>Enter your topic or main keyword.</li>
+        <li>Choose your content type and preferred title style.</li>
+        <li>Generate multiple title ideas.</li>
+        <li>Copy your favourite title and edit it as needed.</li>
+      </ol>
+      <p><strong>Note:</strong> These are template-based suggestions. Check that each title accurately represents your content and avoid misleading claims.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> UtilityHub. Free online tools.</p>
+  </footer>
+</body>
+</html>

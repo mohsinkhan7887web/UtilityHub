@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find and replace words or phrases in your text with this free online text editing tool.">
+  <title>Find and Replace - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">FREE TEXT TOOL</span>
+      <h1>Find and Replace</h1>
+      <p>Find words or phrases in your text and replace them quickly. Edit one match or update every match at once.</p>
+    </section>
+
+    <section class="tool-panel">
+      <label class="field-label" for="textInput">Your text</label>
+      <textarea id="textInput" placeholder="Paste or type your text here..." spellcheck="false"></textarea>
+
+      <div class="fields-grid">
+        <div class="field-group">
+          <label class="field-label" for="findInput">Find this text</label>
+          <input id="findInput" type="text" placeholder="Enter word or phrase">
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="replaceInput">Replace with</label>
+          <input id="replaceInput" type="text" placeholder="Enter replacement">
+        </div>
+      </div>
+
+      <div class="settings">
+        <label class="checkbox-label">
+          <input type="checkbox" id="matchCase">
+          Match case (uppercase/lowercase)
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="wholeWord">
+          Match whole words only
+        </label>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn btn-primary" id="replaceAllButton">Replace All</button>
+        <button type="button" class="btn btn-secondary" id="replaceNextButton">Replace Next</button>
+        <button type="button" class="btn btn-secondary" id="clearButton">Clear</button>
+        <button type="button" class="btn btn-secondary" id="sampleButton">Try Sample</button>
+      </div>
+
+      <p id="statusMessage" class="status-message" role="status" aria-live="polite">Enter your text and the phrase you want to find.</p>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <span class="result-label">Matches found</span>
+          <strong id="matchCount">0</strong>
+        </div>
+        <div class="result-card">
+          <span class="result-label">Replacements made</span>
+          <strong id="replacementCount">0</strong>
+        </div>
+      </div>
+
+      <label class="field-label output-label" for="outputText">Updated text</label>
+      <textarea id="outputText" placeholder="Your updated text will appear here..." readonly spellcheck="false"></textarea>
+
+      <div class="actions">
+        <button type="button" class="btn btn-primary" id="copyButton">Copy Updated Text</button>
+        <button type="button" class="btn btn-secondary" id="useOutputButton">Use Output as Input</button>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to use Find and Replace</h2>
+      <ol>
+        <li>Paste your text into the input box.</li>
+        <li>Enter the word or phrase to find.</li>
+        <li>Enter the replacement text. Leave it empty to remove matches.</li>
+        <li>Choose optional matching settings and click Replace All or Replace Next.</li>
+        <li>Copy your updated text when you are satisfied with the result.</li>
+      </ol>
+      <p class="note"><strong>Privacy:</strong> Your text is processed in your browser; this tool does not intentionally upload it to a server.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 UtilityHub. Simple tools for everyday work.</p>
+  </footer>
+</body>
+</html>

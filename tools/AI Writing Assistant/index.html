@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create and improve email drafts, social media captions, and paragraphs with UtilityHub's free writing assistant.">
+  <meta name="robots" content="index, follow">
+  <title>Free Writing Assistant Online | UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="page-container">
+    <section class="intro">
+      <span class="eyebrow">FREE WRITING TOOL</span>
+      <h1>AI Writing Assistant</h1>
+      <p>Prepare email drafts, social captions, and paragraphs using ready-made writing templates. Edit the result to suit your needs.</p>
+    </section>
+
+    <section class="tool-card">
+      <form id="writingForm">
+        <div class="form-group">
+          <label for="contentType">What do you want to write?</label>
+          <select id="contentType" name="contentType">
+            <option value="email">Email draft</option>
+            <option value="social">Social media caption</option>
+            <option value="paragraph">General paragraph</option>
+            <option value="product">Product description</option>
+            <option value="blog">Blog introduction</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="topic">Topic or purpose</label>
+          <input
+            id="topic"
+            name="topic"
+            type="text"
+            maxlength="200"
+            placeholder="e.g. Introduce my new online store"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="details">Details to include (optional)</label>
+          <textarea
+            id="details"
+            name="details"
+            rows="5"
+            maxlength="3000"
+            placeholder="Add important points, audience, benefits, or other details..."
+          ></textarea>
+          <div class="input-meta">
+            <span id="detailsCount">0 words</span>
+            <span id="characterCount">0 / 3,000 characters</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="tone">Writing tone</label>
+          <select id="tone" name="tone">
+            <option value="professional">Professional</option>
+            <option value="friendly">Friendly</option>
+            <option value="persuasive">Persuasive</option>
+            <option value="casual">Casual</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="length">Writing length</label>
+          <select id="length" name="length">
+            <option value="short">Short</option>
+            <option value="medium" selected>Medium</option>
+            <option value="long">Long</option>
+          </select>
+        </div>
+
+        <div class="button-row">
+          <button type="submit" id="generateBtn" class="primary-button">
+            Create Draft
+          </button>
+          <button type="button" id="clearBtn" class="secondary-button">
+            Clear Form
+          </button>
+        </div>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+
+      <section id="resultSection" class="result-section" hidden>
+        <div class="result-heading">
+          <h2>Your writing draft</h2>
+          <span id="resultCount">0 words</span>
+        </div>
+
+        <textarea
+          id="outputText"
+          rows="12"
+          maxlength="15000"
+          aria-label="Your generated writing draft"
+        ></textarea>
+
+        <div class="button-row">
+          <button type="button" id="copyBtn" class="primary-button">
+            Copy Draft
+          </button>
+          <button type="button" id="downloadBtn" class="secondary-button">
+            Download TXT
+          </button>
+        </div>
+      </section>
+
+      <p class="privacy-note">
+        Your text is processed locally in your browser. This version uses writing templates and does not connect to an AI service.
+      </p>
+    </section>
+
+    <section class="info-section">
+      <h2>How to use this writing assistant</h2>
+      <ol>
+        <li>Select the type of content you want to prepare.</li>
+        <li>Enter your topic and any important details.</li>
+        <li>Choose a tone and preferred length.</li>
+        <li>Create your draft, edit it, then copy or download it.</li>
+      </ol>
+      <p><strong>Note:</strong> This is a template-based writing helper, not a generative AI model. Always review the draft before sending or publishing it.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> UtilityHub. Free online tools.</p>
+  </footer>
+</body>
+</html>

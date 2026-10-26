@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Scan barcodes from images online for free with UtilityHub Barcode Scanner. Upload a barcode image to read its contents."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <title>Free Barcode Scanner Online | UtilityHub</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/@zxing/library@0.21.3/umd/index.min.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">
+      <span class="brand-icon">U</span>
+      <span>UtilityHub</span>
+    </a>
+
+    <a class="back-link" href="../../index.html">
+      ← All Tools
+    </a>
+  </header>
+
+  <main class="page-container">
+    <section class="intro">
+      <span class="eyebrow">FREE ONLINE TOOL</span>
+      <h1>Barcode Scanner</h1>
+      <p>
+        Upload a barcode image and quickly scan it to read the
+        encoded text or number. Free, simple, and easy to use.
+      </p>
+    </section>
+
+    <section class="scanner-card">
+      <div class="card-heading">
+        <div>
+          <h2>Scan a Barcode</h2>
+          <p>Select a clear image containing a barcode.</p>
+        </div>
+        <span class="scan-icon">▥</span>
+      </div>
+
+      <form id="scannerForm">
+        <label for="barcodeFile" class="upload-area">
+          <span class="upload-icon">↑</span>
+          <strong>Choose a barcode image</strong>
+          <span>Click here to browse your device</span>
+          <small>JPG, PNG, WEBP and other supported image formats</small>
+        </label>
+
+        <input
+          type="file"
+          id="barcodeFile"
+          accept="image/*"
+          required
+        >
+
+        <div id="fileName" class="file-name" aria-live="polite">
+          No image selected
+        </div>
+
+        <button type="submit" id="scanBtn" class="primary-button">
+          Scan Barcode
+        </button>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <section id="result" class="result-box" hidden>
+        <h3>Scan Result</h3>
+
+        <textarea
+          id="barcodeResult"
+          rows="3"
+          readonly
+          aria-label="Scanned barcode content"
+        ></textarea>
+
+        <div class="result-actions">
+          <button type="button" id="copyBtn" class="secondary-button">
+            Copy Result
+          </button>
+
+          <button type="button" id="clearBtn" class="secondary-button">
+            Clear
+          </button>
+        </div>
+      </section>
+
+      <div class="privacy-note">
+        <span>🔒</span>
+        <p>
+          Your selected image is processed in your browser.
+          Avoid uploading images containing private information.
+        </p>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to Scan a Barcode</h2>
+
+      <ol>
+        <li>Choose an image that clearly shows the barcode.</li>
+        <li>Click the Scan Barcode button.</li>
+        <li>View the decoded text or number in the result box.</li>
+        <li>Copy the result or clear it to scan another image.</li>
+      </ol>
+    </section>
+
+    <section class="info-section">
+      <h2>About This Tool</h2>
+      <p>
+        UtilityHub Barcode Scanner reads supported barcodes from
+        uploaded images. Scan accuracy depends on image quality,
+        lighting, barcode condition, and format support.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> UtilityHub. Free online tools.</p>
+    <a href="../../index.html">Back to Home</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

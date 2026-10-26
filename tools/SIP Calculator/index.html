@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free SIP Calculator to estimate investment value, invested amount, and potential returns.">
+  <title>SIP Calculator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="../../index.html" class="brand">UtilityHub</a>
+    <a href="../../index.html" class="back-link">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">FINANCIAL CALCULATORS</span>
+      <h1>SIP Calculator</h1>
+      <p>Estimate how your regular monthly investments could grow over time with the power of compounding.</p>
+    </section>
+
+    <section class="calculator-card">
+      <form id="sipForm">
+        <div class="field">
+          <label for="monthlyInvestment">Monthly Investment (₹)</label>
+          <input id="monthlyInvestment" type="number" min="1" step="any" placeholder="e.g. 5000" required>
+        </div>
+
+        <div class="field">
+          <label for="annualReturn">Expected Annual Return (%)</label>
+          <input id="annualReturn" type="number" min="0" max="100" step="any" placeholder="e.g. 12" required>
+        </div>
+
+        <div class="field">
+          <label for="investmentYears">Investment Period (years)</label>
+          <input id="investmentYears" type="number" min="0.01" max="100" step="any" placeholder="e.g. 10" required>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="primary-btn">Calculate Returns</button>
+          <button type="reset" class="secondary-btn">Reset</button>
+        </div>
+
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </form>
+
+      <section id="result" class="results" aria-live="polite" hidden>
+        <h2>Your Investment Estimate</h2>
+
+        <div class="result-grid">
+          <article class="result-item highlight">
+            <span>Estimated Future Value</span>
+            <strong id="futureValue">₹0.00</strong>
+          </article>
+          <article class="result-item">
+            <span>Total Invested</span>
+            <strong id="totalInvested">₹0.00</strong>
+          </article>
+          <article class="result-item">
+            <span>Estimated Returns</span>
+            <strong id="estimatedReturns">₹0.00</strong>
+          </article>
+          <article class="result-item">
+            <span>Total Monthly Investments</span>
+            <strong id="paymentCount">0</strong>
+          </article>
+        </div>
+
+        <div class="breakdown">
+          <div class="breakdown-heading">
+            <span>Invested Amount</span>
+            <strong id="investedPercentage">0%</strong>
+          </div>
+          <div class="bar-track">
+            <div id="investedBar" class="bar-invested"></div>
+            <div id="returnsBar" class="bar-returns"></div>
+          </div>
+          <p class="legend">
+            <span class="legend-invested"></span> Invested
+            <span class="legend-returns"></span> Estimated returns
+          </p>
+        </div>
+
+        <p class="disclaimer">This is an illustration, not a guaranteed return. Actual investment returns vary with market performance. Taxes and fees are not included.</p>
+      </section>
+    </section>
+
+    <section class="info-card">
+      <h2>How does a SIP Calculator work?</h2>
+      <p>A Systematic Investment Plan (SIP) lets you invest a fixed amount regularly. This calculator estimates the future value assuming a constant monthly rate of return and investments made at the end of each month.</p>
+      <p class="formula">Future Value = P × [((1 + r)<sup>n</sup> − 1) ÷ r]</p>
+      <p>Here, P is the monthly investment, r is the estimated monthly return rate, and n is the total number of monthly investments. With a 0% return, the future value equals the total amount invested.</p>
+    </section>
+  </main>
+
+  <footer class="footer">© 2026 UtilityHub · Free online tools</footer>
+</body>
+</html>

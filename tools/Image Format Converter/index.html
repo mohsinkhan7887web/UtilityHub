@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Convert images between JPG, PNG, WebP, BMP, GIF, AVIF and other supported formats online with UtilityHub.">
+
+  <title>Image Format Converter - UtilityHub</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">FREE ONLINE IMAGE TOOL</p>
+      <h1>Image Format Converter</h1>
+      <p>
+        Convert images between popular formats with a simple,
+        browser-based tool.
+      </p>
+    </section>
+
+    <section class="tool-card">
+      <div id="uploadArea" class="upload-area">
+        <div class="image-icon">IMG</div>
+        <h2>Select your image</h2>
+        <p>
+          Choose an image from your device to get started.
+        </p>
+
+        <label for="imageInput" class="button primary">
+          Choose Image
+        </label>
+
+        <input
+          id="imageInput"
+          type="file"
+          accept="image/*,.bmp,.tif,.tiff,.ico,.heic,.heif"
+          hidden
+        >
+
+        <p class="small-note">
+          Image processing happens in your browser where supported.
+        </p>
+      </div>
+
+      <div id="workspace" hidden>
+        <div class="file-card">
+          <div class="image-icon small">IMG</div>
+
+          <div class="file-info">
+            <strong id="fileName">image.png</strong>
+            <span id="fileSize"></span>
+            <span id="imageDimensions"></span>
+            <span id="sourceFormat"></span>
+          </div>
+
+          <button
+            id="changeImageButton"
+            class="button secondary"
+            type="button"
+          >
+            Change Image
+          </button>
+        </div>
+
+        <div class="preview-section">
+          <h2>Image Preview</h2>
+          <div class="preview-frame">
+            <img id="imagePreview" alt="Selected image preview">
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <label for="outputFormat">Convert to format</label>
+
+          <select id="outputFormat">
+            <option value="image/png">PNG</option>
+            <option value="image/jpeg">JPG / JPEG</option>
+            <option value="image/webp">WebP</option>
+            <option value="image/avif">AVIF (if supported)</option>
+            <option value="image/bmp">BMP (if supported)</option>
+          </select>
+
+          <div id="qualityGroup" class="quality-group" hidden>
+            <label for="quality">
+              Output quality: <span id="qualityValue">90%</span>
+            </label>
+            <input
+              id="quality"
+              type="range"
+              min="10"
+              max="100"
+              value="90"
+            >
+          </div>
+
+          <div id="backgroundGroup" class="background-group" hidden>
+            <label for="backgroundColor">
+              Background for transparent images
+            </label>
+            <input
+              id="backgroundColor"
+              type="color"
+              value="#ffffff"
+            >
+          </div>
+
+          <p class="small-note">
+            Some formats, including HEIC, TIFF, ICO and animated
+            image formats, may require additional decoding support.
+          </p>
+        </div>
+
+        <p id="statusMessage" class="status" role="status" aria-live="polite"></p>
+
+        <button
+          id="convertButton"
+          class="button primary full-width"
+          type="button"
+        >
+          Convert Image
+        </button>
+
+        <div id="resultArea" class="result-area" hidden>
+          <h2>Your converted image is ready!</h2>
+          <p id="resultDetails"></p>
+
+          <a
+            id="downloadLink"
+            class="button primary full-width"
+            href="#"
+            download="utilityhub-converted.png"
+          >
+            Download Image
+          </a>
+        </div>
+
+        <button
+          id="resetButton"
+          class="button secondary full-width"
+          type="button"
+        >
+          Convert Another Image
+        </button>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to convert an image</h2>
+      <ol>
+        <li>Choose an image from your device.</li>
+        <li>Select your desired output format.</li>
+        <li>Adjust quality or background if available.</li>
+        <li>Convert and download the result.</li>
+      </ol>
+
+      <h2>Supported image formats</h2>
+      <p>
+        Common browser-readable formats include JPEG, PNG, WebP,
+        GIF and AVIF. Actual support depends on your browser.
+        HEIC/HEIF, TIFF, ICO and animated formats may need
+        additional decoding libraries.
+      </p>
+
+      <h2>Frequently asked questions</h2>
+
+      <h3>Will every image format work?</h3>
+      <p>
+        Not necessarily. Browser support varies, and some formats
+        require a dedicated decoder. The tool should report when
+        a format cannot be read or exported.
+      </p>
+
+      <h3>Will transparency be preserved?</h3>
+      <p>
+        PNG and WebP can support transparency. JPG does not, so
+        transparent areas need a background color when converting
+        to JPG.
+      </p>
+
+      <h3>Are my images uploaded?</h3>
+      <p>
+        The intended conversion process runs locally in your browser.
+        Your selected image should not be sent to a server.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>UtilityHub · Simple tools for everyday tasks</p>
+  </footer>
+</body>
+</html>

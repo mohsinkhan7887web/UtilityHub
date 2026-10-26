@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Count sentences in your text instantly with UtilityHub's free Sentence Counter. Check sentences, words, characters and average words per sentence.">
+  <meta name="theme-color" content="#2563eb">
+  <title>Sentence Counter - Free Online Tool | UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">FREE TEXT TOOL</span>
+      <h1>Sentence Counter</h1>
+      <p>Count sentences, words and characters in your text instantly. Everything runs in your browser.</p>
+    </section>
+
+    <section class="tool-panel" aria-label="Sentence Counter tool">
+      <label for="textInput" class="field-label">Enter or paste your text</label>
+      <textarea
+        id="textInput"
+        placeholder="Type or paste your text here..."
+        spellcheck="true"
+        aria-describedby="inputHelp"
+      ></textarea>
+      <p id="inputHelp" class="help-text">Your text stays in your browser and is not uploaded.</p>
+
+      <div class="actions">
+        <button id="countButton" class="btn btn-primary" type="button">Count Sentences</button>
+        <button id="clearButton" class="btn btn-secondary" type="button">Clear Text</button>
+        <button id="sampleButton" class="btn btn-secondary" type="button">Try Sample</button>
+      </div>
+
+      <p id="statusMessage" class="status-message" role="status" aria-live="polite"></p>
+
+      <section class="results" aria-labelledby="resultsTitle">
+        <h2 id="resultsTitle">Your Results</h2>
+        <div class="results-grid">
+          <article class="result-card">
+            <span class="result-label">Sentences</span>
+            <strong id="sentenceCount" aria-live="polite">0</strong>
+          </article>
+          <article class="result-card">
+            <span class="result-label">Words</span>
+            <strong id="wordCount">0</strong>
+          </article>
+          <article class="result-card">
+            <span class="result-label">Characters</span>
+            <strong id="characterCount">0</strong>
+          </article>
+          <article class="result-card">
+            <span class="result-label">Characters (no spaces)</span>
+            <strong id="noSpaceCount">0</strong>
+          </article>
+          <article class="result-card">
+            <span class="result-label">Avg. words / sentence</span>
+            <strong id="averageWords">0</strong>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section class="info-section">
+      <h2>How to use the Sentence Counter</h2>
+      <ol>
+        <li>Type or paste your text into the text box.</li>
+        <li>Select <strong>Count Sentences</strong> to calculate your results.</li>
+        <li>Review the sentence, word and character counts.</li>
+        <li>Use <strong>Clear Text</strong> to start again.</li>
+      </ol>
+      <p class="note"><strong>Note:</strong> Sentence counting is an estimate based on punctuation. Abbreviations and unusual punctuation can affect the result.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 UtilityHub. Free tools for everyday tasks.</p>
+    <a href="../../index.html">Explore more tools</a>
+  </footer>
+</body>
+</html>

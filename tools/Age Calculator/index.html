@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate your exact age in years, months and days with the free UtilityHub Age Calculator.">
+  <title>Age Calculator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">FREE ONLINE TOOL</span>
+      <h1>Age Calculator</h1>
+      <p>Calculate your exact age in years, months and days.</p>
+    </section>
+
+    <section class="calculator-card">
+      <form id="ageForm">
+        <label for="birthDate">Your date of birth</label>
+        <input type="date" id="birthDate" name="birthDate" required>
+
+        <label for="asOfDate">Calculate age on</label>
+        <input type="date" id="asOfDate" name="asOfDate" required>
+
+        <div class="actions">
+          <button type="submit" class="primary-btn">Calculate Age</button>
+          <button type="reset" class="secondary-btn">Clear</button>
+        </div>
+      </form>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+
+      <section id="result" class="result" hidden aria-live="polite">
+        <h2>Your Exact Age</h2>
+        <div class="age-grid">
+          <div class="age-item">
+            <strong id="years">0</strong>
+            <span>Years</span>
+          </div>
+          <div class="age-item">
+            <strong id="months">0</strong>
+            <span>Months</span>
+          </div>
+          <div class="age-item">
+            <strong id="days">0</strong>
+            <span>Days</span>
+          </div>
+        </div>
+        <p id="totalDays" class="total-days"></p>
+      </section>
+    </section>
+
+    <section class="info">
+      <h2>How to calculate your age</h2>
+      <ol>
+        <li>Select your date of birth.</li>
+        <li>Choose the date on which you want to calculate your age.</li>
+        <li>Click Calculate Age to see your result.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 UtilityHub. Free online tools.</p>
+  </footer>
+</body>
+</html>

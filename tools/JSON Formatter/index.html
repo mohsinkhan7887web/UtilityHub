@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Format, validate, and minify JSON data online with this free JSON Formatter and Validator.">
+  <title>JSON Formatter &amp; Validator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">FREE DEVELOPER TOOL</span>
+      <h1>JSON Formatter &amp; Validator</h1>
+      <p>Format messy JSON, validate its syntax, and minify JSON data in seconds.</p>
+    </section>
+
+    <section class="tool-panel">
+      <div class="editor-heading">
+        <label class="field-label" for="jsonInput">Input JSON</label>
+        <span class="editor-hint">Paste or type your JSON below</span>
+      </div>
+
+      <textarea
+        id="jsonInput"
+        spellcheck="false"
+        autocapitalize="off"
+        autocomplete="off"
+        placeholder='{"name":"UtilityHub","tools":["formatter","validator"]}'
+      ></textarea>
+
+      <div class="settings">
+        <div class="field-group">
+          <label class="field-label" for="indentSize">Indentation</label>
+          <select id="indentSize">
+            <option value="2" selected>2 spaces</option>
+            <option value="4">4 spaces</option>
+            <option value="tab">Tab</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn btn-primary" id="formatButton">Format JSON</button>
+        <button type="button" class="btn btn-secondary" id="validateButton">Validate JSON</button>
+        <button type="button" class="btn btn-secondary" id="minifyButton">Minify JSON</button>
+        <button type="button" class="btn btn-secondary" id="sampleButton">Try Sample</button>
+        <button type="button" class="btn btn-secondary" id="clearButton">Clear</button>
+      </div>
+
+      <div id="statusBox" class="status-box" role="status" aria-live="polite">
+        <strong id="statusTitle">Ready to format</strong>
+        <p id="statusMessage">Enter JSON data, then choose an action.</p>
+      </div>
+
+      <div class="editor-heading output-heading">
+        <label class="field-label" for="jsonOutput">Output JSON</label>
+        <span id="outputInfo" class="editor-hint">No output yet</span>
+      </div>
+
+      <textarea
+        id="jsonOutput"
+        spellcheck="false"
+        autocapitalize="off"
+        autocomplete="off"
+        placeholder="Formatted or minified JSON will appear here..."
+        readonly
+      ></textarea>
+
+      <div class="actions output-actions">
+        <button type="button" class="btn btn-primary" id="copyButton">Copy Output</button>
+        <button type="button" class="btn btn-secondary" id="useOutputButton">Use Output as Input</button>
+        <button type="button" class="btn btn-secondary" id="downloadButton">Download JSON</button>
+      </div>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <span class="result-label">Input characters</span>
+          <strong id="inputCount">0</strong>
+        </div>
+        <div class="result-card">
+          <span class="result-label">Output characters</span>
+          <strong id="outputCount">0</strong>
+        </div>
+        <div class="result-card">
+          <span class="result-label">JSON status</span>
+          <strong id="jsonStatus">—</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to use JSON Formatter</h2>
+      <ol>
+        <li>Paste your JSON data into the input editor.</li>
+        <li>Select your preferred indentation size.</li>
+        <li>Click Format JSON to make it readable.</li>
+        <li>Use Validate JSON to check whether the input is valid.</li>
+        <li>Use Minify JSON to remove unnecessary formatting whitespace.</li>
+        <li>Copy the output or download it as a JSON file.</li>
+      </ol>
+      <p class="note"><strong>Privacy:</strong> JSON processing happens in your browser. This tool does not intentionally upload your JSON data to a server.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 UtilityHub. Simple tools for everyday work.</p>
+  </footer>
+</body>
+</html>

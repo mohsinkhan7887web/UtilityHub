@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encode text to Base64 and decode Base64 to text with UtilityHub's free online tool.">
+  <title>Base64 Encoder &amp; Decoder - UtilityHub</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="brand">Utility<span>Hub</span></a>
+      <a href="../../index.html" class="back-link">← Back to Home</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">DEVELOPER TOOLS</span>
+      <h1>Base64 <span>Encoder &amp; Decoder</span></h1>
+      <p>Encode text into Base64 or decode Base64 back into readable text.</p>
+    </section>
+
+    <section class="tool-panel">
+      <div class="panel-heading">
+        <div>
+          <h2>Base64 Converter</h2>
+          <p>Enter text or a Base64 string to get started.</p>
+        </div>
+      </div>
+
+      <label class="field-label" for="base64Input">Input Text</label>
+      <textarea
+        id="base64Input"
+        spellcheck="false"
+        placeholder="Enter text or paste Base64 here..."
+        aria-label="Input text or Base64"
+      ></textarea>
+
+      <div class="button-row primary-actions">
+        <button id="encodeButton" class="btn btn-primary" type="button">Encode to Base64</button>
+        <button id="decodeButton" class="btn btn-secondary" type="button">Decode Base64</button>
+        <button id="sampleButton" class="btn btn-light" type="button">Load Sample</button>
+        <button id="clearButton" class="btn btn-light" type="button">Clear</button>
+      </div>
+
+      <div id="statusBox" class="status-box" role="status" aria-live="polite">
+        <strong id="statusTitle">Ready</strong>
+        <p id="statusMessage">Enter text, then choose Encode or Decode.</p>
+      </div>
+
+      <div class="output-heading">
+        <label class="field-label" for="base64Output">Output</label>
+        <span id="base64Status" class="status-chip">Waiting for input</span>
+      </div>
+
+      <textarea
+        id="base64Output"
+        spellcheck="false"
+        placeholder="Your result will appear here..."
+        aria-label="Base64 conversion output"
+        readonly
+      ></textarea>
+
+      <div class="button-row output-actions">
+        <button id="copyButton" class="btn btn-primary" type="button">Copy Output</button>
+        <button id="useOutputButton" class="btn btn-secondary" type="button">Use Output as Input</button>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <span>Input characters</span>
+          <strong id="inputCount">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Output characters</span>
+          <strong id="outputCount">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to use Base64 Encoder &amp; Decoder</h2>
+      <ol>
+        <li>Enter text or paste a Base64 string into the input box.</li>
+        <li>Click Encode to convert text to Base64.</li>
+        <li>Click Decode to convert Base64 back into text.</li>
+        <li>Copy the output or use it as your next input.</li>
+      </ol>
+
+      <h2>What is Base64?</h2>
+      <p>Base64 represents binary data using a set of printable characters. It is commonly used to transfer or represent data in text-based formats.</p>
+
+      <p class="privacy-note"><strong>Security note:</strong> Base64 is an encoding format, not encryption. Anyone can decode it, so never use it to protect passwords, secrets, or private information.</p>
+    </section>
+
+    <footer class="site-footer">
+      <p>© 2026 UtilityHub. Free online tools.</p>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Delete unwanted pages from a PDF online for free. Choose pages to remove and download the remaining pages as a new PDF.">
+  <title>PDF Page Delete - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">FREE ONLINE PDF TOOL</p>
+      <h1>PDF Page Delete</h1>
+      <p>Remove unwanted pages from your PDF and download a clean, updated document.</p>
+    </section>
+
+    <section class="tool-card">
+      <div id="uploadArea" class="upload-area">
+        <div class="pdf-icon">PDF</div>
+        <h2>Choose a PDF file</h2>
+        <p>Select the PDF you want to clean up.</p>
+<label for="pdfInput" class="button primary">Choose PDF File</label>
+<input id="pdfInput" type="file" accept=".pdf,application/pdf" hidden>        <p class="small-note">Your PDF is processed locally in your browser.</p>
+      </div>
+
+      <div id="workspace" hidden>
+        <div class="file-card">
+          <div class="pdf-icon small">PDF</div>
+          <div class="file-info">
+            <strong id="fileName">document.pdf</strong>
+            <span id="pageCount"></span>
+          </div>
+          <button id="changePdfButton" class="button secondary" type="button">Change PDF</button>
+        </div>
+
+        <label class="field-label" for="deletePages">Pages to delete</label>
+        <input id="deletePages" type="text" placeholder="Example: 2,4,7-9" autocomplete="off">
+        <p class="help-text">Enter page numbers separated by commas. Use a hyphen for a range, e.g. 2,4,7-9.</p>
+
+        <div class="selection-summary">
+          <strong id="selectionCount">0 pages selected for deletion</strong>
+          <p id="selectionPreview">Enter the page numbers you want to remove.</p>
+          <p id="remainingCount">Remaining pages: —</p>
+        </div>
+
+        <p id="statusMessage" class="status" role="status" aria-live="polite"></p>
+
+        <button id="deleteButton" class="button danger full-width" type="button">Delete Selected Pages</button>
+        <button id="resetButton" class="button secondary full-width" type="button">Start Over</button>
+
+        <div id="resultArea" class="result-area" hidden>
+          <h2>Your updated PDF is ready!</h2>
+          <p id="resultDetails"></p>
+          <a id="downloadLink" class="button primary full-width" href="#" download="utilityhub-pages-deleted.pdf">Download PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to delete PDF pages</h2>
+      <ol>
+        <li>Choose a PDF from your device.</li>
+        <li>Enter the page numbers you want to remove.</li>
+        <li>Click Delete Selected Pages and download the updated PDF.</li>
+      </ol>
+      <h2>Frequently asked questions</h2>
+      <h3>Can I delete multiple pages at once?</h3>
+      <p>Yes. Use a comma-separated list such as 2,4,7-9.</p>
+      <h3>Will the original PDF be changed?</h3>
+      <p>No. The tool creates a separate PDF and leaves your original file unchanged.</p>
+      <h3>Is my PDF uploaded to a server?</h3>
+      <p>No upload to our server is needed. Processing takes place in your browser.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>UtilityHub · Simple tools for everyday tasks</p>
+  </footer>
+</body>
+</html>

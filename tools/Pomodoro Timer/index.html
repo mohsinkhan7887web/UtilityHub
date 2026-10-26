@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Focus better with the free UtilityHub Pomodoro Timer. Study, work, and take breaks with a simple productivity timer.">
+  <title>Pomodoro Timer | UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="page">
+    <section class="timer-card">
+      <span class="eyebrow">STUDY SMARTER</span>
+      <h1>Pomodoro Timer</h1>
+      <p class="subtitle">Focus on one task at a time. Small breaks make a difference.</p>
+
+      <div class="mode-tabs" role="group" aria-label="Timer mode">
+        <button class="mode-btn active" data-mode="focus" type="button">Focus</button>
+        <button class="mode-btn" data-mode="short" type="button">Short Break</button>
+        <button class="mode-btn" data-mode="long" type="button">Long Break</button>
+      </div>
+
+      <div class="timer-circle" id="timerCircle">
+        <div class="timer-content">
+          <span id="modeLabel">FOCUS TIME</span>
+          <div class="time" id="timeDisplay" role="timer" aria-live="off">25:00</div>
+          <p id="timerStatus" aria-live="polite">Ready when you are</p>
+        </div>
+      </div>
+
+      <div class="timer-controls">
+        <button id="startPauseBtn" class="primary-btn" type="button">Start Focus</button>
+        <button id="resetBtn" class="secondary-btn" type="button">Reset</button>
+      </div>
+
+      <div class="session-info">
+        <div class="info-box">
+          <span class="info-label">Completed focus sessions</span>
+          <strong id="sessionCount">0</strong>
+        </div>
+        <div class="info-box">
+          <span class="info-label">Next long break</span>
+          <strong id="sessionsUntilBreak">4 sessions</strong>
+        </div>
+      </div>
+
+      <div class="settings">
+        <h2>Timer settings</h2>
+        <p>Customize your study and break durations.</p>
+
+        <div class="settings-grid">
+          <label>
+            Focus (minutes)
+            <input id="focusMinutes" type="number" min="1" max="120" value="25">
+          </label>
+          <label>
+            Short break (minutes)
+            <input id="shortMinutes" type="number" min="1" max="60" value="5">
+          </label>
+          <label>
+            Long break (minutes)
+            <input id="longMinutes" type="number" min="1" max="60" value="15">
+          </label>
+        </div>
+
+        <button id="saveSettingsBtn" class="secondary-btn save-btn" type="button">Save Settings</button>
+        <p id="settingsMessage" class="settings-message" aria-live="polite"></p>
+      </div>
+
+      <p class="tip">💡 Tip: Put your phone away and focus on just one task during each session.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 UtilityHub · Simple tools for everyday life</p>
+  </footer>
+</body>
+</html>

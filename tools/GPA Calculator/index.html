@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate your semester GPA using subject credits and grade points with UtilityHub's free GPA Calculator.">
+  <title>GPA Calculator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">STUDENT TOOLS</span>
+      <h1>GPA Calculator</h1>
+      <p>Calculate your semester GPA using your subjects, credits and grade points.</p>
+    </section>
+
+    <section class="calculator-card">
+      <div class="section-heading">
+        <div>
+          <h2>Semester Details</h2>
+          <p>Add each subject and enter its credits and grade points.</p>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label for="semesterName">Semester / Term (optional)</label>
+        <input type="text" id="semesterName" placeholder="e.g. Semester 5">
+      </div>
+
+      <div class="subjects-heading">
+        <h2>Your Subjects</h2>
+        <span id="subjectCount">1 subject</span>
+      </div>
+
+      <div class="subject-labels">
+        <span>Subject Name</span>
+        <span>Credits</span>
+        <span>Grade Point (0–10)</span>
+        <span>Action</span>
+      </div>
+
+      <div id="subjectsContainer">
+        <div class="subject-row">
+          <input type="text" class="subject-name" placeholder="e.g. Accounting" aria-label="Subject name">
+          <input type="number" class="subject-credits" min="0.01" max="100" step="any" placeholder="4" aria-label="Subject credits">
+          <input type="number" class="subject-grade" min="0" max="10" step="any" placeholder="8" aria-label="Grade point">
+          <button type="button" class="remove-btn" aria-label="Remove subject" disabled>×</button>
+        </div>
+      </div>
+
+      <button type="button" id="addSubjectBtn" class="secondary-btn">＋ Add Subject</button>
+
+      <div class="button-row">
+        <button type="button" id="calculateBtn" class="primary-btn">Calculate GPA</button>
+        <button type="button" id="resetBtn" class="reset-btn">Reset</button>
+      </div>
+
+      <p id="errorMessage" class="error-message" role="alert" hidden></p>
+
+      <section id="resultSection" class="result-section" aria-live="polite" hidden>
+        <p class="result-label" id="resultSemester">SEMESTER GPA</p>
+        <div class="gpa-value" id="gpaValue">0.00</div>
+        <p class="result-caption">Your calculated Grade Point Average</p>
+
+        <div class="result-details">
+          <div class="result-item">
+            <span>Total Credits</span>
+            <strong id="totalCredits">0</strong>
+          </div>
+          <div class="result-item">
+            <span>Weighted Grade Points</span>
+            <strong id="weightedPoints">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <div class="formula-box">
+        <h3>How is GPA calculated?</h3>
+        <p>GPA = Total of (Grade Point × Subject Credits) ÷ Total Credits</p>
+        <p class="note">This calculator uses a 0–10 grade-point scale. Enter the grade points and credits used by your institution.</p>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <p>Free online student tool · UtilityHub</p>
+    </footer>
+  </main>
+</body>
+</html>

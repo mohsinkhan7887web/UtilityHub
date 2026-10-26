@@ -1,0 +1,753 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================= HEADER ================= */
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.navigation {
+    display: flex;
+    gap: 24px;
+}
+
+.navigation a {
+    color: #475569;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    color: #2563eb;
+}
+
+
+/* ================= MAIN ================= */
+
+.tool-page {
+    max-width: 950px;
+    margin: auto;
+    padding: 32px 20px 70px;
+}
+
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+
+    color: #64748b;
+    font-size: 14px;
+
+    margin-bottom: 35px;
+}
+
+.breadcrumb a {
+    color: #2563eb;
+}
+
+
+/* ================= HERO ================= */
+
+.tool-hero {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.tool-badge {
+    display: inline-block;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    padding: 7px 14px;
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.tool-hero h1 {
+    font-size: 42px;
+    line-height: 1.15;
+
+    margin-bottom: 15px;
+}
+
+.tool-hero p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #64748b;
+
+    font-size: 17px;
+}
+
+
+/* ================= SPLIT CARD ================= */
+
+.split-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(15, 23, 42, 0.07);
+}
+
+
+/* ================= UPLOAD ================= */
+
+.upload-area {
+    border: 2px dashed #cbd5e1;
+
+    border-radius: 16px;
+
+    padding: 55px 25px;
+
+    text-align: center;
+
+    background: #f8fafc;
+
+    transition: 0.25s ease;
+}
+
+.upload-area:hover {
+    border-color: #2563eb;
+
+    background: #eff6ff;
+}
+
+.upload-icon {
+    font-size: 48px;
+
+    margin-bottom: 12px;
+}
+
+.upload-area h2 {
+    font-size: 23px;
+
+    margin-bottom: 8px;
+}
+
+.upload-area p {
+    color: #64748b;
+
+    margin-bottom: 20px;
+}
+
+.upload-button {
+    display: inline-block;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.upload-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+.file-types {
+    display: block;
+
+    margin-top: 13px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* ================= WORKSPACE ================= */
+
+.workspace {
+    margin-top: 25px;
+}
+
+
+/* ================= FILE INFO ================= */
+
+.file-info-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 13px;
+
+    padding: 15px;
+
+    margin-bottom: 25px;
+}
+
+.pdf-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.file-details {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.file-details strong {
+    display: block;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.file-details span {
+    display: inline-block;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    margin-right: 12px;
+}
+
+
+/* ================= SPLIT OPTIONS ================= */
+
+.split-options {
+    margin-top: 10px;
+}
+
+.split-options h2 {
+    font-size: 21px;
+
+    margin-bottom: 15px;
+}
+
+.option-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.option-card {
+    position: relative;
+
+    display: block;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.option-card:hover {
+    border-color: #93c5fd;
+
+    background: #f8fbff;
+}
+
+.option-card input {
+    position: absolute;
+
+    opacity: 0;
+}
+
+.option-card:has(input:checked) {
+    border-color: #2563eb;
+
+    background: #eff6ff;
+
+    box-shadow:
+        0 0 0 2px rgba(37, 99, 235, 0.08);
+}
+
+.option-content {
+    display: block;
+}
+
+.option-content strong {
+    display: block;
+
+    margin-bottom: 4px;
+}
+
+.option-content small {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ================= RANGE ================= */
+
+.range-section {
+    margin-top: 25px;
+}
+
+.range-section label {
+    display: block;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+#pageRange {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #0f172a;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+#pageRange:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input-help {
+    margin-top: 8px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ================= ACTIONS ================= */
+
+.action-row {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.clear-button,
+.secondary-button,
+.split-button {
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 13px 20px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.clear-button {
+    background: #fee2e2;
+
+    color: #b91c1c;
+}
+
+.clear-button:hover {
+    background: #fecaca;
+}
+
+.secondary-button {
+    background: #e2e8f0;
+
+    color: #334155;
+}
+
+.secondary-button:hover {
+    background: #cbd5e1;
+}
+
+.split-button {
+    flex: 1;
+
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+.split-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+.split-button:disabled {
+    background: #94a3b8;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* ================= RESULT ================= */
+
+.result-area {
+    margin-top: 30px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #e2e8f0;
+
+    text-align: center;
+}
+
+.success-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    background: #dcfce7;
+
+    color: #16a34a;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+.result-area h2 {
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+.result-area p {
+    color: #64748b;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= DOWNLOAD LIST ================= */
+
+.download-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    text-align: left;
+}
+
+.download-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+}
+
+.download-item-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.download-item-info strong {
+    display: block;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.download-item-info span {
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.download-link {
+    flex-shrink: 0;
+
+    background: #16a34a;
+
+    color: #ffffff;
+
+    padding: 9px 13px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.download-link:hover {
+    background: #15803d;
+}
+
+
+/* ================= INFO ================= */
+
+.info-section {
+    margin-top: 45px;
+}
+
+.info-section h2 {
+    font-size: 24px;
+
+    margin: 30px 0 12px;
+}
+
+.info-section p,
+.info-section li {
+    color: #64748b;
+}
+
+.info-section ol {
+    padding-left: 22px;
+}
+
+.info-section li {
+    margin-bottom: 7px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.site-footer {
+    border-top: 1px solid #e2e8f0;
+
+    background: #ffffff;
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+
+    .header-inner {
+        padding: 16px 18px;
+    }
+
+    .navigation {
+        gap: 14px;
+    }
+
+    .navigation a {
+        font-size: 13px;
+    }
+
+    .tool-page {
+        padding: 25px 15px 55px;
+    }
+
+    .tool-hero h1 {
+        font-size: 34px;
+    }
+
+    .tool-hero p {
+        font-size: 15px;
+    }
+
+    .split-card {
+        padding: 18px;
+
+        border-radius: 16px;
+    }
+
+    .upload-area {
+        padding: 40px 15px;
+    }
+
+    .file-info-card {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .file-info-card .secondary-button {
+        width: 100%;
+    }
+
+    .option-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .action-row {
+        flex-direction: column;
+    }
+
+    .clear-button,
+    .secondary-button,
+    .split-button {
+        width: 100%;
+    }
+
+    .download-item {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .download-link {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 400px) {
+
+    .header-inner {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .tool-hero h1 {
+        font-size: 30px;
+    }
+
+}

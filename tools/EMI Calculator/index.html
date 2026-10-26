@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate monthly loan EMI, total interest and total repayment with UtilityHub's free EMI Calculator.">
+  <title>EMI Calculator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">FREE ONLINE TOOL</span>
+      <h1>EMI Calculator</h1>
+      <p>Calculate your monthly instalment, total interest and loan repayment.</p>
+    </section>
+
+    <section class="calculator-card">
+      <form id="emiForm">
+        <div class="field">
+          <label for="loanAmount">Loan Amount (₹)</label>
+          <input
+            type="number"
+            id="loanAmount"
+            min="1"
+            step="any"
+            placeholder="e.g. 500000"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="interestRate">Annual Interest Rate (%)</label>
+          <input
+            type="number"
+            id="interestRate"
+            min="0"
+            step="any"
+            placeholder="e.g. 8.5"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="loanTenure">Loan Tenure (Years)</label>
+          <input
+            type="number"
+            id="loanTenure"
+            min="0.01"
+            step="any"
+            placeholder="e.g. 5"
+            required
+          >
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="primary-btn">Calculate EMI</button>
+          <button type="reset" class="secondary-btn">Clear</button>
+        </div>
+      </form>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+
+      <section id="result" class="result" hidden aria-live="polite">
+        <h2>Your EMI Summary</h2>
+
+        <div class="result-grid">
+          <div class="result-item highlight">
+            <span>Monthly EMI</span>
+            <strong id="monthlyEmi">₹0.00</strong>
+          </div>
+
+          <div class="result-item">
+            <span>Total Interest</span>
+            <strong id="totalInterest">₹0.00</strong>
+          </div>
+
+          <div class="result-item">
+            <span>Total Repayment</span>
+            <strong id="totalPayment">₹0.00</strong>
+          </div>
+
+          <div class="result-item">
+            <span>Number of Monthly Payments</span>
+            <strong id="numberOfPayments">0</strong>
+          </div>
+        </div>
+
+        <div class="formula-box">
+          <strong>EMI Formula</strong>
+          <p>EMI = P × r × (1 + r)<sup>n</sup> ÷ ((1 + r)<sup>n</sup> − 1)</p>
+          <small>P = loan principal, r = monthly interest rate, n = number of monthly payments.</small>
+        </div>
+      </section>
+    </section>
+
+    <section class="info">
+      <h2>How to use the EMI Calculator</h2>
+      <ol>
+        <li>Enter the amount you want to borrow.</li>
+        <li>Enter the annual interest rate offered by the lender.</li>
+        <li>Enter the loan tenure in years.</li>
+        <li>Click Calculate EMI to estimate your monthly payment.</li>
+      </ol>
+      <p><strong>Note:</strong> This is an estimate based on a fixed interest rate and regular monthly payments. Actual lender charges and repayment schedules may differ.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 UtilityHub. Free online tools.</p>
+  </footer>
+</body>
+</html>

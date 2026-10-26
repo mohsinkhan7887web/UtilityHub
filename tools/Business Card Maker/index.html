@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a professional business card online. Customize your details, colors, and design, then print or save as PDF for free.">
+  <title>Business Card Maker | UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <span class="eyebrow">FREE DESIGN TOOL</span>
+      <h1>Business Card Maker</h1>
+      <p>Create a professional business card in minutes. Enter your details, choose a style, and print or save your card as a PDF.</p>
+    </section>
+
+    <div class="workspace">
+      <section class="panel editor">
+        <h2>Customize Your Card</h2>
+        <p class="muted">Fill in your details below to update the preview.</p>
+
+        <form id="cardForm">
+          <div class="field">
+            <label for="personName">Full name *</label>
+            <input id="personName" type="text" placeholder="e.g. Mohammed Ali" maxlength="60" required>
+          </div>
+
+          <div class="field">
+            <label for="jobTitle">Job title / Profession</label>
+            <input id="jobTitle" type="text" placeholder="e.g. Digital Marketing Specialist" maxlength="70">
+          </div>
+
+          <div class="field">
+            <label for="companyName">Company / Business name</label>
+            <input id="companyName" type="text" placeholder="e.g. Your Business" maxlength="70">
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" type="email" placeholder="you@example.com" maxlength="100">
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" type="tel" placeholder="+91 98765 43210" maxlength="30">
+          </div>
+
+          <div class="field">
+            <label for="website">Website</label>
+            <input id="website" type="text" placeholder="www.example.com" maxlength="100">
+          </div>
+
+          <div class="field">
+            <label for="address">Address (optional)</label>
+            <textarea id="address" rows="2" placeholder="City, State" maxlength="120"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="template">Card style</label>
+            <select id="template">
+              <option value="classic">Classic Blue</option>
+              <option value="dark">Modern Dark</option>
+              <option value="green">Fresh Green</option>
+              <option value="minimal">Minimal White</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="accentColor">Accent color</label>
+            <div class="color-control">
+              <input id="accentColor" type="color" value="#3977f6">
+              <span id="colorValue">#3977F6</span>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn-primary" type="button" id="printBtn">Print / Save PDF</button>
+            <button class="btn btn-secondary" type="button" id="resetBtn">Reset Form</button>
+          </div>
+          <p class="note">Tip: In the print window, choose “Save as PDF” to save your card digitally.</p>
+        </form>
+      </section>
+
+      <section class="panel preview-panel">
+        <div class="preview-heading">
+          <div>
+            <h2>Live Preview</h2>
+            <p class="muted">Your card updates as you type.</p>
+          </div>
+          <span class="preview-tag">PREVIEW</span>
+        </div>
+
+        <div class="preview-stage">
+          <article class="business-card classic" id="businessCard">
+            <div class="card-accent"></div>
+            <div class="card-content">
+              <div class="card-brand" id="previewCompany">YOUR BUSINESS</div>
+              <div class="card-main">
+                <h3 id="previewName">Your Name</h3>
+                <p class="preview-job" id="previewJob">Your Profession</p>
+              </div>
+              <div class="card-divider"></div>
+              <div class="contact-list">
+                <p id="previewEmail">✉ your@email.com</p>
+                <p id="previewPhone">☎ +91 00000 00000</p>
+                <p id="previewWebsite">🌐 www.example.com</p>
+                <p id="previewAddress">⌖ Your City</p>
+              </div>
+            </div>
+            <div class="card-decoration"></div>
+          </article>
+        </div>
+
+        <div class="preview-info">
+          <span>Standard landscape layout</span>
+          <span>3.5 × 2 inches</span>
+        </div>
+        <div class="privacy-note">
+          <strong>Your information stays in your browser.</strong>
+          <p>This tool does not send your card details to a server.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© UtilityHub · Free online tools for everyday work</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

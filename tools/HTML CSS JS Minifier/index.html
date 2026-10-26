@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Minify HTML, CSS and JavaScript online with UtilityHub. Remove unnecessary whitespace and comments from your code in your browser.">
+  <title>HTML CSS JS Minifier - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+      <a class="back-link" href="../../index.html">← All Tools</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">DEVELOPER TOOL</p>
+      <h1>HTML / CSS / JS Minifier</h1>
+      <p>Make your code more compact by removing unnecessary whitespace and comments.</p>
+    </section>
+
+    <section class="tool-panel">
+      <div class="panel-heading">
+        <h2>Minify Your Code</h2>
+        <p>Select a code type, paste your code, and generate a compact version.</p>
+      </div>
+
+      <label class="field-label" for="codeType">Code Type</label>
+      <select id="codeType" class="code-select">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+      </select>
+
+      <label class="field-label" for="codeInput">Input Code</label>
+      <textarea id="codeInput" placeholder="Paste your HTML, CSS or JavaScript here..." spellcheck="false"></textarea>
+
+      <div class="button-row primary-actions">
+        <button type="button" id="minifyButton" class="btn btn-primary">Minify Code</button>
+        <button type="button" id="sampleButton" class="btn btn-secondary">Load Sample</button>
+        <button type="button" id="clearButton" class="btn btn-light">Clear</button>
+      </div>
+
+      <div id="statusBox" class="status-box warning" role="status" aria-live="polite">
+        <strong id="statusTitle">Ready to use</strong>
+        <p id="statusMessage">Choose a code type and enter your code.</p>
+      </div>
+
+      <div class="output-heading">
+        <label class="field-label" for="codeOutput">Minified Output</label>
+        <span id="codeStatus" class="status-chip">Waiting</span>
+      </div>
+
+      <textarea id="codeOutput" placeholder="Your minified code will appear here..." spellcheck="false" readonly></textarea>
+
+      <div class="button-row output-actions">
+        <button type="button" id="copyButton" class="btn btn-primary">Copy Output</button>
+        <button type="button" id="useOutputButton" class="btn btn-secondary">Use Output as Input</button>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <span>Original Size</span>
+          <strong id="originalSize">0 bytes</strong>
+        </div>
+        <div class="stat-card">
+          <span>Minified Size</span>
+          <strong id="minifiedSize">0 bytes</strong>
+        </div>
+        <div class="stat-card">
+          <span>Space Saved</span>
+          <strong id="spaceSaved">0%</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>What does a code minifier do?</h2>
+      <p>A minifier removes unnecessary characters from code to reduce file size. This tool provides lightweight, browser-based minification for HTML, CSS and JavaScript.</p>
+
+      <h2>How to use this tool</h2>
+      <ol>
+        <li>Select HTML, CSS or JavaScript.</li>
+        <li>Paste your source code.</li>
+        <li>Click Minify Code and review the result.</li>
+        <li>Copy the output for your project.</li>
+      </ol>
+
+      <p class="privacy-note"><strong>Important:</strong> Always keep a backup of your original code. Lightweight minification may not handle every language edge case or complex syntax. Test minified code before using it in production.</p>
+      <p class="privacy-note"><strong>Privacy:</strong> This tool processes your code in your browser; it does not intentionally upload your code.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 UtilityHub. Free online tools.</p>
+  </footer>
+</body>
+</html>

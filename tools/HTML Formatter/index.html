@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Format, validate, and minify HTML code online with UtilityHub's free HTML Formatter."
+  >
+  <meta name="robots" content="index, follow">
+  <title>HTML Formatter &amp; Validator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← Back to Home</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">Developer Tools</span>
+      <h1>HTML Formatter &amp; Validator</h1>
+      <p>
+        Format messy HTML, check common markup problems, and minify your
+        code with this free online tool.
+      </p>
+    </section>
+
+    <section class="tool-panel">
+      <div class="editor-heading">
+        <h2>Input HTML</h2>
+        <span class="editor-hint">Paste your HTML code below</span>
+      </div>
+
+      <label class="field-label" for="htmlInput">Your HTML code</label>
+      <textarea
+        id="htmlInput"
+        spellcheck="false"
+        autocapitalize="off"
+        autocomplete="off"
+        placeholder="Paste your HTML code here..."
+      ></textarea>
+
+      <div class="settings">
+        <div class="field-group">
+          <label for="indentSize">Indentation</label>
+          <select id="indentSize">
+            <option value="2" selected>2 spaces</option>
+            <option value="4">4 spaces</option>
+            <option value="tab">Tab</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="formatButton" class="btn btn-primary" type="button">
+          Format HTML
+        </button>
+        <button id="validateButton" class="btn btn-secondary" type="button">
+          Check HTML
+        </button>
+        <button id="minifyButton" class="btn btn-secondary" type="button">
+          Minify HTML
+        </button>
+        <button id="sampleButton" class="btn btn-secondary" type="button">
+          Load Sample
+        </button>
+        <button id="clearButton" class="btn btn-secondary" type="button">
+          Clear
+        </button>
+      </div>
+
+      <div id="statusBox" class="status-box" role="status" aria-live="polite">
+        <h3 id="statusTitle">Ready to use</h3>
+        <p id="statusMessage">
+          Paste HTML code or load the sample to get started.
+        </p>
+      </div>
+
+      <section class="output-section">
+        <div class="output-heading">
+          <h2>Output HTML</h2>
+          <span class="editor-hint">Your processed code appears here</span>
+        </div>
+
+        <label class="field-label" for="htmlOutput">Formatted output</label>
+        <textarea
+          id="htmlOutput"
+          spellcheck="false"
+          readonly
+          placeholder="Your output will appear here..."
+        ></textarea>
+
+        <div class="output-actions">
+          <button id="copyButton" class="btn btn-primary" type="button">
+            Copy Output
+          </button>
+          <button id="useOutputButton" class="btn btn-secondary" type="button">
+            Use Output as Input
+          </button>
+          <button id="downloadButton" class="btn btn-secondary" type="button">
+            Download HTML
+          </button>
+        </div>
+      </section>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <span class="result-label">Input characters</span>
+          <strong id="inputCount">0</strong>
+        </div>
+        <div class="result-card">
+          <span class="result-label">Output characters</span>
+          <strong id="outputCount">0</strong>
+        </div>
+        <div class="result-card">
+          <span class="result-label">Check status</span>
+          <strong id="htmlStatus">Ready</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to use the HTML Formatter</h2>
+      <ul>
+        <li>Paste your HTML markup into the input editor.</li>
+        <li>Choose your preferred indentation size.</li>
+        <li>Click Format HTML to organize the markup.</li>
+        <li>Click Check HTML to look for common structural issues.</li>
+        <li>Use Minify HTML to remove unnecessary whitespace and comments.</li>
+        <li>Copy the output or download it as an HTML file.</li>
+      </ul>
+
+      <div class="note">
+        Privacy note: your code is processed locally in your browser.
+        This tool does not need to upload your HTML to a server.
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© UtilityHub — Free online tools for everyday tasks.</p>
+  </footer>
+</body>
+</html>

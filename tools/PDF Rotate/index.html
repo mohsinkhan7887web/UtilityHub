@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f8fc">
+    <title>PDF Rotate - Rotate PDF Pages Online | UtilityHub</title>
+    <meta name="description" content="Rotate PDF pages online by 90, 180 or 270 degrees. Adjust individual pages or rotate your entire PDF and download the updated file.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+        <a class="back-link" href="../../index.html">← All Tools</a>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <span class="eyebrow">FREE ONLINE PDF TOOL</span>
+            <h1>Rotate PDF Pages</h1>
+            <p>Rotate individual PDF pages or adjust every page at once. Download your corrected PDF directly to your device.</p>
+        </section>
+
+        <section class="tool-panel">
+            <div id="uploadArea" class="upload-area">
+                <div class="upload-icon">↻</div>
+                <h2>Choose a PDF file</h2>
+                <p>Select the PDF whose page orientation you want to correct.</p>
+                <button type="button" id="choosePdfButton" class="primary-button">Choose PDF</button>
+                <p class="small-note">Your PDF is processed in your browser.</p>
+                <input type="file" id="pdfInput" accept=".pdf,application/pdf" hidden>
+            </div>
+
+            <div id="workspace" hidden>
+                <div class="file-summary">
+                    <div class="file-icon">PDF</div>
+                    <div class="file-details">
+                        <strong id="fileName">document.pdf</strong>
+                        <span id="fileSize"></span>
+                        <span id="pageCount"></span>
+                    </div>
+                    <button type="button" id="changePdfButton" class="secondary-button">Change PDF</button>
+                </div>
+
+                <div class="rotation-settings">
+                    <h2>Rotation settings</h2>
+                    <p>Choose how you want to rotate your PDF pages.</p>
+
+                    <label for="rotationAngle">Rotation angle</label>
+                    <select id="rotationAngle">
+                        <option value="90">90° clockwise</option>
+                        <option value="180">180°</option>
+                        <option value="270">270° clockwise (90° counterclockwise)</option>
+                    </select>
+
+                    <label for="rotationMode">Apply rotation to</label>
+                    <select id="rotationMode">
+                        <option value="all">All pages</option>
+                        <option value="selected">Selected pages only</option>
+                    </select>
+
+                    <div id="pageSelectionArea" hidden>
+                        <label for="pageSelection">Page numbers</label>
+                        <input
+                            type="text"
+                            id="pageSelection"
+                            placeholder="Example: 1,3,5-7"
+                            autocomplete="off"
+                        >
+                        <p class="small-note">Enter page numbers separated by commas or ranges. Example: 1,3,5-7.</p>
+                    </div>
+                </div>
+
+                <div class="action-row">
+                    <button type="button" id="clearButton" class="secondary-button">Clear PDF</button>
+                    <button type="button" id="rotateButton" class="primary-button">Rotate PDF</button>
+                </div>
+            </div>
+
+            <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
+
+            <div id="resultArea" class="result-area" hidden>
+                <div class="success-icon">✓</div>
+                <h2>Your rotated PDF is ready!</h2>
+                <p id="resultDetails"></p>
+                <a id="downloadLink" class="primary-button download-button" href="#" download="utilityhub-rotated.pdf">Download Rotated PDF</a>
+                <button type="button" id="rotateAnotherButton" class="secondary-button">Rotate Another PDF</button>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2>How to rotate a PDF</h2>
+            <ol>
+                <li>Upload your PDF file.</li>
+                <li>Select a rotation angle: 90°, 180° or 270°.</li>
+                <li>Choose all pages or enter specific page numbers.</li>
+                <li>Click Rotate PDF and download the updated document.</li>
+            </ol>
+        </section>
+
+        <section class="info-section">
+            <h2>About this PDF Rotate tool</h2>
+            <p>Correct sideways or upside-down PDF pages before printing, sharing or reading. The tool changes page orientation in the PDF document itself and processes the file in your browser.</p>
+
+            <h3>Frequently asked questions</h3>
+            <h4>Can I rotate just one page?</h4>
+            <p>Yes. Choose Selected pages only and enter the page number you want to rotate.</p>
+
+            <h4>Will the original PDF be changed?</h4>
+            <p>No. The tool creates a separate rotated PDF for download. Your original file remains unchanged.</p>
+
+            <h4>Are my documents uploaded to a server?</h4>
+            <p>This tool processes the selected PDF locally in your browser and does not upload it to a UtilityHub server.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a href="../../index.html">UtilityHub</a>
+        <p>Free online tools for everyday tasks.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

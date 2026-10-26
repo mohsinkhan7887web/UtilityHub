@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate your class attendance percentage and find out how many classes you need to attend to reach your target.">
+  <title>Attendance Calculator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">STUDENT TOOLS</span>
+      <h1>Attendance Calculator</h1>
+      <p>Check your attendance percentage and calculate how many classes you need to attend to reach your target.</p>
+    </section>
+
+    <section class="calculator-card">
+      <div class="section-heading">
+        <h2>Your Attendance Details</h2>
+        <p>Enter the number of classes held and the classes you attended.</p>
+      </div>
+
+      <div class="form-grid">
+        <div class="field-group">
+          <label for="totalClasses">Total Classes Held</label>
+          <input type="number" id="totalClasses" min="1" step="1" placeholder="e.g. 100">
+        </div>
+
+        <div class="field-group">
+          <label for="attendedClasses">Classes Attended</label>
+          <input type="number" id="attendedClasses" min="0" step="1" placeholder="e.g. 72">
+        </div>
+
+        <div class="field-group full-width">
+          <label for="targetPercentage">Target Attendance (%)</label>
+          <input type="number" id="targetPercentage" min="0.01" max="100" step="any" value="75">
+          <p class="field-hint">Set your institution's required attendance percentage.</p>
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button type="button" id="calculateBtn" class="primary-btn">Calculate Attendance</button>
+        <button type="button" id="resetBtn" class="reset-btn">Reset</button>
+      </div>
+
+      <p id="errorMessage" class="error-message" role="alert" hidden></p>
+
+      <section id="resultSection" class="result-section" aria-live="polite" hidden>
+        <p class="result-label">YOUR ATTENDANCE</p>
+        <div class="percentage-value">
+          <span id="attendanceValue">0.00</span><span class="percent-sign">%</span>
+        </div>
+
+        <div class="progress-track" role="progressbar" aria-label="Attendance percentage" aria-valuemin="0" aria-valuemax="100" id="attendanceProgress">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <p id="statusMessage" class="status-message"></p>
+
+        <div class="result-details">
+          <div class="result-item">
+            <span>Total Classes Held</span>
+            <strong id="resultTotal">0</strong>
+          </div>
+          <div class="result-item">
+            <span>Classes Attended</span>
+            <strong id="resultAttended">0</strong>
+          </div>
+          <div class="result-item">
+            <span>Classes Missed</span>
+            <strong id="resultMissed">0</strong>
+          </div>
+          <div class="result-item">
+            <span>Target Attendance</span>
+            <strong id="resultTarget">75%</strong>
+          </div>
+        </div>
+
+        <div class="target-box">
+          <h3>How to reach your target</h3>
+          <p id="targetMessage"></p>
+        </div>
+      </section>
+
+      <div class="formula-box">
+        <h3>How is attendance calculated?</h3>
+        <p>Attendance = (Classes Attended ÷ Total Classes Held) × 100</p>
+        <p class="note">The future-class estimate assumes you attend every upcoming class and no additional classes are missed. Your institution's official attendance rules may differ.</p>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <p>Free online student tool · UtilityHub</p>
+    </footer>
+  </main>
+</body>
+</html>

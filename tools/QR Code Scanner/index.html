@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Scan QR codes online using your camera or upload an image for free with UtilityHub.">
+  <meta name="robots" content="index, follow">
+  <title>Free QR Code Scanner Online | UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <span class="eyebrow">FREE ONLINE TOOL</span>
+      <h1>QR Code Scanner</h1>
+      <p>Scan QR codes with your camera or upload an image to read the information inside.</p>
+    </section>
+
+    <section class="scanner-card">
+      <div class="tabs">
+        <button type="button" id="cameraTab" class="tab active">Scan with Camera</button>
+        <button type="button" id="uploadTab" class="tab">Upload Image</button>
+      </div>
+
+      <section id="cameraPanel" class="panel">
+        <p class="panel-description">
+          Allow camera access when your browser asks for permission.
+        </p>
+
+        <div id="reader" class="reader"></div>
+
+        <div class="button-row">
+          <button type="button" id="startBtn" class="primary-btn">Start Camera</button>
+          <button type="button" id="stopBtn" class="secondary-btn" disabled>Stop Camera</button>
+        </div>
+      </section>
+
+      <section id="uploadPanel" class="panel" hidden>
+        <p class="panel-description">Choose an image that contains a QR code.</p>
+
+        <label for="qrFile" class="file-label">Choose QR Image</label>
+        <input type="file" id="qrFile" accept="image/*">
+
+        <div id="imagePreview" class="image-preview" hidden>
+          <img id="previewImage" alt="Selected QR code image">
+        </div>
+
+        <button type="button" id="scanImageBtn" class="primary-btn" disabled>
+          Scan Uploaded Image
+        </button>
+      </section>
+
+      <p id="status" class="status" role="status" aria-live="polite">
+        Choose camera scanning or image upload to begin.
+      </p>
+
+      <section id="resultPanel" class="result-panel" hidden>
+        <h2>Scan Result</h2>
+        <textarea id="scanResult" rows="4" readonly aria-label="Scanned QR code result"></textarea>
+
+        <div class="button-row">
+          <button type="button" id="copyBtn" class="primary-btn">Copy Result</button>
+          <a id="openLink" class="secondary-btn" href="#" target="_blank" rel="noopener noreferrer" hidden>
+            Open Link
+          </a>
+        </div>
+      </section>
+    </section>
+
+    <section class="info">
+      <h2>How to scan a QR code</h2>
+      <ol>
+        <li>Choose camera scanning or image upload.</li>
+        <li>Allow camera permission or select an image.</li>
+        <li>Wait for the QR code to be detected.</li>
+        <li>Review the result before opening any link.</li>
+      </ol>
+      <p>Safety tip: Only open QR code links from sources you trust.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> UtilityHub. Free online tools.</p>
+  </footer>
+
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="script.js"></script>
+</body>
+</html>

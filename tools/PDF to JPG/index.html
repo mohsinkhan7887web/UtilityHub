@@ -1,0 +1,448 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PDF to JPG - UtilityHub</title>
+
+    <meta
+        name="description"
+        content="Convert PDF pages to JPG images online for free with UtilityHub."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <a href="../../index.html" class="logo">
+            Utility<span>Hub</span>
+        </a>
+
+        <nav class="navigation">
+            <a href="../../index.html">Home</a>
+            <a href="../../index.html#tools">All Tools</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="tool-page">
+
+    <div class="breadcrumb">
+
+        <a href="../../index.html">Home</a>
+
+        <span>›</span>
+
+        <span>PDF to JPG</span>
+
+    </div>
+
+
+    <section class="tool-hero">
+
+        <div class="tool-badge">
+            PDF Tool
+        </div>
+
+        <h1>PDF to JPG</h1>
+
+        <p>
+            Convert every PDF page into a JPG image quickly and easily.
+        </p>
+
+    </section>
+
+
+    <section class="converter-card">
+
+        <!-- UPLOAD -->
+
+        <div
+            class="upload-area"
+            id="uploadArea"
+        >
+
+            <div class="upload-icon">
+                📄
+            </div>
+
+            <h2>
+                Select a PDF File
+            </h2>
+
+            <p>
+                Choose a PDF from your device to convert its pages into JPG images.
+            </p>
+
+            <label
+                for="pdfInput"
+                class="upload-button"
+            >
+                Choose PDF
+            </label>
+
+            <input
+                type="file"
+                id="pdfInput"
+                accept=".pdf,application/pdf"
+            >
+
+            <span class="file-types">
+                PDF files only
+            </span>
+
+        </div>
+
+
+        <!-- WORKSPACE -->
+
+        <div
+            class="workspace"
+            id="workspace"
+            hidden
+        >
+
+            <div class="file-info-card">
+
+                <div class="pdf-icon">
+                    PDF
+                </div>
+
+                <div class="file-details">
+
+                    <strong id="fileName">
+                        document.pdf
+                    </strong>
+
+                    <span id="fileSize">
+                        0 KB
+                    </span>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="changeFileButton"
+                    class="secondary-button"
+                >
+                    Change PDF
+                </button>
+
+            </div>
+
+
+            <!-- QUALITY -->
+
+            <div class="settings-section">
+
+                <h2>
+                    JPG Quality
+                </h2>
+
+                <div class="quality-options">
+
+                    <label class="quality-option">
+
+                        <input
+                            type="radio"
+                            name="jpgQuality"
+                            value="0.75"
+                        >
+
+                        <span class="option-content">
+
+                            <strong>
+                                Standard
+                            </strong>
+
+                            <small>
+                                Smaller JPG files.
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <label class="quality-option">
+
+                        <input
+                            type="radio"
+                            name="jpgQuality"
+                            value="0.9"
+                            checked
+                        >
+
+                        <span class="option-content">
+
+                            <strong>
+                                High
+                            </strong>
+
+                            <small>
+                                Recommended quality and file size.
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <label class="quality-option">
+
+                        <input
+                            type="radio"
+                            name="jpgQuality"
+                            value="1"
+                        >
+
+                        <span class="option-content">
+
+                            <strong>
+                                Maximum
+                            </strong>
+
+                            <small>
+                                Highest JPG quality.
+                            </small>
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESOLUTION -->
+
+            <div class="settings-section">
+
+                <h2>
+                    Image Resolution
+                </h2>
+
+                <select
+                    id="scaleSelect"
+                    class="scale-select"
+                >
+
+                    <option value="1">
+                        Standard — 1×
+                    </option>
+
+                    <option value="1.5" selected>
+                        High — 1.5×
+                    </option>
+
+                    <option value="2">
+                        Very High — 2×
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="conversion-notice">
+
+                <strong>Private processing:</strong>
+                Your PDF is processed directly in your browser.
+
+            </div>
+
+
+            <div class="action-row">
+
+                <button
+                    type="button"
+                    id="clearButton"
+                    class="clear-button"
+                >
+                    Clear
+                </button>
+
+                <button
+                    type="button"
+                    id="convertButton"
+                    class="convert-button"
+                >
+                    Convert to JPG
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROGRESS -->
+
+        <div
+            class="progress-area"
+            id="progressArea"
+            hidden
+        >
+
+            <div class="progress-icon">
+                ⏳
+            </div>
+
+            <h2>
+                Converting PDF...
+            </h2>
+
+            <p id="progressText">
+                Preparing PDF...
+            </p>
+
+            <div class="progress-bar">
+
+                <div
+                    class="progress-fill"
+                    id="progressFill"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESULTS -->
+
+        <div
+            class="result-area"
+            id="resultArea"
+            hidden
+        >
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Conversion Complete
+            </h2>
+
+            <p id="resultMessage">
+                Your JPG images are ready.
+            </p>
+
+
+            <div
+                class="results-list"
+                id="resultsList"
+            ></div>
+
+
+            <button
+                type="button"
+                id="downloadAllButton"
+                class="download-all-button"
+            >
+                Download All JPGs
+            </button>
+
+
+            <button
+                type="button"
+                id="convertAnotherButton"
+                class="secondary-button"
+            >
+                Convert Another PDF
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- INFORMATION -->
+
+    <section class="info-section">
+
+        <h2>
+            How to Convert PDF to JPG
+        </h2>
+
+        <ol>
+
+            <li>
+                Choose your PDF file.
+            </li>
+
+            <li>
+                Select JPG quality.
+            </li>
+
+            <li>
+                Select image resolution.
+            </li>
+
+            <li>
+                Click Convert to JPG.
+            </li>
+
+            <li>
+                Download your JPG images.
+            </li>
+
+        </ol>
+
+
+        <h2>
+            What Does PDF to JPG Do?
+        </h2>
+
+        <p>
+            Every page of your PDF is converted into a separate JPG image.
+            For example, a 5-page PDF creates 5 JPG images.
+        </p>
+
+
+        <h2>
+            Private Processing
+        </h2>
+
+        <p>
+            The conversion happens directly in your browser.
+            Your PDF is not intentionally uploaded to a UtilityHub server.
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <p>
+        © 2026 UtilityHub. Free online tools for everyone.
+    </p>
+
+</footer>
+
+
+<!-- PDF.js stable browser build -->
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js">
+</script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

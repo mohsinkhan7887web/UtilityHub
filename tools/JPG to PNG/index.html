@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Convert JPG and JPEG images to PNG format online for free. Preview and download your converted image directly in your browser."
+  >
+
+  <title>JPG to PNG Converter - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">FREE ONLINE IMAGE TOOL</p>
+      <h1>JPG to PNG Converter</h1>
+      <p>Convert JPG and JPEG images into PNG format with a simple browser-based tool.</p>
+    </section>
+
+    <section class="tool-card">
+      <div id="uploadArea" class="upload-area">
+        <div class="image-icon">JPG</div>
+        <h2>Select your JPG image</h2>
+        <p>Choose a JPG or JPEG image from your device.</p>
+
+        <label for="imageInput" class="button primary">Choose JPG Image</label>
+        <input
+          id="imageInput"
+          type="file"
+          accept=".jpg,.jpeg,image/jpeg"
+          hidden
+        >
+
+        <p class="small-note">Your image is processed locally in your browser.</p>
+      </div>
+
+      <div id="workspace" hidden>
+        <div class="file-card">
+          <div class="image-icon small">JPG</div>
+          <div class="file-info">
+            <strong id="fileName">image.jpg</strong>
+            <span id="fileSize"></span>
+            <span id="imageDimensions"></span>
+          </div>
+          <button id="changeImageButton" class="button secondary" type="button">
+            Change Image
+          </button>
+        </div>
+
+        <div class="preview-section">
+          <h2>Image Preview</h2>
+          <div class="preview-frame">
+            <img id="imagePreview" alt="Selected JPG image preview">
+          </div>
+        </div>
+
+        <p id="statusMessage" class="status" role="status" aria-live="polite"></p>
+
+        <button id="convertButton" class="button primary full-width" type="button">
+          Convert to PNG
+        </button>
+
+        <div id="resultArea" class="result-area" hidden>
+          <h2>Your PNG is ready!</h2>
+          <p id="resultDetails"></p>
+
+          <a
+            id="downloadLink"
+            class="button primary full-width"
+            href="#"
+            download="utilityhub-converted.png"
+          >
+            Download PNG
+          </a>
+        </div>
+
+        <button id="resetButton" class="button secondary full-width" type="button">
+          Convert Another Image
+        </button>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to convert JPG to PNG</h2>
+      <ol>
+        <li>Choose a JPG or JPEG image from your device.</li>
+        <li>Preview the selected image and click Convert to PNG.</li>
+        <li>Download your converted PNG image.</li>
+      </ol>
+
+      <h2>Frequently asked questions</h2>
+
+      <h3>Will the image quality change?</h3>
+      <p>PNG is a lossless image format. The conversion preserves the decoded image pixels, though it does not restore detail already lost in the original JPG.</p>
+
+      <h3>Is my image uploaded to a server?</h3>
+      <p>No. This tool converts images directly in your browser.</p>
+
+      <h3>Can I convert PNG images back to JPG here?</h3>
+      <p>This tool converts JPG and JPEG images to PNG. Use the separate PNG to JPG tool for the reverse conversion.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>UtilityHub · Simple tools for everyday tasks</p>
+  </footer>
+</body>
+</html>

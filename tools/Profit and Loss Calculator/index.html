@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate profit, loss and profit or loss percentage using UtilityHub's free online calculator.">
+  <title>Profit and Loss Calculator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">FREE ONLINE TOOL</span>
+      <h1>Profit and Loss Calculator</h1>
+      <p>Find your profit, loss and percentage from buying and selling prices.</p>
+    </section>
+
+    <section class="calculator-card">
+      <form id="profitLossForm">
+        <div class="field">
+          <label for="costPrice">Cost Price (₹)</label>
+          <input
+            type="number"
+            id="costPrice"
+            min="0"
+            step="any"
+            placeholder="e.g. 1000"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="sellingPrice">Selling Price (₹)</label>
+          <input
+            type="number"
+            id="sellingPrice"
+            min="0"
+            step="any"
+            placeholder="e.g. 1250"
+            required
+          >
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="primary-btn">Calculate Result</button>
+          <button type="reset" class="secondary-btn">Clear</button>
+        </div>
+      </form>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+
+      <section id="result" class="result" hidden aria-live="polite">
+        <h2>Calculation Result</h2>
+
+        <div id="statusBadge" class="status-badge">Profit</div>
+
+        <div class="result-grid">
+          <div class="result-item">
+            <span>Cost Price</span>
+            <strong id="shownCostPrice">₹0.00</strong>
+          </div>
+
+          <div class="result-item">
+            <span>Selling Price</span>
+            <strong id="shownSellingPrice">₹0.00</strong>
+          </div>
+
+          <div class="result-item highlight">
+            <span id="amountLabel">Profit Amount</span>
+            <strong id="amountValue">₹0.00</strong>
+          </div>
+
+          <div class="result-item">
+            <span id="percentageLabel">Profit Percentage</span>
+            <strong id="percentageValue">0%</strong>
+          </div>
+        </div>
+
+        <p id="summaryText" class="summary-text"></p>
+      </section>
+    </section>
+
+    <section class="info">
+      <h2>How it works</h2>
+      <ol>
+        <li>Enter the original cost price of the item.</li>
+        <li>Enter the price at which you sold or plan to sell it.</li>
+        <li>Click Calculate Result to see your profit or loss.</li>
+      </ol>
+      <p><strong>Profit/Loss:</strong> Selling Price − Cost Price.</p>
+      <p><strong>Percentage:</strong> Profit or Loss ÷ Cost Price × 100.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 UtilityHub. Free online tools.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create QR codes for URLs, text, email, and WhatsApp messages. Download your QR code for free with UtilityHub.">
+  <meta name="robots" content="index, follow">
+  <title>Free QR Code Generator Online | UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <span class="eyebrow">FREE ONLINE TOOL</span>
+      <h1>QR Code Generator</h1>
+      <p>Create and download QR codes for links, text, email addresses, and WhatsApp messages.</p>
+    </section>
+
+    <section class="tool-card">
+      <form id="qrForm">
+        <label for="qrType">QR code type</label>
+        <select id="qrType">
+          <option value="url">Website URL</option>
+          <option value="text">Plain Text</option>
+          <option value="email">Email Address</option>
+          <option value="whatsapp">WhatsApp Message</option>
+        </select>
+
+        <label for="qrInput" id="inputLabel">Website URL</label>
+        <textarea id="qrInput" rows="4" placeholder="https://example.com" required></textarea>
+
+        <button type="submit" id="generateBtn">Generate QR Code</button>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <div id="result" class="result" hidden>
+        <h2>Your QR Code</h2>
+        <div id="qrOutput" class="qr-output"></div>
+        <a id="downloadBtn" class="download-btn" href="#" download="utilityhub-qr-code.png">Download QR Code</a>
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>How to use this QR code generator</h2>
+      <ol>
+        <li>Choose the type of QR code you need.</li>
+        <li>Enter your link, text, email, or WhatsApp message.</li>
+        <li>Click Generate QR Code.</li>
+        <li>Download your QR code and scan it to test it.</li>
+      </ol>
+      <p>Tip: Avoid entering confidential or sensitive information into QR codes.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> UtilityHub. Free online tools.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

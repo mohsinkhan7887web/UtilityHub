@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encode and decode URLs online with UtilityHub's free URL Encoder and Decoder tool.">
+  <title>URL Encoder &amp; Decoder - UtilityHub</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="brand">Utility<span>Hub</span></a>
+      <a href="../../index.html" class="back-link">← Back to Home</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">DEVELOPER TOOLS</span>
+      <h1>URL <span>Encoder &amp; Decoder</span></h1>
+      <p>Encode special characters for URLs or decode encoded text in seconds.</p>
+    </section>
+
+    <section class="tool-panel">
+      <div class="panel-heading">
+        <div>
+          <h2>URL Converter</h2>
+          <p>Enter a URL or text to get started.</p>
+        </div>
+      </div>
+
+      <label class="field-label" for="urlInput">Input URL or Text</label>
+      <textarea
+        id="urlInput"
+        spellcheck="false"
+        placeholder="Paste a URL or text here..."
+        aria-label="Input URL or text"
+      ></textarea>
+
+      <div class="button-row primary-actions">
+        <button id="encodeButton" class="btn btn-primary" type="button">Encode URL</button>
+        <button id="decodeButton" class="btn btn-secondary" type="button">Decode URL</button>
+        <button id="sampleButton" class="btn btn-light" type="button">Load Sample</button>
+        <button id="clearButton" class="btn btn-light" type="button">Clear</button>
+      </div>
+
+      <div id="statusBox" class="status-box" role="status" aria-live="polite">
+        <strong id="statusTitle">Ready</strong>
+        <p id="statusMessage">Enter text, then choose Encode or Decode.</p>
+      </div>
+
+      <div class="output-heading">
+        <label class="field-label" for="urlOutput">Output</label>
+        <span id="urlStatus" class="status-chip">Waiting for input</span>
+      </div>
+
+      <textarea
+        id="urlOutput"
+        spellcheck="false"
+        placeholder="Your result will appear here..."
+        aria-label="URL conversion output"
+        readonly
+      ></textarea>
+
+      <div class="button-row output-actions">
+        <button id="copyButton" class="btn btn-primary" type="button">Copy Output</button>
+        <button id="useOutputButton" class="btn btn-secondary" type="button">Use Output as Input</button>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <span>Input characters</span>
+          <strong id="inputCount">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Output characters</span>
+          <strong id="outputCount">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to use URL Encoder &amp; Decoder</h2>
+      <ol>
+        <li>Paste your URL or text into the input field.</li>
+        <li>Click Encode URL to encode special characters.</li>
+        <li>Click Decode URL to convert percent-encoded text back.</li>
+        <li>Copy the output or use it as your next input.</li>
+      </ol>
+
+      <h2>What is URL encoding?</h2>
+      <p>URL encoding converts characters into a format that can safely represent data in a URL. For example, a space can be represented as <code>%20</code> when using component encoding.</p>
+
+      <p class="privacy-note">Privacy: Conversion runs in your browser. Avoid sharing sensitive information in URLs, especially passwords or private access tokens.</p>
+    </section>
+
+    <footer class="site-footer">
+      <p>© 2026 UtilityHub. Free online tools.</p>
+    </footer>
+  </main>
+</body>
+</html>

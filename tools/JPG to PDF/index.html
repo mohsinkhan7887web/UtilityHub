@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f8fc">
+    <title>JPG to PDF Converter - UtilityHub</title>
+    <meta name="description" content="Convert JPG, JPEG and PNG images into a single PDF online for free. Arrange your images and download your PDF directly in your browser.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+        <a class="back-link" href="../../index.html">← All Tools</a>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <div class="eyebrow">FREE ONLINE TOOL</div>
+            <h1>JPG to PDF Converter</h1>
+            <p>Convert JPG, JPEG and PNG images into one PDF document. Arrange your images, choose the page size and download your PDF.</p>
+        </section>
+
+        <section class="tool-panel">
+            <div id="uploadArea" class="upload-area">
+                <div class="upload-icon">↑</div>
+                <h2>Add images to convert</h2>
+                <p>Select JPG, JPEG or PNG images from your device.</p>
+                <button type="button" id="chooseImagesButton" class="primary-button">Choose Images</button>
+                <p class="small-note">You can select multiple images at once.</p>
+                <input type="file" id="imageInput" accept="image/jpeg,image/png,.jpg,.jpeg,.png" multiple hidden>
+            </div>
+
+            <div id="workspace" hidden>
+                <div class="workspace-heading">
+                    <div>
+                        <h2>Your images</h2>
+                        <p id="imageCount">0 images selected</p>
+                    </div>
+                    <button type="button" id="addMoreButton" class="secondary-button">+ Add Images</button>
+                </div>
+
+                <p class="small-note">Use the arrows to change the page order. Each image becomes one PDF page.</p>
+                <div id="imageList" class="image-list"></div>
+
+                <div class="settings">
+                    <label for="pageSize">PDF page size</label>
+                    <select id="pageSize">
+                        <option value="a4">A4</option>
+                        <option value="letter">Letter</option>
+                        <option value="fit">Fit to image</option>
+                    </select>
+
+                    <label for="orientation">Page orientation</label>
+                    <select id="orientation">
+                        <option value="auto">Automatic</option>
+                        <option value="portrait">Portrait</option>
+                        <option value="landscape">Landscape</option>
+                    </select>
+
+                    <label for="imageFit">Image placement</label>
+                    <select id="imageFit">
+                        <option value="contain">Fit entire image</option>
+                        <option value="fill">Fill page (may crop image)</option>
+                    </select>
+                </div>
+
+                <div class="action-row">
+                    <button type="button" id="clearButton" class="secondary-button">Clear All</button>
+                    <button type="button" id="convertButton" class="primary-button">Convert to PDF</button>
+                </div>
+            </div>
+
+            <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
+
+            <div id="resultArea" class="result-area" hidden>
+                <div class="success-icon">✓</div>
+                <h2>Your PDF is ready!</h2>
+                <p id="resultDetails"></p>
+                <a id="downloadLink" class="primary-button download-button" href="#" download="utilityhub-images.pdf">Download PDF</a>
+                <button type="button" id="convertAnotherButton" class="secondary-button">Create Another PDF</button>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2>How to convert JPG to PDF</h2>
+            <ol>
+                <li>Choose one or more JPG, JPEG or PNG images.</li>
+                <li>Arrange their order using the up and down arrows.</li>
+                <li>Select your preferred page size and orientation.</li>
+                <li>Click Convert to PDF and download your document.</li>
+            </ol>
+        </section>
+
+        <section class="info-section">
+            <h2>About this JPG to PDF tool</h2>
+            <p>Combine multiple images into one convenient PDF document for sharing, printing or keeping records. Image conversion is performed in your browser, so your selected images are not uploaded to a UtilityHub server by this tool.</p>
+            <h3>Frequently asked questions</h3>
+            <h4>Can I convert multiple images into one PDF?</h4>
+            <p>Yes. Select multiple supported images, arrange them in order and convert them into a single PDF.</p>
+            <h4>Are my images uploaded?</h4>
+            <p>This tool processes your images locally in your browser. It does not send them to a UtilityHub server.</p>
+            <h4>Can I change the image order?</h4>
+            <p>Yes. Use the up and down arrow buttons beside each image before converting.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a href="../../index.html">UtilityHub</a>
+        <p>Free online tools for everyday tasks.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

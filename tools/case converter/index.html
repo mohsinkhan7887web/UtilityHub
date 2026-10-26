@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Free online case converter. Convert text to uppercase, lowercase, title case and sentence case."
+    >
+
+    <meta name="robots" content="index, follow">
+
+    <title>Case Converter — UtilityHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="../../index.html" class="logo">
+                Utility<span>Hub</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="../../index.html#tools">Tools</a>
+                <a href="../../index.html#categories">Categories</a>
+                <a href="../../index.html#about">About</a>
+                <a href="../../index.html#blog">Blog</a>
+            </nav>
+
+            <button class="mobile-menu" aria-label="Open menu">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <section class="tool-hero">
+
+            <div class="container">
+
+                <div class="tool-breadcrumb">
+                    <a href="../../index.html">UtilityHub</a>
+                    <span>›</span>
+                    <span>Case Converter</span>
+                </div>
+
+                <div class="tool-heading">
+
+                    <div class="tool-icon-large">
+                        A↔
+                    </div>
+
+                    <div>
+                        <p class="eyebrow">TEXT TOOL</p>
+
+                        <h1>Case Converter</h1>
+
+                        <p>
+                            Convert your text between uppercase, lowercase,
+                            title case and sentence case instantly.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- TOOL BOX -->
+                <div class="converter-box">
+
+                    <div class="converter-header">
+
+                        <div>
+                            <h2>Convert your text</h2>
+
+                            <p>
+                                Type or paste your text below.
+                            </p>
+                        </div>
+
+                        <button
+                            type="button"
+                            id="clearButton"
+                            class="clear-button"
+                        >
+                            Clear
+                        </button>
+
+                    </div>
+
+
+                    <textarea
+                        id="textInput"
+                        placeholder="Type or paste your text here..."
+                        aria-label="Text to convert"
+                    ></textarea>
+
+
+                    <!-- ACTION BUTTONS -->
+                    <div class="case-buttons">
+
+                        <button
+                            type="button"
+                            data-case="upper"
+                            class="case-button"
+                        >
+                            UPPERCASE
+                        </button>
+
+                        <button
+                            type="button"
+                            data-case="lower"
+                            class="case-button"
+                        >
+                            lowercase
+                        </button>
+
+                        <button
+                            type="button"
+                            data-case="title"
+                            class="case-button"
+                        >
+                            Title Case
+                        </button>
+
+                        <button
+                            type="button"
+                            data-case="sentence"
+                            class="case-button"
+                        >
+                            Sentence case
+                        </button>
+
+                    </div>
+
+
+                    <!-- COPY -->
+                    <div class="converter-footer">
+
+                        <span id="characterCount">
+                            0 characters
+                        </span>
+
+                        <button
+                            type="button"
+                            id="copyButton"
+                            class="copy-button"
+                        >
+                            Copy Text
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOW TO USE -->
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow">HOW IT WORKS</p>
+
+                        <h2>How to use the Case Converter</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+                        <h3>1. Enter your text</h3>
+
+                        <p>
+                            Type or paste any text into the box above.
+                        </p>
+                    </div>
+
+
+                    <div class="info-card">
+                        <h3>2. Choose a case</h3>
+
+                        <p>
+                            Select uppercase, lowercase, title case
+                            or sentence case.
+                        </p>
+                    </div>
+
+
+                    <div class="info-card">
+                        <h3>3. Copy your result</h3>
+
+                        <p>
+                            Click Copy Text to quickly copy the converted text.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OTHER TOOLS -->
+        <section class="section">
+
+            <div class="container">
+
+                <div class="about-box">
+
+                    <p class="eyebrow">UTILITYHUB</p>
+
+                    <h2>
+                        Simple tools for everyday work.
+                    </h2>
+
+                    <p>
+                        Use UtilityHub to quickly complete common online
+                        tasks without installing additional software.
+                    </p>
+
+                    <a
+                        href="../../index.html#tools"
+                        class="tool-link"
+                    >
+                        Explore more tools →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <a href="../../index.html" class="logo">
+                    Utility<span>Hub</span>
+                </a>
+
+                <p>
+                    Simple online tools for everyday work.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container copyright">
+
+            © 2026 UtilityHub. All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Percentage Calculator - UtilityHub</title>
+    <meta name="description" content="Calculate percentages, percentage changes, increases and decreases quickly with our free online percentage calculator.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a href="../../index.html" class="logo">
+                Utility<span>Hub</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="../../index.html">Home</a>
+                <a href="../../index.html#tools">All Tools</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="tool-page">
+
+        <div class="breadcrumb">
+            <a href="../../index.html">Home</a>
+            <span>›</span>
+            <span>Percentage Calculator</span>
+        </div>
+
+
+        <section class="tool-hero">
+
+            <div class="tool-badge">
+                Calculator
+            </div>
+
+            <h1>Percentage Calculator</h1>
+
+            <p>
+                Calculate percentages, percentage changes, increases and
+                decreases quickly and easily.
+            </p>
+
+        </section>
+
+
+        <section class="calculator-grid">
+
+
+            <!-- Calculator 1 -->
+
+            <div class="calculator-card">
+
+                <h2>What is X% of Y?</h2>
+
+                <p class="calculator-description">
+                    Find a percentage of a number.
+                </p>
+
+                <div class="input-group">
+
+                    <label for="percentOfPercent">
+                        Percentage
+                    </label>
+
+                    <input
+                        type="number"
+                        id="percentOfPercent"
+                        placeholder="Example: 20"
+                        step="any"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="percentOfNumber">
+                        Number
+                    </label>
+
+                    <input
+                        type="number"
+                        id="percentOfNumber"
+                        placeholder="Example: 500"
+                        step="any"
+                    >
+
+                </div>
+
+
+                <button class="calculate-button" id="calculatePercentOf">
+                    Calculate
+                </button>
+
+
+                <div class="result-box">
+
+                    <span>Result</span>
+
+                    <strong id="percentOfResult">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Calculator 2 -->
+
+            <div class="calculator-card">
+
+                <h2>X is what % of Y?</h2>
+
+                <p class="calculator-description">
+                    Find what percentage one number is of another.
+                </p>
+
+                <div class="input-group">
+
+                    <label for="whatPercentX">
+                        Number X
+                    </label>
+
+                    <input
+                        type="number"
+                        id="whatPercentX"
+                        placeholder="Example: 25"
+                        step="any"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="whatPercentY">
+                        Number Y
+                    </label>
+
+                    <input
+                        type="number"
+                        id="whatPercentY"
+                        placeholder="Example: 100"
+                        step="any"
+                    >
+
+                </div>
+
+
+                <button class="calculate-button" id="calculateWhatPercent">
+                    Calculate
+                </button>
+
+
+                <div class="result-box">
+
+                    <span>Result</span>
+
+                    <strong id="whatPercentResult">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Calculator 3 -->
+
+            <div class="calculator-card">
+
+                <h2>Percentage Increase / Decrease</h2>
+
+                <p class="calculator-description">
+                    Find the percentage change between two numbers.
+                </p>
+
+                <div class="input-group">
+
+                    <label for="oldValue">
+                        Original Value
+                    </label>
+
+                    <input
+                        type="number"
+                        id="oldValue"
+                        placeholder="Example: 100"
+                        step="any"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="newValue">
+                        New Value
+                    </label>
+
+                    <input
+                        type="number"
+                        id="newValue"
+                        placeholder="Example: 125"
+                        step="any"
+                    >
+
+                </div>
+
+
+                <button class="calculate-button" id="calculateChange">
+                    Calculate
+                </button>
+
+
+                <div class="result-box">
+
+                    <span>Result</span>
+
+                    <strong id="changeResult">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Calculator 4 -->
+
+            <div class="calculator-card">
+
+                <h2>Add or Subtract a Percentage</h2>
+
+                <p class="calculator-description">
+                    Quickly increase or decrease a number by a percentage.
+                </p>
+
+                <div class="input-group">
+
+                    <label for="baseValue">
+                        Number
+                    </label>
+
+                    <input
+                        type="number"
+                        id="baseValue"
+                        placeholder="Example: 1000"
+                        step="any"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="adjustmentPercent">
+                        Percentage
+                    </label>
+
+                    <input
+                        type="number"
+                        id="adjustmentPercent"
+                        placeholder="Example: 10"
+                        step="any"
+                    >
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        class="calculate-button small-button"
+                        id="addPercent"
+                    >
+                        Add %
+                    </button>
+
+                    <button
+                        class="calculate-button small-button subtract-button"
+                        id="subtractPercent"
+                    >
+                        Subtract %
+                    </button>
+
+                </div>
+
+
+                <div class="result-box">
+
+                    <span>Result</span>
+
+                    <strong id="adjustmentResult">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <section class="info-section">
+
+            <h2>How to Use the Percentage Calculator</h2>
+
+            <ol>
+
+                <li>
+                    Enter the numbers required for the calculation.
+                </li>
+
+                <li>
+                    Click the appropriate Calculate button.
+                </li>
+
+                <li>
+                    Your percentage result will appear instantly.
+                </li>
+
+            </ol>
+
+
+            <h2>Percentage Formula</h2>
+
+            <p>
+                To calculate a percentage of a number, use:
+            </p>
+
+            <div class="formula-box">
+                Percentage × Number ÷ 100
+            </div>
+
+
+            <p>
+                For example, 20% of 500 is 100.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <p>
+            © 2026 UtilityHub. Free online tools for everyone.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

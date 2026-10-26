@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Summarize long text into shorter, readable summaries for free with UtilityHub Text Summarizer."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <title>Free Text Summarizer Online | UtilityHub</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">
+      <span class="brand-icon">U</span>
+      <span>UtilityHub</span>
+    </a>
+
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="page-container">
+    <section class="intro">
+      <span class="eyebrow">FREE TEXT TOOL</span>
+      <h1>AI Text Summarizer</h1>
+      <p>
+        Turn long text into a shorter summary by selecting
+        its most important sentences. Simple, fast, and free.
+      </p>
+    </section>
+
+    <section class="tool-card">
+      <div class="card-heading">
+        <div>
+          <h2>Summarize Your Text</h2>
+          <p>Paste an article, notes, or other text below.</p>
+        </div>
+        <span class="tool-icon">≡</span>
+      </div>
+
+      <form id="summarizerForm">
+        <div class="form-group">
+          <label for="inputText">Your Text</label>
+
+          <textarea
+            id="inputText"
+            name="inputText"
+            rows="10"
+            maxlength="30000"
+            placeholder="Paste or type your text here..."
+            required
+          ></textarea>
+
+          <div class="text-meta">
+            <span id="wordCount">0 words</span>
+            <span id="characterCount">0 / 30,000 characters</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="summaryLength">Summary Length</label>
+
+          <select id="summaryLength" name="summaryLength">
+            <option value="short">Short — about 20%</option>
+            <option value="medium" selected>Medium — about 35%</option>
+            <option value="long">Long — about 50%</option>
+          </select>
+        </div>
+
+        <div class="button-row">
+          <button type="submit" id="summarizeBtn" class="primary-button">
+            Summarize Text
+          </button>
+
+          <button type="button" id="clearBtn" class="secondary-button">
+            Clear Text
+          </button>
+        </div>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <section id="resultSection" class="result-section" hidden>
+        <div class="result-heading">
+          <div>
+            <h2>Your Summary</h2>
+            <p id="summaryStats">Summary ready</p>
+          </div>
+          <span class="result-icon">✓</span>
+        </div>
+
+        <textarea
+          id="summaryOutput"
+          rows="8"
+          readonly
+          aria-label="Generated summary"
+        ></textarea>
+
+        <div class="button-row result-actions">
+          <button type="button" id="copyBtn" class="primary-button">
+            Copy Summary
+          </button>
+
+          <button type="button" id="downloadBtn" class="secondary-button">
+            Download TXT
+          </button>
+        </div>
+
+        <p class="method-note">
+          This version selects important sentences from your original
+          text. It does not generate new facts or rewrite sentences.
+        </p>
+      </section>
+
+      <div class="privacy-note">
+        <span>🔒</span>
+        <p>
+          Your text is processed locally in your browser and is not
+          sent to an AI server by this tool.
+        </p>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to Summarize Text</h2>
+      <ol>
+        <li>Paste your article, notes, or other text.</li>
+        <li>Choose short, medium, or long summary length.</li>
+        <li>Click Summarize Text.</li>
+        <li>Copy the summary or download it as a text file.</li>
+      </ol>
+    </section>
+
+    <section class="info-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Is this tool free?</h3>
+      <p>Yes. This browser-based version is free to use.</p>
+
+      <h3>Does it use a live AI model?</h3>
+      <p>
+        No. This initial version ranks sentences and selects key
+        information from the original text. It does not use a
+        generative AI model.
+      </p>
+
+      <h3>Is my text uploaded?</h3>
+      <p>
+        No. The summarization logic runs in your browser.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> UtilityHub. Free online tools.</p>
+    <a href="../../index.html">Back to Home</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

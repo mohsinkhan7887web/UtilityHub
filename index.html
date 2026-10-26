@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Free, fast and simple online utility tools for everyday tasks."
+    >
+
+    <meta name="robots" content="index, follow">
+
+    <title>UtilityHub — Free Online Tools</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="#" class="logo">
+                Utility<span>Hub</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="#tools">Tools</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+                <a href="#blog">Blog</a>
+            </nav>
+
+            <button
+                class="mobile-menu"
+                aria-label="Open menu"
+                type="button"
+            >
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+        <!-- ================= HERO ================= -->
+        <section class="hero">
+            <div class="container hero-content">
+
+                <div class="hero-badge">
+                    ✦ Simple tools. Real solutions.
+                </div>
+
+                <h1>
+                    Useful tools for
+                    <span>everyday work.</span>
+                </h1>
+
+                <p>
+                    Fast, simple and free online tools to help you
+                    work smarter without installing anything.
+                </p>
+
+                <div class="search-box">
+                    <span>⌕</span>
+
+                    <input
+                        type="search"
+                        id="toolSearch"
+                        placeholder="Search for a tool..."
+                        aria-label="Search tools"
+                        autocomplete="off"
+                    >
+                </div>
+
+                <p id="searchResult" class="search-result"></p>
+
+            </div>
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+        <section class="section" id="categories">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">EXPLORE</p>
+                        <h2>Tool categories</h2>
+                    </div>
+
+                    <p class="section-description">
+                        Everything you need, organized in one place.
+                    </p>
+                </div>
+
+
+                <div class="category-grid">
+
+                    <a
+                        href="#tools"
+                        class="category-card"
+                        data-category="text"
+                    >
+                        <div class="category-icon">Aa</div>
+
+                        <div>
+                            <h3>Text Tools</h3>
+                            <p>Write, clean and format text.</p>
+                        </div>
+                    </a>
+
+
+                    <a
+                        href="#tools"
+                        class="category-card"
+                        data-category="image"
+                    >
+                        <div class="category-icon">▧</div>
+
+                        <div>
+                            <h3>Image Tools</h3>
+                            <p>Resize, convert and compress images.</p>
+                        </div>
+                    </a>
+
+
+                    <a
+                        href="#tools"
+                        class="category-card"
+                        data-category="calculator"
+                    >
+                        <div class="category-icon">%</div>
+
+                        <div>
+                            <h3>Calculators</h3>
+                            <p>Calculate everyday numbers easily.</p>
+                        </div>
+                    </a>
+
+
+                    <a
+                        href="#tools"
+                        class="category-card"
+                        data-category="pdf"
+                    >
+                        <div class="category-icon">PDF</div>
+
+                        <div>
+                            <h3>PDF Tools</h3>
+                            <p>Work with PDF files quickly.</p>
+                        </div>
+                    </a>
+
+
+                    <a
+                        href="#tools"
+                        class="category-card"
+                        data-category="developer"
+                    >
+                        <div class="category-icon">{ }</div>
+
+                        <div>
+                            <h3>Developer Tools</h3>
+                            <p>Useful tools for developers.</p>
+                        </div>
+                    </a>
+
+
+                    <a
+                        href="#tools"
+                        class="category-card"
+                        data-category="ai"
+                    >
+                        <div class="category-icon">AI</div>
+
+                        <div>
+                            <h3>AI Tools</h3>
+                            <p>Smart tools for everyday tasks.</p>
+                        </div>
+                    </a>
+                    
+<a
+  href="#tools"
+  class="category-card"
+  data-category="student"
+>
+  <div class="category-icon">🎓</div>
+  <div>
+    <h3>Student Tools</h3>
+    <p>Useful tools for students and everyday study tasks.</p>
+  </div>
+</a>
+
+<a
+  href="#tools"
+  class="category-card"
+  data-category="document"
+>
+  <div class="category-icon">📄</div>
+  <div>
+    <h3>Document Tools</h3>
+    <p>Create resumes, invoices, receipts, business cards and cover letters.</p>
+  </div>
+</a>
+
+<a
+  href="#tools"
+  class="category-card"
+  data-category="qr"
+>
+  <div class="category-icon">📱</div>
+  <div>
+    <h3>QR / Barcode Tools</h3>
+    <p>Generate and scan QR codes and barcodes with ease.</p>
+  </div>
+</a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= POPULAR TOOLS ================= -->
+        <section class="section tools-section" id="popularTools">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow">POPULAR</p>
+                        <h2>Popular tools</h2>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="view-all"
+                        id="viewAllTools"
+                    >
+                        View all →
+                    </button>
+
+                </div>
+
+
+                <div class="tool-grid" id="toolGrid">
+
+<!-- JSON FORMATTER & VALIDATOR -->
+<article
+  class="tool-card"
+  data-category="developer"
+  data-name="json formatter validator"
+>
+  <div class="tool-icon">{ }</div>
+  <h3>JSON Formatter &amp; Validator</h3>
+  <p>Format, validate, and minify JSON data with helpful error feedback.</p>
+  <a
+    href="tools/JSON%20Formatter/index.html"
+    class="tool-link"
+  >
+    Open tool →
+  </a>
+</article>
+<!-- HTML FORMATTER & VALIDATOR -->
+<article
+  class="tool-card"
+  data-category="developer"
+  data-name="html formatter validator"
+>
+  <div class="tool-icon">&lt;/&gt;</div>
+  <h3>HTML Formatter &amp; Validator</h3>
+  <p>Format, minify, and check HTML markup for common structural issues.</p>
+  <a
+    href="tools/HTML%20Formatter/index.html"
+    class="tool-link"
+  >
+    Open Tool →
+  </a>
+</article>
+<!-- XML FORMATTER & VALIDATOR -->
+<article
+  class="tool-card"
+  data-category="developer"
+  data-name="xml formatter validator"
+>
+  <div class="tool-icon">&lt;xml&gt;</div>
+  <h3>XML Formatter &amp; Validator</h3>
+  <p>Format, validate, and minify XML with helpful error feedback.</p>
+  <a
+    href="tools/XML%20Formatter/index.html"
+    class="tool-link"
+  >
+    Open Tool →
+  </a>
+</article>
+<!-- URL ENCODER & DECODER -->
+<article
+  class="tool-card"
+  data-category="developer"
+  data-name="url encoder decoder"
+>
+  <div class="tool-icon">URL</div>
+  <h3>URL Encoder &amp; Decoder</h3>
+  <p>Encode special characters for URLs and decode percent-encoded text.</p>
+  <a
+    href="tools/URL%20Encoder%20Decoder/index.html"
+    class="tool-link"
+  >
+    Open Tool →
+  </a>
+</article>
+
+<!-- BASE64 ENCODER & DECODER -->
+<article
+  class="tool-card"
+  data-category="developer"
+  data-name="base64 encoder decoder"
+>
+  <div class="tool-icon">64</div>
+  <h3>Base64 Encoder &amp; Decoder</h3>
+  <p>Encode text to Base64 and decode Base64 back into readable text.</p>
+  <a
+    href="tools/Base64%20Encoder%20Decoder/index.html"
+    class="tool-link"
+  >Open Tool →</a>
+</article>
+
+<!-- JSON MINIFIER -->
+<article
+  class="tool-card"
+  data-category="developer"
+  data-name="json minifier"
+>
+  <div class="tool-icon">{ }</div>
+  <h3>JSON Minifier</h3>
+  <p>Minify valid JSON by removing unnecessary whitespace and indentation.</p>
+  <a
+    href="tools/JSON%20Minifier/index.html"
+    class="tool-link"
+  >Open Tool →</a>
+</article>
+
+<!-- HTML CSS JS MINIFIER -->
+<article
+  class="tool-card"
+  data-category="developer"
+  data-name="html css js minifier"
+>
+  <div class="tool-icon">JS</div>
+  <h3>HTML/CSS/JS Minifier</h3>
+  <p>Reduce unnecessary whitespace in HTML, CSS and JavaScript code.</p>
+  <a
+    href="tools/HTML%20CSS%20JS%20Minifier/index.html"
+    class="tool-link"
+  >Open Tool →</a>
+</article>
+
+<!-- HTML TO MARKDOWN CONVERTER -->
+<article
+  class="tool-card"
+  data-category="developer"
+  data-name="html to markdown converter"
+>
+  <div class="tool-icon">MD</div>
+  <h3>HTML to Markdown Converter</h3>
+  <p>Convert HTML code into clean, readable Markdown format.</p>
+  <a
+    href="tools/HTML%20to%20Markdown%20Converter/index.html"
+    class="tool-link"
+  >Open Tool →</a>
+</article>
+
+<!-- MARKDOWN TO HTML CONVERTER -->
+<article
+  class="tool-card"
+  data-category="developer"
+  data-name="markdown to html converter"
+>
+  <div class="tool-icon">MD</div>
+  <h3>Markdown to HTML Converter</h3>
+  <p>Convert Markdown text into HTML code with headings, links, lists and more.</p>
+  <a
+    href="tools/Markdown%20to%20HTML%20Converter/index.html"
+    class="tool-link"
+  >Use Tool →</a>
+</article>
+
+
+                    <!-- WORD COUNTER -->
+                    <article
+                        class="tool-card"
+                        data-category="text"
+                        data-name="word counter"
+                    >
+                        <div class="tool-icon">Aa</div>
+
+                        <h3>Word Counter</h3>
+
+                        <p>
+                            Count words, characters and paragraphs instantly.
+                        </p>
+
+                        <a
+                            href="tools/word%20counter/index.html"
+                            class="tool-link"
+                        >
+                            Open tool →
+                        </a>
+                    </article>
+
+
+                    <!-- CASE CONVERTER -->
+                    <article
+                        class="tool-card"
+                        data-category="text"
+                        data-name="case converter"
+                    >
+                        <div class="tool-icon">A↔</div>
+
+                        <h3>Case Converter</h3>
+
+                        <p>
+                            Convert text between uppercase, lowercase and more.
+                        </p>
+
+                        <a href="tools/case converter/index.html" class="tool-link">
+    Open tool →
+</a>
+                    </article>
+
+
+                    <!-- IMAGE COMPRESSOR -->
+                    <article
+                        class="tool-card"
+                        data-category="image"
+                        data-name="image compressor"
+                    >
+                        <div class="tool-icon">▧</div>
+
+                        <h3>Image Compressor</h3>
+
+                        <p>
+                            Reduce image size while keeping good quality.
+                        </p>
+
+                        <a href="tools/image compressor/index.html" class="tool-link">
+    Open Tool →
+</a>
+                    </article>
+
+<article
+    class="tool-card"
+    data-category="image"
+    data-name="jpg to png converter"
+>
+    <div class="tool-icon">PNG</div>
+
+    <h3>JPG to PNG Converter</h3>
+
+    <p>
+        Convert JPG and JPEG images to PNG format for free.
+    </p>
+
+    <a href="tools/JPG%20to%20PNG/index.html" class="tool-link">
+        Open Tool →
+    </a>
+</article>
+
+<article
+    class="tool-card"
+    data-category="image"
+    data-name="png to jpg converter"
+>
+    <div class="tool-icon">JPG</div>
+
+    <h3>PNG to JPG Converter</h3>
+
+    <p>
+        Convert PNG images to JPG with adjustable quality and background color.
+    </p>
+
+    <a href="tools/PNG%20to%20JPG/index.html" class="tool-link">
+        Open Tool →
+    </a>
+</article>
+
+<article
+    class="tool-card"
+    data-category="image"
+    data-name="image resizer"
+>
+    <div class="tool-icon">↔</div>
+
+    <h3>Image Resizer</h3>
+
+    <p>
+        Resize JPG, PNG and WebP images with custom dimensions.
+    </p>
+
+    <a href="tools/Image%20Resizer/index.html" class="tool-link">
+        Open Tool →
+    </a>
+</article>
+
+<article
+    class="tool-card"
+    data-category="image"
+    data-name="image cropper"
+>
+    <div class="tool-icon">CROP</div>
+
+    <h3>Image Cropper</h3>
+
+    <p>
+        Crop JPG, PNG and WebP images with custom crop ratios.
+    </p>
+
+    <a href="tools/Image%20Cropper/index.html" class="tool-link">
+        Open Tool →
+    </a>
+</article>
+
+<article class="tool-card" data-category="image" data-name="image format converter">
+  <div class="tool-icon">🔄</div>
+  <h3>Image Format Converter</h3>
+  <p>Convert images between PNG, JPG, WebP and other supported formats.</p>
+  <a href="tools/Image%20Format%20Converter/index.html" class="tool-link">Open Tool</a>
+</article>
+
+
+                    <!-- PERCENTAGE CALCULATOR -->
+                    <article
+                        class="tool-card"
+                        data-category="calculator"
+                        data-name="percentage calculator"
+                    >
+                        <div class="tool-icon">%</div>
+
+                        <h3>Percentage Calculator</h3>
+
+                        <p>
+                            Calculate percentages quickly and easily.
+                        </p>
+
+                        <a href="tools/percentage calculator/index.html" class="tool-link">
+    Open Tool →
+</a>
+                    </article>
+                    
+<!-- AGE CALCULATOR -->
+<article
+  class="tool-card"
+  data-category="calculator"
+  data-name="age calculator"
+>
+  <div class="tool-icon">AGE</div>
+  <h3>Age Calculator</h3>
+  <p>Calculate your exact age in years, months and days.</p>
+  <a
+    href="tools/Age%20Calculator/index.html"
+    class="tool-link"
+  >Open Tool →</a>
+</article>
+
+<!-- AVERAGE CALCULATOR -->
+<article
+  class="tool-card"
+  data-category="calculator"
+  data-name="average calculator"
+>
+  <div class="tool-icon">AVG</div>
+  <h3>Average Calculator</h3>
+  <p>Calculate the average, sum, and count of your numbers instantly.</p>
+  <a
+    href="tools/Average%20Calculator/index.html"
+    class="tool-link"
+  >Open Tool →</a>
+</article>
+
+<!-- DISCOUNT CALCULATOR -->
+<article
+  class="tool-card"
+  data-category="calculator"
+  data-name="discount calculator"
+>
+  <div class="tool-icon">%</div>
+  <h3>Discount Calculator</h3>
+  <p>Calculate the final sale price and discover how much money you save.</p>
+  <a
+    href="tools/Discount%20Calculator/index.html"
+    class="tool-link"
+  >Open Tool →</a>
+</article>
+
+<!-- PROFIT AND LOSS CALCULATOR -->
+<article
+  class="tool-card"
+  data-category="calculator"
+  data-name="profit and loss calculator"
+>
+  <div class="tool-icon">P/L</div>
+  <h3>Profit and Loss Calculator</h3>
+  <p>Calculate your profit, loss and percentage from cost and selling prices.</p>
+  <a
+    href="tools/Profit%20and%20Loss%20Calculator/index.html"
+    class="tool-link"
+  >Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="calculator" data-name="emi calculator">
+  <div class="tool-icon">💳</div>
+  <h3>EMI Calculator</h3>
+  <p>Calculate monthly loan EMI, total interest, and repayment amount.</p>
+  <a href="tools/EMI Calculator/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="calculator" data-name="loan calculator">
+  <div class="tool-icon">🏦</div>
+  <h3>Loan Calculator</h3>
+  <p>Calculate monthly loan payments, total interest, and total repayment.</p>
+  <a href="tools/Loan Calculator/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="calculator" data-name="sip calculator">
+  <div class="tool-icon">📈</div>
+  <h3>SIP Calculator</h3>
+  <p>Estimate your investment growth, total invested amount, and potential returns.</p>
+  <a href="tools/SIP Calculator/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="calculator" data-name="interest calculator">
+  <div class="tool-icon">💰</div>
+  <h3>Interest Calculator</h3>
+  <p>Calculate simple interest, compound interest, and your final amount.</p>
+  <a href="tools/Interest Calculator/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="calculator" data-name="gst calculator">
+  <div class="tool-icon">🧾</div>
+  <h3>GST Calculator</h3>
+  <p>Calculate GST, add tax to prices, or extract GST from a total.</p>
+  <a href="tools/GST Calculator/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="student" data-name="cgpa calculator">
+  <div class="tool-icon">🎓</div>
+  <h3>CGPA Calculator</h3>
+  <p>Calculate your CGPA using subject credits and grade points.</p>
+  <a href="tools/CGPA Calculator/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="student" data-name="gpa calculator">
+  <div class="tool-icon">📊</div>
+  <h3>GPA Calculator</h3>
+  <p>Calculate your semester GPA from subject credits and grade points.</p>
+  <a href="tools/GPA Calculator/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="student" data-name="marks percentage calculator">
+  <div class="tool-icon">📊</div>
+  <h3>Marks Percentage Calculator</h3>
+  <p>Calculate exam percentage from subject-wise marks obtained and maximum marks.</p>
+  <a href="tools/Marks Percentage Calculator/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="student" data-name="attendance calculator">
+  <div class="tool-icon">📅</div>
+  <h3>Attendance Calculator</h3>
+  <p>Calculate your attendance percentage and find classes needed to reach your target.</p>
+  <a href="tools/Attendance Calculator/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="student" data-name="pomodoro timer">
+  <div class="tool-icon">⏱️</div>
+  <h3>Pomodoro Timer</h3>
+  <p>Boost productivity with focused study sessions and timed breaks.</p>
+  <a href="tools/Pomodoro Timer/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="document" data-name="resume cv builder">
+  <div class="tool-icon">📄</div>
+  <h3>Resume / CV Builder</h3>
+  <p>Create a professional resume and print or save it as a PDF.</p>
+  <a href="tools/Resume CV Builder/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="document" data-name="invoice generator">
+  <div class="tool-icon">🧾</div>
+  <h3>Invoice Generator</h3>
+  <p>Create professional invoices with automatic tax calculations and print or save them as PDF.</p>
+  <a href="tools/Invoice Generator/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="document" data-name="receipt generator">
+  <div class="tool-icon">🧾</div>
+  <h3>Receipt Generator</h3>
+  <p>Create payment receipts with automatic totals, discounts, tax, and print or save as PDF.</p>
+  <a href="tools/Receipt Generator/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="document" data-name="business card maker">
+  <div class="tool-icon">💼</div>
+  <h3>Business Card Maker</h3>
+  <p>Create professional business cards with custom colors, multiple styles, and print or save as PDF.</p>
+  <a href="tools/Business Card Maker/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="document" data-name="cover letter generator">
+  <div class="tool-icon">✉️</div>
+  <h3>Cover Letter Generator</h3>
+  <p>Create professional job application letters with customizable details, writing styles, and download or print options.</p>
+  <a href="tools/Cover Letter Generator/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<article class="tool-card" data-category="qr" data-name="qr code generator">
+  <div class="tool-icon">▦</div>
+  <h3>QR Code Generator</h3>
+  <p>Create QR codes for website links, text, email addresses, and WhatsApp messages. Download them for free.</p>
+  <a href="tools/QR Code Generator/index.html" class="tool-link">Open Tool →</a>
+</article>
+
+<!-- QR CODE SCANNER -->
+<article
+  class="tool-card"
+  data-category="qr"
+  data-name="qr code scanner"
+>
+  <div class="tool-icon">📷</div>
+  <h3>QR Code Scanner</h3>
+  <p>Scan QR codes using your camera or upload an image to read its contents instantly.</p>
+  <a
+    href="tools/QR Code Scanner/index.html"
+    class="tool-link"
+  >
+    Open tool →
+  </a>
+</article>
+
+<!-- BARCODE GENERATOR -->
+<article
+  class="tool-card"
+  data-category="qr"
+  data-name="barcode generator"
+>
+  <div class="tool-icon">▥</div>
+  <h3>Barcode Generator</h3>
+  <p>Create Code 128 barcodes from text or numbers and download them as PNG images.</p>
+  <a
+    href="tools/Barcode Generator/index.html"
+    class="tool-link"
+  >
+    Open tool →
+  </a>
+</article>
+
+<!-- BARCODE SCANNER -->
+<article
+  class="tool-card"
+  data-category="qr"
+  data-name="barcode scanner"
+>
+  <div class="tool-icon">▥</div>
+  <h3>Barcode Scanner</h3>
+  <p>Scan barcodes from uploaded images and quickly copy the decoded text or number.</p>
+  <a
+    href="tools/Barcode Scanner/index.html"
+    class="tool-link"
+  >
+    Open tool →
+  </a>
+</article>
+
+<!-- WI-FI QR CODE GENERATOR -->
+<article
+  class="tool-card"
+  data-category="qr"
+  data-name="wifi qr code generator wireless network"
+>
+  <div class="tool-icon">📶</div>
+  <h3>Wi-Fi QR Code Generator</h3>
+  <p>Create and download a Wi-Fi QR code so guests can connect to your network easily.</p>
+  <a
+    href="tools/Wi-Fi QR Code Generator/index.html"
+    class="tool-link"
+  >
+    Open tool →
+  </a>
+</article>
+
+<!-- AI TEXT SUMMARIZER -->
+<article
+  class="tool-card"
+  data-category="ai"
+  data-name="ai text summarizer text summary"
+>
+  <div class="tool-icon">≡</div>
+  <h3>AI Text Summarizer</h3>
+  <p>Turn long text into a shorter summary by selecting important sentences from your original text.</p>
+  <a
+    href="tools/AI Text Summarizer/index.html"
+    class="tool-link"
+  >
+    Open tool →
+  </a>
+</article>
+
+<!-- AI PARAPHRASER -->
+<article
+  class="tool-card"
+  data-category="ai"
+  data-name="ai paraphraser text rewriter"
+>
+  <div class="tool-icon">✍</div>
+  <h3>AI Paraphraser</h3>
+  <p>Rewrite text with different wording styles, including formal, simple, standard, and casual.</p>
+  <a
+    href="tools/AI Paraphraser/index.html"
+    class="tool-link"
+  >
+    Open tool →
+  </a>
+</article>
+
+<!-- AI WRITING ASSISTANT -->
+<article
+  class="tool-card"
+  data-category="ai"
+  data-name="ai writing assistant email caption content writer"
+>
+  <div class="tool-icon">✍️</div>
+  <h3>AI Writing Assistant</h3>
+  <p>Create email drafts, social media captions, product descriptions, and blog introductions using writing templates.</p>
+  <a
+    href="tools/AI Writing Assistant/index.html"
+    class="tool-link"
+  >
+    Open tool →
+  </a>
+</article>
+
+<!-- AI TITLE GENERATOR -->
+<article
+  class="tool-card"
+  data-category="ai"
+  data-name="ai title generator youtube blog catchy titles"
+>
+  <div class="tool-icon">✦</div>
+  <h3>AI Title Generator</h3>
+  <p>Generate title ideas for YouTube videos, blog posts, Shorts, social posts, and products.</p>
+  <a href="tools/AI%20Title%20Generator/index.html" class="tool-link">Open tool →</a>
+</article>
+
+<!-- AI DESCRIPTION GENERATOR -->
+<article
+  class="tool-card"
+  data-category="ai"
+  data-name="ai description generator youtube blog social media product"
+>
+  <div class="tool-icon">✎</div>
+  <h3>AI Description Generator</h3>
+  <p>Create description ideas for YouTube videos, blog posts, social media content, and products.</p>
+  <a href="tools/AI%20Description%20Generator/index.html" class="tool-link">Open tool →</a>
+</article>
+
+                    <!-- CHARACTER COUNTER -->
+<article
+    class="tool-card"
+    data-category="text"
+    data-name="character counter"
+>
+
+    <div class="tool-icon">Aa</div>
+
+    <h3>Character Counter</h3>
+
+    <p>
+        Count characters, words, lines and sentences instantly.
+    </p>
+
+    <a
+        href="tools/character counter/index.html"
+        class="tool-link"
+    >
+        Open tool →
+    </a>
+
+</article>
+
+<article class="tool-card" data-category="text" data-name="sentence counter">
+  <div class="tool-icon">📝</div>
+  <h3>Sentence Counter</h3>
+  <p>Count sentences, words, characters and average words per sentence instantly.</p>
+  <a href="tools/Sentence%20Counter/index.html" class="tool-link">Open Tool</a>
+</article>
+
+<article class="tool-card" data-category="text" data-name="reading time calculator">
+  <div class="tool-icon">⏱️</div>
+  <h3>Reading Time Calculator</h3>
+  <p>Estimate reading time, word count and reading speed for any text.</p>
+  <a href="tools/Reading%20Time%20Calculator/index.html" class="tool-link">Open Tool</a>
+</article>
+<article class="tool-card" data-category="text" data-name="extra spaces remover">
+  <div class="tool-icon">🧹</div>
+  <h3>Extra Spaces Remover</h3>
+  <p>Remove extra spaces, clean up text, and remove unnecessary blank lines.</p>
+  <a href="tools/Extra%20Spaces%20Remover/index.html" class="tool-link">Open Tool</a>
+</article>
+
+<article class="tool-card" data-category="text" data-name="find and replace">
+  <div class="tool-icon">🔎</div>
+  <h3>Find and Replace</h3>
+  <p>Find words or phrases in your text and replace them quickly.</p>
+  <a href="tools/Find%20and%20Replace/index.html" class="tool-link">Open Tool</a>
+</article>
+
+<!-- PDF MERGE -->
+<article
+    class="tool-card"
+    data-category="pdf"
+    data-name="pdf merge"
+>
+
+    <div class="tool-icon">PDF</div>
+
+    <h3>PDF Merge</h3>
+
+    <p>
+        Combine multiple PDF files into one document quickly.
+    </p>
+
+    <a
+        href="tools/PDF merge/index.html"
+        class="tool-link"
+    >
+        Open tool →
+    </a>
+
+</article>
+<!-- PDF SPLIT -->
+<article
+    class="tool-card"
+    data-category="pdf"
+    data-name="pdf split"
+>
+
+    <div class="tool-icon">PDF</div>
+
+    <h3>PDF Split</h3>
+
+    <p>
+        Split a PDF into separate files by page or page range.
+    </p>
+
+    <a
+        href="tools/PDF split/index.html"
+        class="tool-link"
+    >
+        Open tool →
+    </a>
+
+</article>
+<article
+    class="tool-card"
+    data-category="pdf"
+    data-name="pdf compress"
+>
+    <div class="tool-icon">PDF</div>
+    <h3>PDF Compress</h3>
+    <p>
+        Reduce PDF file size and optimize documents quickly.
+    </p>
+    <a
+        href="tools/PDF compress/index.html"
+        class="tool-link"
+    >
+        Open tool →
+    </a>
+</article>
+
+<article
+    class="tool-card"
+    data-category="pdf"
+    data-name="pdf to jpg"
+>
+    <div class="tool-icon">PDF</div>
+
+    <h3>PDF to JPG</h3>
+
+    <p>
+        Convert PDF pages into high-quality JPG images quickly.
+    </p>
+
+    <a
+        href="tools/PDF to JPG/index.html"
+        class="tool-link"
+    >
+        Open tool →
+    </a>
+</article>
+
+<article
+    class="tool-card"
+    data-category="image"
+    data-name="jpg to pdf"
+>
+    <div class="tool-icon">IMG</div>
+    <h3>JPG to PDF</h3>
+    <p>
+        Convert JPG and PNG images into one PDF document quickly.
+    </p>
+    <a
+        href="tools/JPG to PDF/index.html"
+        class="tool-link"
+    >
+        Open tool →
+    </a>
+</article>
+
+<article
+    class="tool-card"
+    data-category="pdf"
+    data-name="pdf rotate"
+>
+    <div class="tool-icon">PDF</div>
+    <h3>PDF Rotate</h3>
+    <p>
+        Rotate all PDF pages or selected pages by 90, 180 or 270 degrees.
+    </p>
+    <a
+        href="tools/PDF Rotate/index.html"
+        class="tool-link"
+    >
+        Open tool →
+    </a>
+</article>
+
+<article
+    class="tool-card"
+    data-category="pdf"
+    data-name="pdf page reorder"
+>
+    <div class="tool-icon">PDF</div>
+    <h3>PDF Page Reorder</h3>
+    <p>
+        Rearrange PDF pages into your preferred order and download a new PDF.
+    </p>
+    <a
+        href="tools/PDF%20Page%20Reorder/index.html"
+        class="tool-link"
+    >
+        Open tool →
+    </a>
+</article>
+
+<article
+    class="tool-card"
+    data-category="pdf"
+    data-name="pdf page delete"
+>
+    <div class="tool-icon">PDF</div>
+    <h3>PDF Page Delete</h3>
+    <p>
+        Remove unwanted pages from a PDF and download the updated document.
+    </p>
+    <a
+        href="tools/PDF%20Page%20Delete/index.html"
+        class="tool-link"
+    >
+        Open tool →
+    </a>
+</article>
+
+                </div>
+
+
+                <p
+                    id="noToolsMessage"
+                    class="no-tools-message"
+                    hidden
+                >
+                    No tools found.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+        <section
+            class="section about-section"
+            id="about"
+        >
+
+            <div class="container">
+
+                <div class="about-box">
+
+                    <p class="eyebrow">
+                        WHY UTILITYHUB
+                    </p>
+
+                    <h2>
+                        Simple tools without the unnecessary complexity.
+                    </h2>
+
+                    <p>
+                        Our goal is to make everyday online tasks faster,
+                        easier and accessible from any device.
+                    </p>
+
+
+                    <div class="feature-list">
+
+                        <div>
+                            <strong>⚡ Fast</strong>
+                            <span>Built for quick everyday use.</span>
+                        </div>
+
+                        <div>
+                            <strong>🔒 Private</strong>
+                            <span>We aim to process tools safely.</span>
+                        </div>
+
+                        <div>
+                            <strong>📱 Responsive</strong>
+                            <span>
+                                Works across phones, tablets and computers.
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer
+        class="site-footer"
+        id="blog"
+    >
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <div class="logo">
+                    Utility<span>Hub</span>
+                </div>
+
+                <p>
+                    Simple online tools for everyday work.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container copyright">
+            © 2026 UtilityHub. All rights reserved.
+        </div>
+
+    </footer>
+
+
+    <!-- UTILITYHUB HOMEPAGE JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>

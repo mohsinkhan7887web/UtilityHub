@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a professional resume for free with the UtilityHub Resume and CV Builder. Enter your details and print or save your resume as a PDF.">
+  <title>Resume / CV Builder | UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <span class="eyebrow">CAREER TOOLS</span>
+      <h1>Resume / CV Builder</h1>
+      <p>Create a professional resume by filling in your details. Preview it and print or save it as a PDF.</p>
+    </section>
+
+    <div class="builder-layout">
+      <section class="form-card">
+        <h2>Your Information</h2>
+        <p class="section-description">Fill in the details you want to include in your resume.</p>
+
+        <form id="resumeForm">
+          <div class="form-section">
+            <h3>Personal Details</h3>
+
+            <label for="fullName">Full Name *</label>
+            <input id="fullName" type="text" placeholder="e.g. Mohan Kumar" required maxlength="100">
+
+            <label for="jobTitle">Target Job Title</label>
+            <input id="jobTitle" type="text" placeholder="e.g. Accounts Assistant" maxlength="100">
+
+            <div class="two-columns">
+              <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" maxlength="150">
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" type="tel" placeholder="Your phone number" maxlength="30">
+              </div>
+            </div>
+
+            <label for="location">City / Location</label>
+            <input id="location" type="text" placeholder="e.g. Hyderabad, Telangana" maxlength="100">
+
+            <label for="linkedin">LinkedIn / Portfolio URL</label>
+            <input id="linkedin" type="url" placeholder="https://example.com" maxlength="250">
+          </div>
+
+          <div class="form-section">
+            <h3>Professional Summary</h3>
+            <label for="summary">About You</label>
+            <textarea id="summary" rows="4" maxlength="1200" placeholder="Write a short summary of your skills, strengths and career goals."></textarea>
+          </div>
+
+          <div class="form-section">
+            <h3>Work Experience</h3>
+            <label for="experience">Experience Details</label>
+            <textarea id="experience" rows="6" maxlength="3000" placeholder="Job Title — Company Name&#10;Month Year – Month Year&#10;• Describe your responsibilities and achievements."></textarea>
+          </div>
+
+          <div class="form-section">
+            <h3>Education</h3>
+            <label for="education">Education Details</label>
+            <textarea id="education" rows="5" maxlength="2000" placeholder="Degree / Qualification — Institution&#10;Year of completion&#10;Relevant marks or achievements (optional)."></textarea>
+          </div>
+
+          <div class="form-section">
+            <h3>Skills</h3>
+            <label for="skills">Your Skills</label>
+            <textarea id="skills" rows="3" maxlength="1000" placeholder="MS Excel, Communication, Accounting, Teamwork"></textarea>
+            <span class="field-hint">Separate skills with commas for a clean list.</span>
+          </div>
+
+          <div class="form-section">
+            <h3>Projects & Certifications</h3>
+            <label for="projects">Projects</label>
+            <textarea id="projects" rows="3" maxlength="1500" placeholder="Project name and a short description (optional)."></textarea>
+
+            <label for="certifications">Certifications / Achievements</label>
+            <textarea id="certifications" rows="3" maxlength="1500" placeholder="Certification name, issuing organization, or achievement."></textarea>
+          </div>
+
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+
+          <div class="form-actions">
+            <button type="submit" class="primary-btn">Update Resume Preview</button>
+            <button type="reset" id="clearBtn" class="secondary-btn">Clear Form</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="preview-card">
+        <div class="preview-heading">
+          <div>
+            <h2>Live Resume Preview</h2>
+            <p class="section-description">Your resume appears here.</p>
+          </div>
+          <button type="button" id="printBtn" class="print-btn">Print / Save PDF</button>
+        </div>
+
+        <article id="resumePreview" class="resume-paper">
+          <header class="resume-header">
+            <h1 id="previewName">Your Name</h1>
+            <p id="previewJobTitle" class="preview-job-title">Your Target Job Title</p>
+            <div id="previewContact" class="preview-contact">
+              <span>Email, phone and location appear here</span>
+            </div>
+          </header>
+
+          <section class="resume-section" id="summarySection">
+            <h2>Professional Summary</h2>
+            <p id="previewSummary">Your professional summary will appear here.</p>
+          </section>
+
+          <section class="resume-section" id="experienceSection">
+            <h2>Work Experience</h2>
+            <p id="previewExperience">Your experience details will appear here.</p>
+          </section>
+
+          <section class="resume-section" id="educationSection">
+            <h2>Education</h2>
+            <p id="previewEducation">Your education details will appear here.</p>
+          </section>
+
+          <section class="resume-section" id="skillsSection">
+            <h2>Skills</h2>
+            <p id="previewSkills">Your skills will appear here.</p>
+          </section>
+
+          <section class="resume-section" id="projectsSection">
+            <h2>Projects</h2>
+            <p id="previewProjects">Your projects will appear here.</p>
+          </section>
+
+          <section class="resume-section" id="certificationsSection">
+            <h2>Certifications & Achievements</h2>
+            <p id="previewCertifications">Your certifications will appear here.</p>
+          </section>
+        </article>
+      </section>
+    </div>
+
+    <p class="privacy-note">Privacy tip: Avoid adding sensitive information such as passwords, bank details or government ID numbers to your resume.</p>
+  </main>
+
+  <footer>
+    <p>© 2026 UtilityHub · Simple tools for everyday life</p>
+  </footer>
+</body>
+</html>

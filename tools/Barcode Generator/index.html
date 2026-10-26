@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generate and download Code 128 barcodes online for free. Create barcodes from text and numbers with UtilityHub.">
+  <meta name="robots" content="index, follow">
+  <title>Free Barcode Generator Online | UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <span class="eyebrow">FREE ONLINE TOOL</span>
+      <h1>Barcode Generator</h1>
+      <p>Create Code 128 barcodes from text or numbers and download them as PNG images.</p>
+    </section>
+
+    <section class="tool-card">
+      <form id="barcodeForm">
+        <label for="barcodeInput">Text or number</label>
+        <input
+          type="text"
+          id="barcodeInput"
+          placeholder="Example: UH20261021"
+          maxlength="80"
+          autocomplete="off"
+          required
+        >
+
+        <p class="hint">
+          Enter letters or numbers. Avoid special characters that Code 128 may not support.
+        </p>
+
+        <label for="barcodeFormat">Barcode format</label>
+        <select id="barcodeFormat">
+          <option value="CODE128">Code 128 — general text and numbers</option>
+          <option value="CODE128A">Code 128A — basic characters</option>
+          <option value="CODE128B">Code 128B — printable characters</option>
+          <option value="CODE128C">Code 128C — numeric pairs only</option>
+        </select>
+
+        <label for="barcodeWidth">Barcode width</label>
+        <select id="barcodeWidth">
+          <option value="1">Small</option>
+          <option value="2" selected>Medium</option>
+          <option value="3">Large</option>
+        </select>
+
+        <button type="submit" id="generateBtn">Generate Barcode</button>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <section id="result" class="result" hidden>
+        <h2>Your Barcode</h2>
+
+        <div class="barcode-preview">
+          <svg id="barcodeSvg" role="img" aria-label="Generated barcode"></svg>
+        </div>
+
+        <p id="barcodeValue" class="barcode-value"></p>
+
+        <button type="button" id="downloadBtn" class="download-btn">
+          Download Barcode PNG
+        </button>
+      </section>
+    </section>
+
+    <section class="info">
+      <h2>How to use the barcode generator</h2>
+      <ol>
+        <li>Enter the text or number you want encoded.</li>
+        <li>Choose a supported barcode format and width.</li>
+        <li>Click Generate Barcode to preview it.</li>
+        <li>Download the PNG and test it with a barcode scanner.</li>
+      </ol>
+      <p>
+        Note: A generated barcode does not automatically provide an official retail
+        product identifier. For retail products, use a valid identifier from the
+        relevant issuing authority.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> UtilityHub. Free online tools.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

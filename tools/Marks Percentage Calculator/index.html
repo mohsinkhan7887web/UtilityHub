@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate your exam marks percentage easily with this free Marks Percentage Calculator from UtilityHub.">
+  <title>Marks Percentage Calculator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">STUDENT TOOLS</span>
+      <h1>Marks Percentage Calculator</h1>
+      <p>Calculate your exam percentage by entering the marks you scored in each subject.</p>
+    </section>
+
+    <section class="calculator-card">
+      <div class="section-heading">
+        <h2>Enter Your Marks</h2>
+        <p>Add each subject with its obtained marks and maximum marks.</p>
+      </div>
+
+      <div class="field-group">
+        <label for="examName">Exam Name (optional)</label>
+        <input type="text" id="examName" placeholder="e.g. Semester 5 Exams">
+      </div>
+
+      <div class="subjects-heading">
+        <h2>Subject Details</h2>
+        <span id="subjectCount">1 subject</span>
+      </div>
+
+      <div class="subject-labels">
+        <span>Subject Name</span>
+        <span>Marks Obtained</span>
+        <span>Maximum Marks</span>
+        <span>Action</span>
+      </div>
+
+      <div id="subjectsContainer">
+        <div class="subject-row">
+          <input type="text" class="subject-name" placeholder="e.g. Accounting" aria-label="Subject name">
+          <input type="number" class="obtained-marks" min="0" step="any" placeholder="75" aria-label="Marks obtained">
+          <input type="number" class="maximum-marks" min="0.01" step="any" placeholder="100" aria-label="Maximum marks">
+          <button type="button" class="remove-btn" aria-label="Remove subject" disabled>×</button>
+        </div>
+      </div>
+
+      <button type="button" id="addSubjectBtn" class="secondary-btn">＋ Add Subject</button>
+
+      <div class="button-row">
+        <button type="button" id="calculateBtn" class="primary-btn">Calculate Percentage</button>
+        <button type="button" id="resetBtn" class="reset-btn">Reset</button>
+      </div>
+
+      <p id="errorMessage" class="error-message" role="alert" hidden></p>
+
+      <section id="resultSection" class="result-section" aria-live="polite" hidden>
+        <p class="result-label" id="resultExam">YOUR EXAM RESULT</p>
+        <div class="percentage-value"><span id="percentageValue">0.00</span><span class="percent-sign">%</span></div>
+        <p class="result-caption">Overall marks percentage</p>
+
+        <div class="result-details">
+          <div class="result-item">
+            <span>Total Marks Obtained</span>
+            <strong id="totalObtained">0</strong>
+          </div>
+          <div class="result-item">
+            <span>Total Maximum Marks</span>
+            <strong id="totalMaximum">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <div class="formula-box">
+        <h3>How is percentage calculated?</h3>
+        <p>Percentage = (Total Marks Obtained ÷ Total Maximum Marks) × 100</p>
+        <p class="note">Enter the marks for every subject. Marks obtained cannot exceed the maximum marks for that subject.</p>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <p>Free online student tool · UtilityHub</p>
+    </footer>
+  </main>
+</body>
+</html>

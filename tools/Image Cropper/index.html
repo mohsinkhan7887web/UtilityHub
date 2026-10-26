@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crop JPG, PNG and WebP images online for free. Choose a crop ratio, preview your selection and download the cropped image in your browser.">
+  <title>Image Cropper - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">FREE ONLINE IMAGE TOOL</p>
+      <h1>Image Cropper</h1>
+      <p>Crop your photos to the area you need and download the result directly in your browser.</p>
+    </section>
+
+    <section class="tool-card">
+      <div id="uploadArea" class="upload-area">
+        <div class="image-icon">CROP</div>
+        <h2>Select your image</h2>
+        <p>Choose a JPG, PNG or WebP image from your device.</p>
+        <label for="imageInput" class="button primary">Choose Image</label>
+        <input
+          id="imageInput"
+          type="file"
+          accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp"
+          hidden
+        >
+        <p class="small-note">Your image is processed locally in your browser.</p>
+      </div>
+
+      <div id="workspace" hidden>
+        <div class="file-card">
+          <div class="image-icon small">IMG</div>
+          <div class="file-info">
+            <strong id="fileName">image.jpg</strong>
+            <span id="fileSize"></span>
+            <span id="imageDimensions"></span>
+          </div>
+          <button id="changeImageButton" class="button secondary" type="button">
+            Change Image
+          </button>
+        </div>
+
+        <section class="crop-settings">
+          <h2>Crop Settings</h2>
+          <label for="aspectRatio">Crop ratio</label>
+          <select id="aspectRatio">
+            <option value="free">Free crop</option>
+            <option value="1:1">Square (1:1)</option>
+            <option value="4:3">Landscape (4:3)</option>
+            <option value="16:9">Widescreen (16:9)</option>
+            <option value="3:4">Portrait (3:4)</option>
+            <option value="9:16">Vertical (9:16)</option>
+          </select>
+          <p class="small-note">
+            Drag inside the image to move the crop area. Drag a corner or edge to resize it.
+          </p>
+        </section>
+
+        <section class="preview-section">
+          <h2>Crop Your Image</h2>
+          <div id="cropStage" class="crop-stage">
+            <canvas id="cropCanvas" aria-label="Image crop selection area"></canvas>
+          </div>
+          <div class="crop-actions">
+            <button id="centerCropButton" class="button secondary" type="button">
+              Center Crop
+            </button>
+            <button id="resetCropButton" class="button secondary" type="button">
+              Reset Selection
+            </button>
+          </div>
+          <p id="statusMessage" class="status" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="format-section">
+          <label for="outputFormat">Download format</label>
+          <select id="outputFormat">
+            <option value="image/png">PNG</option>
+            <option value="image/jpeg">JPG</option>
+            <option value="image/webp">WebP</option>
+          </select>
+          <p class="small-note">
+            Transparent areas will become white if you choose JPG.
+          </p>
+        </section>
+
+        <button id="cropButton" class="button primary full-width" type="button">
+          Crop Image
+        </button>
+
+        <section id="resultArea" class="result-area" hidden>
+          <h2>Your Cropped Image</h2>
+          <p id="resultDetails"></p>
+          <div class="preview-frame">
+            <img id="resultPreview" alt="Cropped image preview">
+          </div>
+          <a
+            id="downloadLink"
+            class="button primary full-width"
+            href="#"
+            download="utilityhub-cropped.png"
+          >
+            Download Cropped Image
+          </a>
+        </section>
+
+        <button id="resetToolButton" class="button secondary full-width" type="button">
+          Crop Another Image
+        </button>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to crop an image</h2>
+      <ol>
+        <li>Select a JPG, PNG or WebP image.</li>
+        <li>Choose a crop ratio or select Free crop.</li>
+        <li>Drag the crop selection to position it and resize it using its handles.</li>
+        <li>Click Crop Image, preview the result and download it.</li>
+      </ol>
+
+      <h2>Frequently asked questions</h2>
+
+      <h3>What is an aspect ratio?</h3>
+      <p>It describes the relationship between the width and height of the crop area. Square is useful for profile pictures, while 16:9 is commonly used for video thumbnails.</p>
+
+      <h3>Will cropping improve image quality?</h3>
+      <p>Cropping removes unwanted parts of an image but does not add detail that was not in the original.</p>
+
+      <h3>Is my image uploaded to a server?</h3>
+      <p>No. The image is designed to be processed locally in your browser.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>UtilityHub · Simple tools for everyday tasks</p>
+  </footer>
+</body>
+</html>

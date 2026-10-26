@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate GST easily. Add GST to an amount or remove GST from a tax-inclusive price with UtilityHub's free GST Calculator.">
+  <title>GST Calculator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">FINANCIAL CALCULATORS</p>
+      <h1>GST Calculator</h1>
+      <p class="subtitle">
+        Calculate GST instantly. Add tax to a price or find the GST
+        included in a final amount.
+      </p>
+    </section>
+
+    <section class="calculator-card">
+      <div class="card-heading">
+        <h2>Calculate your GST</h2>
+        <p>Enter the amount and choose your calculation mode.</p>
+      </div>
+
+      <form id="gstForm">
+        <div class="field">
+          <label for="amount">Amount (₹)</label>
+          <input
+            type="number"
+            id="amount"
+            placeholder="e.g. 1000"
+            min="0.01"
+            step="any"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="gstRate">GST Rate</label>
+          <select id="gstRate" required>
+            <option value="0">0%</option>
+            <option value="3">3%</option>
+            <option value="5">5%</option>
+            <option value="12">12%</option>
+            <option value="18" selected>18%</option>
+            <option value="28">28%</option>
+            <option value="custom">Custom rate</option>
+          </select>
+        </div>
+
+        <div class="field" id="customRateField" hidden>
+          <label for="customRate">Custom GST Rate (%)</label>
+          <input
+            type="number"
+            id="customRate"
+            placeholder="Enter GST rate"
+            min="0"
+            max="100"
+            step="any"
+          >
+        </div>
+
+        <div class="field">
+          <label for="mode">Calculation Mode</label>
+          <select id="mode" required>
+            <option value="add">Add GST to amount</option>
+            <option value="remove">Remove GST from total</option>
+          </select>
+        </div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-btn">Calculate GST</button>
+          <button type="reset" class="secondary-btn">Reset</button>
+        </div>
+
+        <p id="errorMessage" class="error-message" role="alert"></p>
+      </form>
+
+      <section id="results" class="results" aria-live="polite" hidden>
+        <p class="result-label" id="resultTitle">Calculation Results</p>
+        <div class="result-main">
+          <span id="finalLabel">Final Amount</span>
+          <strong id="finalAmount">₹0.00</strong>
+        </div>
+
+        <div class="result-row">
+          <span id="baseLabel">Base Amount</span>
+          <strong id="baseAmount">₹0.00</strong>
+        </div>
+
+        <div class="result-row">
+          <span>GST Amount</span>
+          <strong id="gstAmount">₹0.00</strong>
+        </div>
+
+        <div class="result-row">
+          <span>GST Rate</span>
+          <strong id="resultRate">18%</strong>
+        </div>
+
+        <div class="result-row">
+          <span id="taxLabel">Tax treatment</span>
+          <strong id="taxTreatment">GST added</strong>
+        </div>
+      </section>
+    </section>
+
+    <section class="info-card">
+      <h2>How to use this calculator</h2>
+      <ul>
+        <li>Enter the amount in rupees.</li>
+        <li>Select a GST rate or enter a custom rate.</li>
+        <li>Choose whether to add GST or remove GST from a total.</li>
+        <li>Click Calculate GST to see the amount and tax breakdown.</li>
+      </ul>
+      <p class="note">
+        Note: This calculator provides a mathematical estimate.
+        Confirm the applicable GST rate for your product or service.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 UtilityHub. Simple tools for everyday work.</p>
+  </footer>
+</body>
+</html>

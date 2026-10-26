@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estimate reading time for any text with UtilityHub's free Reading Time Calculator. Calculate word count and reading duration at your preferred speed.">
+  <meta name="theme-color" content="#2563eb">
+  <title>Reading Time Calculator - Free Online Tool | UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">FREE TEXT TOOL</span>
+      <h1>Reading Time Calculator</h1>
+      <p>Find out how long it may take to read your text. Choose your reading speed and get an instant estimate.</p>
+    </section>
+
+    <section class="tool-panel" aria-label="Reading time calculator">
+      <label for="textInput" class="field-label">Enter or paste your text</label>
+      <textarea
+        id="textInput"
+        placeholder="Paste an article, essay, story or any text here..."
+        spellcheck="true"
+      ></textarea>
+      <p class="help-text">Your text stays in your browser. It is not uploaded.</p>
+
+      <div class="settings">
+        <label for="readingSpeed" class="field-label">Reading speed</label>
+        <select id="readingSpeed">
+          <option value="150">Slow — 150 words per minute</option>
+          <option value="200" selected>Average — 200 words per minute</option>
+          <option value="250">Fast — 250 words per minute</option>
+          <option value="300">Very fast — 300 words per minute</option>
+        </select>
+      </div>
+
+      <div class="actions">
+        <button id="calculateButton" class="btn btn-primary" type="button">Calculate Reading Time</button>
+        <button id="clearButton" class="btn btn-secondary" type="button">Clear Text</button>
+        <button id="sampleButton" class="btn btn-secondary" type="button">Try Sample</button>
+      </div>
+
+      <p id="statusMessage" class="status-message" role="status" aria-live="polite"></p>
+
+      <section class="results" aria-labelledby="resultsTitle">
+        <h2 id="resultsTitle">Your Results</h2>
+        <div class="results-grid">
+          <article class="result-card result-highlight">
+            <span class="result-label">Estimated reading time</span>
+            <strong id="readingTime">0 sec</strong>
+          </article>
+          <article class="result-card">
+            <span class="result-label">Total words</span>
+            <strong id="wordCount">0</strong>
+          </article>
+          <article class="result-card">
+            <span class="result-label">Characters</span>
+            <strong id="characterCount">0</strong>
+          </article>
+          <article class="result-card">
+            <span class="result-label">Selected speed</span>
+            <strong id="speedDisplay">200 WPM</strong>
+          </article>
+        </div>
+        <button id="copyButton" class="btn btn-secondary copy-button" type="button">Copy Results</button>
+      </section>
+    </section>
+
+    <section class="info-section">
+      <h2>How to use this tool</h2>
+      <ol>
+        <li>Paste or type your text in the text box.</li>
+        <li>Select a reading speed that suits your reading style.</li>
+        <li>View the estimated reading time and word count.</li>
+        <li>Use Copy Results to copy the calculation.</li>
+      </ol>
+      <p class="note"><strong>Note:</strong> Reading time is an estimate. Actual time varies with text difficulty, reading ability and pauses.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 UtilityHub. Free tools for everyday tasks.</p>
+    <a href="../../index.html">Explore more tools</a>
+  </footer>
+</body>
+</html>

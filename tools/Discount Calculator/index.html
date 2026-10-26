@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate discounts, savings and final sale prices instantly with UtilityHub's free Discount Calculator.">
+  <title>Discount Calculator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">FREE ONLINE TOOL</span>
+      <h1>Discount Calculator</h1>
+      <p>Calculate your discount, savings and final price in seconds.</p>
+    </section>
+
+    <section class="calculator-card">
+      <form id="discountForm">
+        <div class="field">
+          <label for="originalPrice">Original Price (₹ or any currency)</label>
+          <input
+            type="number"
+            id="originalPrice"
+            min="0"
+            step="any"
+            placeholder="e.g. 2000"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="discountPercent">Discount Percentage (%)</label>
+          <input
+            type="number"
+            id="discountPercent"
+            min="0"
+            max="100"
+            step="any"
+            placeholder="e.g. 25"
+            required
+          >
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="primary-btn">Calculate Discount</button>
+          <button type="reset" class="secondary-btn">Clear</button>
+        </div>
+      </form>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+
+      <section id="result" class="result" hidden aria-live="polite">
+        <h2>Your Discount Summary</h2>
+
+        <div class="result-grid">
+          <div class="result-item highlight">
+            <span>Final Price</span>
+            <strong id="finalPrice">₹0.00</strong>
+          </div>
+
+          <div class="result-item">
+            <span>You Save</span>
+            <strong id="savings">₹0.00</strong>
+          </div>
+
+          <div class="result-item">
+            <span>Original Price</span>
+            <strong id="shownOriginalPrice">₹0.00</strong>
+          </div>
+        </div>
+
+        <p id="summaryText" class="summary-text"></p>
+      </section>
+    </section>
+
+    <section class="info">
+      <h2>How to calculate a discount</h2>
+      <ol>
+        <li>Enter the original product price.</li>
+        <li>Enter the discount percentage offered by the seller.</li>
+        <li>Click Calculate Discount to see your savings and final price.</li>
+      </ol>
+      <p><strong>Formula:</strong> Discount = Original Price × Discount Percentage ÷ 100.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 UtilityHub. Free online tools.</p>
+  </footer>
+</body>
+</html>

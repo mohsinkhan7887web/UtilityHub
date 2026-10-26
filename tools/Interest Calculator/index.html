@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free Interest Calculator to calculate simple or compound interest, total interest earned, and final amount.">
+  <title>Interest Calculator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="../../index.html" class="brand">UtilityHub</a>
+    <a href="../../index.html" class="back-link">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">FINANCIAL CALCULATORS</span>
+      <h1>Interest Calculator</h1>
+      <p>Calculate simple or compound interest and see how your money could grow over time.</p>
+    </section>
+
+    <section class="calculator-card">
+      <form id="interestForm">
+        <div class="field">
+          <label for="interestType">Interest Type</label>
+          <select id="interestType" required>
+            <option value="simple">Simple Interest</option>
+            <option value="compound">Compound Interest</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="principal">Principal Amount (₹)</label>
+          <input id="principal" type="number" min="0.01" step="any" placeholder="e.g. 100000" required>
+        </div>
+
+        <div class="field">
+          <label for="annualRate">Annual Interest Rate (%)</label>
+          <input id="annualRate" type="number" min="0" max="1000" step="any" placeholder="e.g. 8" required>
+        </div>
+
+        <div class="field">
+          <label for="timePeriod">Time Period (years)</label>
+          <input id="timePeriod" type="number" min="0.01" max="1000" step="any" placeholder="e.g. 5" required>
+        </div>
+
+        <div class="field" id="frequencyField" hidden>
+          <label for="frequency">Compounding Frequency</label>
+          <select id="frequency">
+            <option value="1">Annually</option>
+            <option value="2">Half-yearly</option>
+            <option value="4">Quarterly</option>
+            <option value="12" selected>Monthly</option>
+            <option value="365">Daily</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="primary-btn">Calculate Interest</button>
+          <button type="reset" class="secondary-btn">Reset</button>
+        </div>
+
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </form>
+
+      <section id="result" class="results" aria-live="polite" hidden>
+        <h2>Calculation Summary</h2>
+
+        <div class="result-grid">
+          <article class="result-item highlight">
+            <span>Final Amount</span>
+            <strong id="finalAmount">₹0.00</strong>
+          </article>
+
+          <article class="result-item">
+            <span>Total Interest</span>
+            <strong id="totalInterest">₹0.00</strong>
+          </article>
+
+          <article class="result-item">
+            <span>Principal Amount</span>
+            <strong id="principalResult">₹0.00</strong>
+          </article>
+
+          <article class="result-item">
+            <span>Interest Type</span>
+            <strong id="typeResult">Simple Interest</strong>
+          </article>
+        </div>
+
+        <div class="breakdown">
+          <div class="breakdown-heading">
+            <span>Principal vs Interest</span>
+            <strong id="interestPercentage">0%</strong>
+          </div>
+          <div class="bar-track">
+            <div id="principalBar" class="bar-principal"></div>
+            <div id="interestBar" class="bar-interest"></div>
+          </div>
+          <p class="legend">
+            <span class="legend-principal"></span> Principal
+            <span class="legend-interest"></span> Interest
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <section class="info-card">
+      <h2>Simple vs Compound Interest</h2>
+      <p><strong>Simple interest:</strong> Interest is calculated only on the original principal.</p>
+      <p><strong>Compound interest:</strong> Interest is calculated on the principal plus previously accumulated interest, according to the selected compounding frequency.</p>
+      <p class="formula">Simple Interest = Principal × Rate × Time ÷ 100</p>
+      <p>Results are estimates and do not include taxes, fees, or other financial charges.</p>
+    </section>
+  </main>
+
+  <footer class="footer">© 2026 UtilityHub · Free online tools</footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online Loan Calculator. Calculate monthly payments, total interest, and total repayment for your loan.">
+  <title>Loan Calculator - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="../../index.html" class="brand">UtilityHub</a>
+    <a href="../../index.html" class="back-link">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">FINANCIAL CALCULATORS</span>
+      <h1>Loan Calculator</h1>
+      <p>Estimate your monthly loan payment, total interest, and total repayment in seconds.</p>
+    </section>
+
+    <section class="calculator-card">
+      <form id="loanForm">
+        <div class="field">
+          <label for="loanAmount">Loan Amount (₹)</label>
+          <input id="loanAmount" type="number" min="0.01" step="any" placeholder="e.g. 500000" required>
+        </div>
+
+        <div class="field">
+          <label for="interestRate">Annual Interest Rate (%)</label>
+          <input id="interestRate" type="number" min="0" step="any" placeholder="e.g. 10.5" required>
+        </div>
+
+        <div class="field">
+          <label for="loanTenure">Loan Tenure (years)</label>
+          <input id="loanTenure" type="number" min="0.01" step="any" placeholder="e.g. 5" required>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="primary-btn">Calculate Loan</button>
+          <button type="reset" class="secondary-btn">Reset</button>
+        </div>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </form>
+
+      <section id="result" class="results" aria-live="polite" hidden>
+        <h2>Loan Summary</h2>
+        <div class="result-grid">
+          <article class="result-item highlight">
+            <span>Monthly Payment</span>
+            <strong id="monthlyPayment">₹0.00</strong>
+          </article>
+          <article class="result-item">
+            <span>Total Interest</span>
+            <strong id="totalInterest">₹0.00</strong>
+          </article>
+          <article class="result-item">
+            <span>Total Repayment</span>
+            <strong id="totalPayment">₹0.00</strong>
+          </article>
+          <article class="result-item">
+            <span>Number of Payments</span>
+            <strong id="paymentCount">0</strong>
+          </article>
+        </div>
+        <p class="disclaimer">This is an estimate. Actual payments may vary due to lender fees, insurance, and loan terms.</p>
+      </section>
+    </section>
+
+    <section class="info-card">
+      <h2>How is a loan payment calculated?</h2>
+      <p>For a fixed-rate loan with monthly payments, the payment depends on the principal, monthly interest rate, and number of payments.</p>
+      <p class="formula">Payment = P × r × (1 + r)<sup>n</sup> ÷ [(1 + r)<sup>n</sup> − 1]</p>
+      <p>Here, P is the loan amount, r is the monthly interest rate, and n is the total number of monthly payments. At 0% interest, the loan amount is divided equally across the payments.</p>
+    </section>
+  </main>
+
+  <footer class="footer">© 2026 UtilityHub · Free online tools</footer>
+</body>
+</html>

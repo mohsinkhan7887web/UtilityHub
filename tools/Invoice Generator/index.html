@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create professional invoices online for free. Add items, calculate tax and totals, and print or save invoices as PDF.">
+  <title>Invoice Generator | UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="../../index.html" class="brand">Utility<span>Hub</span></a>
+    <a href="../../index.html" class="back-link">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="page-heading">
+      <span class="eyebrow">FREE BUSINESS TOOL</span>
+      <h1>Invoice Generator</h1>
+      <p>Create a professional invoice, calculate totals automatically, and print or save it as a PDF.</p>
+    </section>
+
+    <form id="invoiceForm">
+      <div class="workspace">
+        <section class="panel">
+          <h2>Invoice Details</h2>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="invoiceNumber">Invoice Number</label>
+              <input id="invoiceNumber" type="text" required>
+            </div>
+            <div class="field">
+              <label for="invoiceDate">Invoice Date</label>
+              <input id="invoiceDate" type="date" required>
+            </div>
+            <div class="field">
+              <label for="dueDate">Due Date</label>
+              <input id="dueDate" type="date">
+            </div>
+            <div class="field">
+              <label for="currency">Currency</label>
+              <select id="currency">
+                <option value="INR">INR (₹)</option>
+                <option value="USD">USD ($)</option>
+                <option value="GBP">GBP (£)</option>
+                <option value="EUR">EUR (€)</option>
+              </select>
+            </div>
+          </div>
+
+          <h2 class="section-title">Your Business</h2>
+          <div class="field">
+            <label for="sellerName">Business / Your Name</label>
+            <input id="sellerName" type="text" placeholder="Your business name" required>
+          </div>
+          <div class="field">
+            <label for="sellerAddress">Business Address</label>
+            <textarea id="sellerAddress" rows="2" placeholder="Street, city, postal code"></textarea>
+          </div>
+          <div class="field-grid">
+            <div class="field">
+              <label for="sellerEmail">Email</label>
+              <input id="sellerEmail" type="email" placeholder="you@example.com">
+            </div>
+            <div class="field">
+              <label for="sellerPhone">Phone</label>
+              <input id="sellerPhone" type="tel" placeholder="Phone number">
+            </div>
+          </div>
+
+          <h2 class="section-title">Bill To</h2>
+          <div class="field">
+            <label for="customerName">Customer Name / Business</label>
+            <input id="customerName" type="text" placeholder="Customer name" required>
+          </div>
+          <div class="field">
+            <label for="customerAddress">Customer Address</label>
+            <textarea id="customerAddress" rows="2" placeholder="Customer address"></textarea>
+          </div>
+          <div class="field-grid">
+            <div class="field">
+              <label for="customerEmail">Customer Email</label>
+              <input id="customerEmail" type="email" placeholder="customer@example.com">
+            </div>
+            <div class="field">
+              <label for="taxRate">Tax Rate (%)</label>
+              <input id="taxRate" type="number" min="0" max="100" step="0.01" value="0">
+            </div>
+          </div>
+
+          <h2 class="section-title">Invoice Items</h2>
+          <div class="items-header">
+            <span>Item / Description</span>
+            <span>Qty</span>
+            <span>Price</span>
+            <span>Total</span>
+            <span></span>
+          </div>
+          <div id="itemsContainer"></div>
+          <button type="button" id="addItemBtn" class="secondary-btn">+ Add Item</button>
+
+          <div class="field notes-field">
+            <label for="invoiceNotes">Notes / Payment Instructions</label>
+            <textarea id="invoiceNotes" rows="3" placeholder="Payment details, thank you message, etc."></textarea>
+          </div>
+
+          <div class="action-row">
+            <button type="button" id="printBtn" class="primary-btn">Print / Save PDF</button>
+            <button type="button" id="clearBtn" class="secondary-btn">Clear Form</button>
+          </div>
+          <p class="privacy-note">Your invoice is generated in your browser. This page does not send invoice details to a server.</p>
+        </section>
+
+        <section class="panel preview-panel">
+          <div class="preview-heading">
+            <h2>Invoice Preview</h2>
+            <span class="live-label">LIVE PREVIEW</span>
+          </div>
+
+          <article id="invoicePreview" class="invoice-paper">
+            <div class="invoice-top">
+              <div>
+                <p class="preview-label">FROM</p>
+                <h2 id="previewSeller">Your Business</h2>
+                <p id="previewSellerAddress" class="preview-muted">Business address</p>
+                <p id="previewSellerContact" class="preview-muted"></p>
+              </div>
+              <div class="invoice-title">
+                <h1>INVOICE</h1>
+                <p id="previewNumber">INV-001</p>
+              </div>
+            </div>
+
+            <div class="invoice-meta">
+              <div>
+                <p class="preview-label">BILL TO</p>
+                <h3 id="previewCustomer">Customer Name</h3>
+                <p id="previewCustomerAddress" class="preview-muted"></p>
+                <p id="previewCustomerEmail" class="preview-muted"></p>
+              </div>
+              <div class="date-details">
+                <p><strong>Invoice Date:</strong> <span id="previewDate">—</span></p>
+                <p><strong>Due Date:</strong> <span id="previewDueDate">—</span></p>
+              </div>
+            </div>
+
+            <table class="preview-table">
+              <thead>
+                <tr>
+                  <th>Description</th>
+                  <th>Qty</th>
+                  <th>Price</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody id="previewItems"></tbody>
+            </table>
+
+            <div class="totals">
+              <div><span>Subtotal</span><strong id="previewSubtotal">₹0.00</strong></div>
+              <div><span>Tax (<span id="previewTaxRate">0</span>%)</span><strong id="previewTax">₹0.00</strong></div>
+              <div class="grand-total"><span>Total Due</span><strong id="previewTotal">₹0.00</strong></div>
+            </div>
+
+            <div class="preview-notes">
+              <p class="preview-label">NOTES</p>
+              <p id="previewNotes">Thank you for your business!</p>
+            </div>
+            <div class="invoice-footer">Thank you for your business.</div>
+          </article>
+          <p class="preview-hint">Tip: Use “Print / Save PDF” to print your invoice or select “Save as PDF” in your browser's print dialog.</p>
+        </section>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

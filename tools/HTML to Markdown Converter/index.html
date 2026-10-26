@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Convert HTML code into clean Markdown online for free.">
+  <title>HTML to Markdown Converter - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">DEVELOPER TOOLS</div>
+      <h1>HTML to Markdown Converter</h1>
+      <p>Convert HTML into clean, readable Markdown in seconds. Free, simple and browser-based.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="panel">
+        <div class="panel-heading">
+          <div>
+            <h2>HTML Input</h2>
+            <p>Paste your HTML code below</p>
+          </div>
+          <button id="sampleButton" class="btn btn-light" type="button">Load Sample</button>
+        </div>
+        <textarea id="htmlInput" spellcheck="false" placeholder="<h1>Hello World</h1>&#10;<p>This is a paragraph.</p>"></textarea>
+        <div class="panel-footer">
+          <span id="inputCount">0 characters</span>
+          <button id="clearButton" class="btn btn-light" type="button">Clear</button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="convertButton" class="btn btn-primary" type="button">Convert to Markdown →</button>
+      </div>
+
+      <div class="panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Markdown Output</h2>
+            <p>Your converted Markdown appears here</p>
+          </div>
+          <span id="statusBadge" class="status-badge">Ready</span>
+        </div>
+        <textarea id="markdownOutput" spellcheck="false" placeholder="Your Markdown output will appear here..." readonly></textarea>
+        <div class="panel-footer">
+          <span id="outputCount">0 characters</span>
+          <div class="footer-actions">
+            <button id="copyButton" class="btn btn-light" type="button">Copy</button>
+            <button id="downloadButton" class="btn btn-primary" type="button">Download .md</button>
+          </div>
+        </div>
+      </div>
+
+      <p id="statusMessage" class="status-message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="info-section">
+      <h2>How to use this tool</h2>
+      <ol>
+        <li>Paste your HTML code into the input box.</li>
+        <li>Click <strong>Convert to Markdown</strong>.</li>
+        <li>Copy the result or download it as a Markdown file.</li>
+      </ol>
+      <p class="privacy-note">Your conversion happens in your browser. Your HTML is not uploaded to a server.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 UtilityHub. Free online tools for everyone.</p>
+  </footer>
+</body>
+</html>

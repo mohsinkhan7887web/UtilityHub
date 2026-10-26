@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Compressor - UtilityHub</title>
+    <meta name="description" content="Compress images online for free. Reduce image file size while keeping good quality.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a href="../../index.html" class="logo">
+                Utility<span>Hub</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="../../index.html">Home</a>
+                <a href="../../index.html#tools">All Tools</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="tool-page">
+
+        <div class="breadcrumb">
+            <a href="../../index.html">Home</a>
+            <span>›</span>
+            <span>Image Compressor</span>
+        </div>
+
+
+        <section class="tool-hero">
+
+            <div class="tool-badge">
+                Image Tool
+            </div>
+
+            <h1>Image Compressor</h1>
+
+            <p>
+                Compress your images online for free while keeping great quality.
+                Your images are processed directly in your browser.
+            </p>
+
+        </section>
+
+
+        <section class="compressor-card">
+
+            <div class="upload-area" id="uploadArea">
+
+                <div class="upload-icon">
+                    🖼️
+                </div>
+
+                <h2>Upload an Image</h2>
+
+                <p>
+                    Drag & drop your image here or choose a file from your device.
+                </p>
+
+                <label for="imageInput" class="upload-button">
+                    Choose Image
+                </label>
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/jpeg,image/png,image/webp"
+                    hidden
+                >
+
+                <span class="file-types">
+                    JPG, PNG or WebP
+                </span>
+
+            </div>
+
+
+            <div class="settings-area" id="settingsArea" hidden>
+
+                <div class="setting-group">
+
+                    <label for="qualityRange">
+                        Compression Quality
+                    </label>
+
+                    <div class="quality-row">
+                        <input
+                            type="range"
+                            id="qualityRange"
+                            min="10"
+                            max="100"
+                            value="75"
+                        >
+
+                        <span id="qualityValue">75%</span>
+                    </div>
+
+                </div>
+
+
+                <div class="format-group">
+
+                    <label for="formatSelect">
+                        Output Format
+                    </label>
+
+                    <select id="formatSelect">
+                        <option value="image/jpeg">JPG</option>
+                        <option value="image/webp">WebP</option>
+                        <option value="image/png">PNG</option>
+                    </select>
+
+                </div>
+
+
+                <button id="compressButton" class="primary-button">
+                    Compress Image
+                </button>
+
+                <button id="resetButton" class="secondary-button">
+                    Choose Another Image
+                </button>
+
+            </div>
+
+
+            <div class="result-area" id="resultArea" hidden>
+
+                <div class="preview-section">
+
+                    <h2>Preview</h2>
+
+                    <div class="image-preview">
+                        <img id="previewImage" src="" alt="Compressed image preview">
+                    </div>
+
+                </div>
+
+
+                <div class="size-comparison">
+
+                    <div class="size-box">
+                        <span>Original Size</span>
+                        <strong id="originalSize">0 KB</strong>
+                    </div>
+
+                    <div class="size-arrow">
+                        →
+                    </div>
+
+                    <div class="size-box">
+                        <span>Compressed Size</span>
+                        <strong id="compressedSize">0 KB</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="saving-message" id="savingMessage">
+                    Your image has been compressed.
+                </div>
+
+
+                <a
+                    id="downloadButton"
+                    class="download-button"
+                    href="#"
+                    download="compressed-image.jpg"
+                >
+                    Download Compressed Image
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="info-section">
+
+            <h2>How to Compress an Image</h2>
+
+            <ol>
+                <li>Choose an image from your device.</li>
+                <li>Select the compression quality.</li>
+                <li>Choose your preferred output format.</li>
+                <li>Click <strong>Compress Image</strong>.</li>
+                <li>Preview and download your compressed image.</li>
+            </ol>
+
+            <h2>Why Use Our Image Compressor?</h2>
+
+            <p>
+                UtilityHub compresses your image directly inside your browser.
+                Your image does not need to be uploaded to a server, making the
+                process fast and privacy-friendly.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <p>
+            © 2026 UtilityHub. Free online tools for everyone.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

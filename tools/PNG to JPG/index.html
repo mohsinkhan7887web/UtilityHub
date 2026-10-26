@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Convert PNG images to JPG format online for free. Preview and download your converted image directly in your browser.">
+  <title>PNG to JPG Converter - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">UtilityHub</a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">FREE ONLINE IMAGE TOOL</p>
+      <h1>PNG to JPG Converter</h1>
+      <p>Convert PNG images into JPG format directly in your browser.</p>
+    </section>
+
+    <section class="tool-card">
+      <div id="uploadArea" class="upload-area">
+        <div class="image-icon">PNG</div>
+        <h2>Select your PNG image</h2>
+        <p>Choose a PNG image from your device to get started.</p>
+        <label for="imageInput" class="button primary">Choose PNG Image</label>
+        <input id="imageInput" type="file" accept=".png,image/png" hidden>
+        <p class="small-note">Your image is processed locally in your browser.</p>
+      </div>
+
+      <div id="workspace" hidden>
+        <div class="file-card">
+          <div class="image-icon small">PNG</div>
+          <div class="file-info">
+            <strong id="fileName">image.png</strong>
+            <span id="fileSize"></span>
+            <span id="imageDimensions"></span>
+          </div>
+          <button id="changeImageButton" class="button secondary" type="button">
+            Change Image
+          </button>
+        </div>
+
+        <div class="preview-section">
+          <h2>Image Preview</h2>
+          <div class="preview-frame">
+            <img id="imagePreview" alt="Selected PNG image preview">
+          </div>
+        </div>
+
+        <div class="quality-section">
+          <label for="qualityInput">JPG Quality: <strong id="qualityValue">90%</strong></label>
+          <input id="qualityInput" type="range" min="10" max="100" value="90">
+          <p class="small-note">Higher quality usually creates a larger JPG file.</p>
+        </div>
+
+        <div class="background-section">
+          <label for="backgroundColor">Background for transparent areas</label>
+          <div class="color-control">
+            <input id="backgroundColor" type="color" value="#ffffff">
+            <span id="backgroundLabel">White background</span>
+          </div>
+          <p class="small-note">
+            JPG does not support transparency. Transparent areas will use this background color.
+          </p>
+        </div>
+
+        <p id="statusMessage" class="status" role="status" aria-live="polite"></p>
+
+        <button id="convertButton" class="button primary full-width" type="button">
+          Convert to JPG
+        </button>
+
+        <div id="resultArea" class="result-area" hidden>
+          <h2>Your JPG is ready!</h2>
+          <p id="resultDetails"></p>
+          <a id="downloadLink" class="button primary full-width" href="#" download="utilityhub-converted.jpg">
+            Download JPG
+          </a>
+        </div>
+
+        <button id="resetButton" class="button secondary full-width" type="button">
+          Convert Another Image
+        </button>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to convert PNG to JPG</h2>
+      <ol>
+        <li>Choose a PNG image from your device.</li>
+        <li>Preview the image and adjust JPG quality or background color.</li>
+        <li>Click Convert to JPG and download the result.</li>
+      </ol>
+
+      <h2>Frequently asked questions</h2>
+      <h3>Does JPG support transparency?</h3>
+      <p>No. Transparent areas are filled with the background color you select before conversion.</p>
+
+      <h3>Will image quality change?</h3>
+      <p>JPG uses lossy compression, so some image detail may be lost. A higher quality setting can reduce visible artifacts.</p>
+
+      <h3>Is my image uploaded to a server?</h3>
+      <p>No. This tool is designed to process images locally in your browser.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>UtilityHub · Simple tools for everyday tasks</p>
+  </footer>
+</body>
+</html>

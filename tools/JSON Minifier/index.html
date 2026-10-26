@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Minify JSON online for free. Remove unnecessary whitespace from JSON data and copy the compact output easily.">
+  <title>JSON Minifier - UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+      <a class="back-link" href="../../index.html">← All Tools</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">DEVELOPER TOOL</p>
+      <h1>JSON Minifier</h1>
+      <p>Compress JSON by removing unnecessary whitespace while preserving its data and structure.</p>
+    </section>
+
+    <section class="tool-panel">
+      <div class="panel-heading">
+        <h2>Minify Your JSON</h2>
+        <p>Paste valid JSON below, then select Minify JSON.</p>
+      </div>
+
+      <label class="field-label" for="jsonInput">Input JSON</label>
+      <textarea id="jsonInput" placeholder='Paste JSON here, for example: {"name": "UtilityHub"}' spellcheck="false"></textarea>
+
+      <div class="button-row primary-actions">
+        <button type="button" id="minifyButton" class="btn btn-primary">Minify JSON</button>
+        <button type="button" id="sampleButton" class="btn btn-secondary">Load Sample</button>
+        <button type="button" id="clearButton" class="btn btn-light">Clear</button>
+      </div>
+
+      <div id="statusBox" class="status-box warning" role="status" aria-live="polite">
+        <strong id="statusTitle">Ready to use</strong>
+        <p id="statusMessage">Enter JSON data to get started.</p>
+      </div>
+
+      <div class="output-heading">
+        <label class="field-label" for="jsonOutput">Minified Output</label>
+        <span id="jsonStatus" class="status-chip">Waiting</span>
+      </div>
+
+      <textarea id="jsonOutput" placeholder="Your minified JSON will appear here..." spellcheck="false" readonly></textarea>
+
+      <div class="button-row output-actions">
+        <button type="button" id="copyButton" class="btn btn-primary">Copy Output</button>
+        <button type="button" id="useOutputButton" class="btn btn-secondary">Use Output as Input</button>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <span>Original Size</span>
+          <strong id="originalSize">0 bytes</strong>
+        </div>
+        <div class="stat-card">
+          <span>Minified Size</span>
+          <strong id="minifiedSize">0 bytes</strong>
+        </div>
+        <div class="stat-card">
+          <span>Space Saved</span>
+          <strong id="spaceSaved">0%</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>What is a JSON Minifier?</h2>
+      <p>A JSON minifier removes unnecessary spaces, indentation and line breaks from valid JSON. It preserves the data, making the JSON more compact for storage or transfer.</p>
+      <h2>How to use this tool</h2>
+      <ol>
+        <li>Paste your JSON into the input box.</li>
+        <li>Click Minify JSON.</li>
+        <li>Review the compact result and copy it.</li>
+      </ol>
+      <p class="privacy-note"><strong>Privacy:</strong> This tool processes JSON directly in your browser. Your input is not intentionally uploaded by this tool.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 UtilityHub. Free online tools.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a professional job cover letter online for free. Customize your details, generate a letter, and copy or download it.">
+  <title>Cover Letter Generator | UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">Utility<span>Hub</span></a>
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <span class="eyebrow">FREE CAREER TOOL</span>
+      <h1>Cover Letter Generator</h1>
+      <p>Create a professional, personalized cover letter for your next job application. Add your details, generate your draft, and customize it before sending.</p>
+    </section>
+
+    <div class="workspace">
+      <section class="panel editor">
+        <div class="panel-heading">
+          <div>
+            <h2>Your Information</h2>
+            <p class="muted">Complete the fields to build your letter.</p>
+          </div>
+          <span class="step-tag">STEP 1</span>
+        </div>
+
+        <form id="letterForm">
+          <h3 class="section-title">Your Details</h3>
+
+          <div class="field">
+            <label for="fullName">Full name *</label>
+            <input id="fullName" type="text" placeholder="e.g. Mohsin Khan" maxlength="100" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" type="email" placeholder="you@example.com" maxlength="120">
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" type="tel" placeholder="+91 98765 43210" maxlength="30">
+          </div>
+
+          <div class="field">
+            <label for="location">Your city</label>
+            <input id="location" type="text" placeholder="e.g. Hyderabad, Telangana" maxlength="100">
+          </div>
+
+          <div class="field">
+            <label for="letterDate">Date</label>
+            <input id="letterDate" type="date">
+          </div>
+
+          <h3 class="section-title">Job Details</h3>
+
+          <div class="field">
+            <label for="jobTitle">Job title *</label>
+            <input id="jobTitle" type="text" placeholder="e.g. Junior Accountant" maxlength="120" required>
+          </div>
+
+          <div class="field">
+            <label for="companyName">Company name *</label>
+            <input id="companyName" type="text" placeholder="e.g. ABC Technologies" maxlength="120" required>
+          </div>
+
+          <div class="field">
+            <label for="hiringManager">Hiring manager (optional)</label>
+            <input id="hiringManager" type="text" placeholder="e.g. Mr. Sharma" maxlength="100">
+          </div>
+
+          <div class="field">
+            <label for="experience">Experience level</label>
+            <select id="experience">
+              <option value="fresher">Fresher / Entry-level</option>
+              <option value="experienced">Experienced professional</option>
+              <option value="internship">Internship applicant</option>
+              <option value="career-change">Career change</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="skills">Relevant skills</label>
+            <textarea id="skills" rows="3" maxlength="600" placeholder="e.g. MS Excel, communication, accounting, teamwork"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="achievements">Achievements or relevant experience</label>
+            <textarea id="achievements" rows="3" maxlength="800" placeholder="Mention projects, internships, work experience, or achievements."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="motivation">Why do you want this job?</label>
+            <textarea id="motivation" rows="3" maxlength="600" placeholder="What interests you about this role or company?"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="tone">Writing style</label>
+            <select id="tone">
+              <option value="professional">Professional</option>
+              <option value="confident">Confident</option>
+              <option value="friendly">Warm and friendly</option>
+              <option value="concise">Short and concise</option>
+            </select>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn-primary" type="submit" id="generateBtn">Generate Cover Letter</button>
+            <button class="btn btn-secondary" type="button" id="clearBtn">Clear Form</button>
+          </div>
+
+          <p class="note">This tool generates a customizable template using your answers. Review the details and edit the final letter before applying.</p>
+        </form>
+      </section>
+
+      <section class="panel output-panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Your Cover Letter</h2>
+            <p class="muted">Your generated letter will appear here.</p>
+          </div>
+          <span class="step-tag output-tag">STEP 2</span>
+        </div>
+
+        <div class="output-toolbar">
+          <span id="wordCount">0 words</span>
+          <div class="toolbar-actions">
+            <button class="btn btn-small btn-secondary" id="copyBtn" type="button">Copy Letter</button>
+            <button class="btn btn-small btn-secondary" id="downloadBtn" type="button">Download .txt</button>
+          </div>
+        </div>
+
+        <div class="letter-paper">
+          <textarea id="letterOutput" aria-label="Generated cover letter" placeholder="Your cover letter will appear here after you complete the form and click Generate Cover Letter." spellcheck="true"></textarea>
+        </div>
+
+        <div class="output-footer">
+          <span id="statusMessage" role="status" aria-live="polite">Ready to create your letter.</span>
+          <button class="btn btn-primary" type="button" id="printBtn">Print / Save PDF</button>
+        </div>
+
+        <div class="privacy-note">
+          <strong>Review before applying</strong>
+          <p>Check names, skills, achievements, and company details. This tool works in your browser and does not send your information to a server.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© UtilityHub · Free online tools for everyday work</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

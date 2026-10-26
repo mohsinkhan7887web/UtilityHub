@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create professional payment receipts online for free. Enter payment details, calculate totals, and print or save receipts as PDF.">
+  <title>Receipt Generator | UtilityHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="../../index.html" class="brand">Utility<span>Hub</span></a>
+    <a href="../../index.html" class="back-link">← All Tools</a>
+  </header>
+
+  <main class="container">
+    <section class="page-heading">
+      <span class="eyebrow">FREE BUSINESS TOOL</span>
+      <h1>Receipt Generator</h1>
+      <p>Create a clean payment receipt, record the transaction details, and print or save it as a PDF.</p>
+    </section>
+
+    <div class="workspace">
+      <section class="panel">
+        <h2>Receipt Details</h2>
+
+        <div class="field-grid">
+          <div class="field">
+            <label for="receiptNumber">Receipt Number</label>
+            <input id="receiptNumber" type="text" required>
+          </div>
+          <div class="field">
+            <label for="receiptDate">Payment Date</label>
+            <input id="receiptDate" type="date" required>
+          </div>
+          <div class="field">
+            <label for="currency">Currency</label>
+            <select id="currency">
+              <option value="INR">INR (₹)</option>
+              <option value="USD">USD ($)</option>
+              <option value="GBP">GBP (£)</option>
+              <option value="EUR">EUR (€)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="paymentMethod">Payment Method</label>
+            <select id="paymentMethod">
+              <option value="Cash">Cash</option>
+              <option value="UPI">UPI</option>
+              <option value="Bank Transfer">Bank Transfer</option>
+              <option value="Debit Card">Debit Card</option>
+              <option value="Credit Card">Credit Card</option>
+              <option value="Cheque">Cheque</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <h2 class="section-title">Business Details</h2>
+        <div class="field">
+          <label for="businessName">Business / Received By</label>
+          <input id="businessName" type="text" placeholder="Your business name" required>
+        </div>
+        <div class="field">
+          <label for="businessAddress">Business Address</label>
+          <textarea id="businessAddress" rows="2" placeholder="Street, city, postal code"></textarea>
+        </div>
+        <div class="field-grid">
+          <div class="field">
+            <label for="businessEmail">Email</label>
+            <input id="businessEmail" type="email" placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="businessPhone">Phone</label>
+            <input id="businessPhone" type="tel" placeholder="Phone number">
+          </div>
+        </div>
+
+        <h2 class="section-title">Customer Details</h2>
+        <div class="field">
+          <label for="customerName">Received From / Customer Name</label>
+          <input id="customerName" type="text" placeholder="Customer name" required>
+        </div>
+        <div class="field">
+          <label for="customerAddress">Customer Address (Optional)</label>
+          <textarea id="customerAddress" rows="2" placeholder="Customer address"></textarea>
+        </div>
+
+        <h2 class="section-title">Payment Items</h2>
+        <div class="items-header">
+          <span>Description</span>
+          <span>Qty</span>
+          <span>Price</span>
+          <span>Amount</span>
+          <span></span>
+        </div>
+        <div id="itemsContainer"></div>
+        <button type="button" id="addItemBtn" class="secondary-btn">+ Add Item</button>
+
+        <div class="field-grid">
+          <div class="field">
+            <label for="discount">Discount Amount</label>
+            <input id="discount" type="number" min="0" step="any" value="0">
+          </div>
+          <div class="field">
+            <label for="taxRate">Tax Rate (%)</label>
+            <input id="taxRate" type="number" min="0" max="100" step="any" value="0">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="paymentStatus">Payment Status</label>
+          <select id="paymentStatus">
+            <option value="Paid">Paid in Full</option>
+            <option value="Partial">Partially Paid</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="amountPaid">Amount Received</label>
+          <input id="amountPaid" type="number" min="0" step="any" value="0">
+          <p class="field-help">For a fully paid receipt, the amount received defaults to the total.</p>
+        </div>
+        <div class="field">
+          <label for="paymentReference">Payment Reference (Optional)</label>
+          <input id="paymentReference" type="text" placeholder="UPI transaction ID or reference">
+        </div>
+        <div class="field">
+          <label for="receiptNotes">Notes</label>
+          <textarea id="receiptNotes" rows="3" placeholder="Additional details or a thank-you message"></textarea>
+        </div>
+
+        <div class="action-row">
+          <button type="button" id="printBtn" class="primary-btn">Print / Save PDF</button>
+          <button type="button" id="clearBtn" class="secondary-btn">Clear Form</button>
+        </div>
+        <p class="privacy-note">Receipt details are processed in your browser and are not sent to a server by this page.</p>
+      </section>
+
+      <section class="panel preview-panel">
+        <div class="preview-heading">
+          <h2>Receipt Preview</h2>
+          <span class="live-label">LIVE PREVIEW</span>
+        </div>
+
+        <article class="receipt-paper" id="receiptPreview">
+          <div class="receipt-banner">
+            <div class="receipt-check">✓</div>
+            <p class="banner-caption">PAYMENT RECEIPT</p>
+            <h1>RECEIPT</h1>
+            <p id="previewReceiptNumber">REC-001</p>
+          </div>
+
+          <div class="receipt-business">
+            <h2 id="previewBusinessName">Your Business</h2>
+            <p id="previewBusinessAddress" class="preview-muted">Business address</p>
+            <p id="previewBusinessContact" class="preview-muted"></p>
+          </div>
+
+          <div class="receipt-status">
+            <span>PAYMENT STATUS</span>
+            <strong id="previewStatus">PAID</strong>
+          </div>
+
+          <div class="receipt-info">
+            <div>
+              <span class="preview-label">RECEIVED FROM</span>
+              <h3 id="previewCustomerName">Customer Name</h3>
+              <p id="previewCustomerAddress" class="preview-muted"></p>
+            </div>
+            <div>
+              <span class="preview-label">PAYMENT DATE</span>
+              <p id="previewDate">—</p>
+              <span class="preview-label payment-method-label">PAYMENT METHOD</span>
+              <p id="previewMethod">Cash</p>
+            </div>
+          </div>
+
+          <table class="preview-table">
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody id="previewItems"></tbody>
+          </table>
+
+          <div class="totals">
+            <div><span>Subtotal</span><strong id="previewSubtotal">₹0.00</strong></div>
+            <div><span>Discount</span><strong id="previewDiscount">₹0.00</strong></div>
+            <div><span>Tax (<span id="previewTaxRate">0</span>%)</span><strong id="previewTax">₹0.00</strong></div>
+            <div class="grand-total"><span>Total Amount</span><strong id="previewTotal">₹0.00</strong></div>
+            <div><span>Amount Received</span><strong id="previewAmountPaid">₹0.00</strong></div>
+            <div class="balance-row"><span>Balance Due</span><strong id="previewBalance">₹0.00</strong></div>
+          </div>
+
+          <div class="reference-block">
+            <span class="preview-label">PAYMENT REFERENCE</span>
+            <p id="previewReference">—</p>
+          </div>
+
+          <div class="receipt-notes">
+            <span class="preview-label">NOTES</span>
+            <p id="previewNotes">Thank you for your payment!</p>
+          </div>
+
+          <div class="receipt-footer">
+            <p>Thank you for your business!</p>
+            <span>This receipt confirms the payment details shown above.</span>
+          </div>
+        </article>
+
+        <p class="preview-hint">Select “Print / Save PDF” to print your receipt or choose “Save as PDF” in the print dialog.</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

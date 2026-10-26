@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Create a Wi-Fi QR code online for free. Share your network name and password through a scannable QR code."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <title>Free Wi-Fi QR Code Generator | UtilityHub</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">
+      <span class="brand-icon">U</span>
+      <span>UtilityHub</span>
+    </a>
+
+    <a class="back-link" href="../../index.html">← All Tools</a>
+  </header>
+
+  <main class="page-container">
+    <section class="intro">
+      <span class="eyebrow">FREE ONLINE TOOL</span>
+      <h1>Wi-Fi QR Code Generator</h1>
+      <p>
+        Create a QR code for your Wi-Fi network. Let guests scan
+        it to connect without manually typing network details.
+      </p>
+    </section>
+
+    <section class="tool-card">
+      <div class="card-heading">
+        <div>
+          <h2>Your Wi-Fi Details</h2>
+          <p>Enter your network information below.</p>
+        </div>
+        <span class="wifi-icon">⌁</span>
+      </div>
+
+      <form id="wifiForm">
+        <div class="form-group">
+          <label for="wifiName">Wi-Fi Network Name (SSID)</label>
+          <input
+            type="text"
+            id="wifiName"
+            name="wifiName"
+            placeholder="e.g. MyHomeWiFi"
+            maxlength="100"
+            autocomplete="off"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="wifiPassword">Wi-Fi Password</label>
+          <input
+            type="password"
+            id="wifiPassword"
+            name="wifiPassword"
+            placeholder="Enter your Wi-Fi password"
+            maxlength="100"
+            autocomplete="off"
+          >
+
+          <label class="checkbox-label" for="showPassword">
+            <input type="checkbox" id="showPassword">
+            Show password
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="wifiSecurity">Security Type</label>
+          <select id="wifiSecurity" name="wifiSecurity">
+            <option value="WPA">WPA/WPA2/WPA3 (Most home Wi-Fi)</option>
+            <option value="WEP">WEP (Older networks)</option>
+            <option value="nopass">No Password (Open Network)</option>
+          </select>
+        </div>
+
+        <label class="checkbox-label hidden-network-label" for="hiddenNetwork">
+          <input type="checkbox" id="hiddenNetwork">
+          This is a hidden Wi-Fi network
+        </label>
+
+        <button type="submit" class="primary-button" id="generateBtn">
+          Generate Wi-Fi QR Code
+        </button>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <section id="result" class="result-box" hidden>
+        <h2>Your Wi-Fi QR Code</h2>
+        <p class="result-description">
+          Scan this code with a compatible phone camera to connect.
+        </p>
+
+        <div class="qr-frame">
+          <div id="qrcode" aria-label="Generated Wi-Fi QR code"></div>
+        </div>
+
+        <p id="networkLabel" class="network-label"></p>
+
+        <button type="button" id="downloadBtn" class="secondary-button">
+          Download QR Code PNG
+        </button>
+
+        <p class="privacy-warning">
+          Anyone who can scan this QR code may be able to access
+          your Wi-Fi. Share it only with people you trust.
+        </p>
+      </section>
+
+      <div class="privacy-note">
+        <span>🔒</span>
+        <p>
+          QR code generation happens in your browser. Do not use
+          a real password on a shared or untrusted computer.
+        </p>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>How to Use This Tool</h2>
+      <ol>
+        <li>Enter your Wi-Fi network name exactly as it appears.</li>
+        <li>Enter the password if your network uses one.</li>
+        <li>Select the correct security type.</li>
+        <li>Generate and download your QR code.</li>
+        <li>Scan it with a compatible device to test it.</li>
+      </ol>
+    </section>
+
+    <section class="info-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>Does this tool connect me to Wi-Fi?</h3>
+      <p>
+        No. It creates a QR code containing your network details.
+        A compatible device can scan it and offer to connect.
+      </p>
+
+      <h3>Is the QR code safe to share?</h3>
+      <p>
+        The QR code may contain your Wi-Fi password. Anyone who
+        obtains it could potentially access your network.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> UtilityHub. Free online tools.</p>
+    <a href="../../index.html">Back to Home</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
